@@ -1,0 +1,6 @@
+theme: minimal-mistakes-jekyll
+title: "My Awesome Blog"
+author: "Your Name"
+description: "A blog about interesting things."
+url: ""
+repository: "<username>/<repository-name>"
