@@ -2,5 +2,6 @@ theme: minimal-mistakes-jekyll
 title: "My Awesome Blog"
 author: "Your Name"
 description: "A blog about interesting things."
-url: ""
-repository: "<username>/<repository-name>"
+url: "https://diepdaocs.github.io"
+baseurl: "/blog"
+repository: "diepdaocs/blog"

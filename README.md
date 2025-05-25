@@ -87,3 +87,19 @@ repository: "YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME"
 ```
 
 Replace `"YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME"` with your actual GitHub username and the name of this repository. This is crucial for features like "Edit on GitHub" links.
+
+## Deploying to GitHub Pages
+
+Your blog is configured to be deployed at `https://diepdaocs.github.io/blog/`.
+
+To enable GitHub Pages for your repository (`diepdaocs/blog`):
+
+1.  Go to your repository on GitHub.
+2.  Click on the 'Settings' tab.
+3.  In the left sidebar, click on 'Pages'.
+4.  Under 'Build and deployment', for 'Source', select 'Deploy from a branch'.
+5.  Under 'Branch', select the branch where your blog content is (e.g., `main` or `feat/simple-blog`). Ensure this branch has the latest `_config.yml` and all other blog files.
+6.  For the folder, select '/ (root)'.
+7.  Click 'Save'.
+8.  GitHub will start building your site. It might take a few minutes for the site to become live at `https://diepdaocs.github.io/blog/`.
+9.  If you push changes to your selected branch, GitHub Pages will automatically rebuild and update your site.
