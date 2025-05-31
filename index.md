@@ -1,6 +1,6 @@
 ---
 layout: home
 ---
-# Welcome to My Blog!
+# Welcome to my personal space on the web!
 
-This is the homepage of my new blog. Check out the [posts](./_posts/) or learn more [about me](./_pages/about.md).
+I'm glad you're here. Feel free to explore my latest [posts](./_posts/) or get to know more [about me](./about/).
