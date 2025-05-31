@@ -3,7 +3,7 @@ title: "My Awesome Blog"
 author: "Your Name"
 description: "A blog about interesting things."
 url: "https://diepdaocs.github.io"
-baseurl: "/"
+baseurl: ""
 repository: "diepdaocs/blog"
 plugins:
   - jekyll-include-cache
