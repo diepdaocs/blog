@@ -1,4 +1,4 @@
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
 title: "My Awesome Blog"
 author: "Your Name"
 description: "A blog about interesting things."
