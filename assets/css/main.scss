@@ -112,17 +112,42 @@
 .home-grid__posts { grid-area: center; }
 .home-grid__right { grid-area: right; }
 
+/* Smaller, elegant post titles on home feed */
+.home-grid__posts {
+  .archive__item-title {
+    font-size: 1.0em;
+    line-height: 1.4;
+    margin-bottom: 0.2em;
+    a { font-weight: 600; }
+  }
+  .archive__item-excerpt {
+    font-size: 0.85em;
+    line-height: 1.5;
+  }
+  .archive__subtitle {
+    font-size: 0.75em;
+    letter-spacing: 0.06em;
+  }
+}
 
 @media (max-width: 1024px) {
   .home-grid {
     grid-template-columns: 1fr 180px;
     grid-template-areas: "center right" "left right";
+    padding: 1rem 1rem;
+    gap: 1.25rem;
   }
 }
 @media (max-width: 640px) {
   .home-grid {
     grid-template-columns: 1fr;
     grid-template-areas: "left" "center" "right";
+    padding: 0.75rem 0.75rem;
+    gap: 1rem;
+  }
+  .home-grid__posts {
+    .archive__item-title { font-size: 0.95em; }
+    .archive__item-excerpt { font-size: 0.82em; }
   }
 }
 
@@ -154,11 +179,11 @@
   align-items: baseline;
   line-height: 2;
 }
-.wm-1 { font-size: 1.55em; font-weight: 700; color: #1a5276; }
-.wm-2 { font-size: 1.2em;  font-weight: 600; color: #1f618d; }
-.wm-3 { font-size: 1.0em;  font-weight: 500; color: #2980b9; }
-.wm-4 { font-size: 0.88em; font-weight: 400; color: #5dade2; }
-.wm-5 { font-size: 0.78em; font-weight: 400; color: #85c1e9; }
+.wm-1 { font-size: 1.05em; font-weight: 700; color: #1a5276; }
+.wm-2 { font-size: 0.95em; font-weight: 600; color: #1f618d; }
+.wm-3 { font-size: 0.88em; font-weight: 500; color: #2980b9; }
+.wm-4 { font-size: 0.80em; font-weight: 400; color: #5dade2; }
+.wm-5 { font-size: 0.74em; font-weight: 400; color: #85c1e9; }
 .wm-1, .wm-2, .wm-3, .wm-4, .wm-5 {
   text-decoration: none;
   cursor: pointer;
