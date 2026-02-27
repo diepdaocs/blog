@@ -6,11 +6,11 @@
 @import "minimal-mistakes";
 
 /* ── Custom Masthead Layout ──────────────────────────── */
+/* 3-column grid: equal 1fr sides keep center perfectly centred */
 .masthead__wrap {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
   width: 100%;
   padding: 0.4rem 0;
 }
@@ -19,29 +19,22 @@
 .masthead__left {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
-  z-index: 2;
+  justify-self: start;
 }
 
-/* MIDDLE — truly centred regardless of side widths */
+/* MIDDLE */
 .masthead__center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  pointer-events: none;
   white-space: nowrap;
-  .site-brand { pointer-events: auto; }
+  text-align: center;
 }
 
-/* RIGHT */
+/* RIGHT — fills its 1fr column so greedy-nav can measure width */
 .masthead__right {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  flex-shrink: 0;
-  z-index: 2;
-  .greedy-nav { background: transparent; }
+  justify-content: flex-end;
+  .greedy-nav { background: transparent; flex: 1; min-width: 0; }
 }
 
 .site-author-link {
@@ -58,9 +51,12 @@
   font-weight: 400;
   color: #7a8288;
   white-space: nowrap;
+  text-decoration: none;
+  &:hover { color: #494e52; }
 }
 
 @media (max-width: 480px) {
+  .masthead__wrap { grid-template-columns: auto 1fr; }
   .masthead__center { display: none; }
 }
 
@@ -256,7 +252,7 @@ $dk-code:         #0d0d0d;
       color: $dk-link !important;
       &:hover { color: $dk-link-hover !important; }
     }
-    .site-brand      { color: $dk-text; }
+    .site-brand      { color: $dk-text; text-decoration: none; &:hover { color: $dk-heading; } }
     .site-author-link { color: $dk-heading; &:hover { color: $dk-link-hover; } }
     .greedy-nav {
       background-color: $dk-masthead;
