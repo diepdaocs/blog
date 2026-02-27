@@ -15,6 +15,10 @@ tags:
   - agents
 ---
 
+**TL;DR:** Everyone fears blockchain will kill banks and AI will kill jobs. But people who actually build these things know the truth: replacing centuries-old financial infrastructure takes centuries of new infrastructure, and giving AI the eyes, hands, and judgment of 8 billion humans requires an almost incomprehensible amount of human work to build. Both technologies are creating more jobs than most people realise — just different ones. The answer isn't fear. It's adaptation.
+
+---
+
 Two technologies. Two waves of fear. Two sets of promises that have been simultaneously oversold and misunderstood.
 
 Everyone is talking about AI and blockchain. The coverage is relentless — in newspapers, in boardrooms, in governments, at dinner tables. And the anxiety follows the same pattern for both: *this technology will take something away from us*. For blockchain, the fear was that trustless protocols would make banks, exchanges, clearing houses, and every financial intermediary obsolete. For AI, the fear is that machines will take human jobs — that the knowledge worker, the creative, the analyst, the coder are all next in line.
