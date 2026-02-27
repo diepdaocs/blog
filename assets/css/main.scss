@@ -23,27 +23,23 @@
   flex-shrink: 0;
 }
 
-/* True centre — absolute so it doesn't affect flexbox side widths */
-.masthead__center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+.site-brand {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #494e52;
   white-space: nowrap;
-  pointer-events: none;
-  .site-title {
-    pointer-events: auto;
-    font-size: 1.1em;
-    font-weight: 700;
-  }
+  flex-shrink: 0;
 }
 
-.site-author-name {
+.site-author-link {
   font-size: 1.05em;
   font-weight: 600;
   letter-spacing: 0.03em;
-  color: #333;
   white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #494e52;
+  &:hover { text-decoration: underline; }
 }
 
 .masthead__left .greedy-nav {
@@ -52,7 +48,7 @@
 }
 
 @media (max-width: 600px) {
-  .masthead__center { display: none; }
+  .site-brand { display: none; }
 }
 
 /* ── Avatar ─────────────────────────────────────────── */
@@ -246,7 +242,8 @@ $dk-code:         #0d0d0d;
       color: $dk-link !important;
       &:hover { color: $dk-link-hover !important; }
     }
-    .site-author-name { color: $dk-heading; }
+    .site-brand      { color: $dk-text; }
+    .site-author-link { color: $dk-heading; &:hover { color: $dk-link-hover; } }
     .greedy-nav {
       background-color: $dk-masthead;
       a {
