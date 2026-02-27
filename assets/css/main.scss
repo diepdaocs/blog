@@ -225,18 +225,18 @@
 }
 
 /* ── Dark Theme ──────────────────────────────────────── */
-$dk-bg:           #0e1c2b;
-$dk-surface:      #152636;
-$dk-surface-alt:  #1b3048;
-$dk-masthead:     #091520;
-$dk-border:       #1e3d58;
-$dk-text:         #ccd9e4;
-$dk-muted:        #7a9ab4;
-$dk-heading:      #e4f0f8;
-$dk-link:         #5ab3d8;
-$dk-link-hover:   #82ccea;
-$dk-accent:       #2e7ab0;
-$dk-code:         #071320;
+$dk-bg:           #1a1a1a;
+$dk-surface:      #242424;
+$dk-surface-alt:  #2e2e2e;
+$dk-masthead:     #111111;
+$dk-border:       #3a3a3a;
+$dk-text:         #d4d4d4;
+$dk-muted:        #888888;
+$dk-heading:      #f0f0f0;
+$dk-link:         #6cb6ff;
+$dk-link-hover:   #96cbff;
+$dk-accent:       #4a90d9;
+$dk-code:         #0d0d0d;
 
 [data-theme="dark"] {
   background-color: $dk-bg;
@@ -378,13 +378,13 @@ $dk-code:         #071320;
     background: $dk-surface;
     border-color: $dk-border;
     .wordmap__title { color: $dk-muted; border-bottom-color: $dk-accent; }
-    .wm-1 { color: #82ccea; }
-    .wm-2 { color: #5ab3d8; }
-    .wm-3 { color: #3e9bc0; }
-    .wm-4 { color: #2e7ab0; }
-    .wm-5 { color: #1e5a84; }
+    .wm-1 { color: #f0f0f0; }
+    .wm-2 { color: #d4d4d4; }
+    .wm-3 { color: #b0b0b0; }
+    .wm-4 { color: #888888; }
+    .wm-5 { color: #666666; }
     .wm-1, .wm-2, .wm-3, .wm-4, .wm-5 {
-      &:hover { color: $dk-heading; text-decoration: underline; }
+      &:hover { color: $dk-link-hover; text-decoration: underline; }
     }
   }
 
