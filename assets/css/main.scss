@@ -6,12 +6,23 @@
 @import "minimal-mistakes";
 
 /* ── Avatar ─────────────────────────────────────────── */
-.author__avatar img {
+.author__avatar {
   width: 150px !important;
   height: 150px !important;
-  object-fit: cover;
   border-radius: 50% !important;
-  border: 3px solid #add8e6 !important;
+  overflow: hidden !important;
+  border: 3px solid #5dade2 !important;
+  display: block !important;
+  margin: 0 auto 1em auto !important;
+}
+
+.author__avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  border: none !important;
+  display: block !important;
 }
 
 /* ── Three-column home layout ────────────────────────── */
