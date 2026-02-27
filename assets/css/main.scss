@@ -5,6 +5,62 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
+/* ── Custom Masthead Layout ──────────────────────────── */
+.masthead__layout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 0.4rem 0;
+}
+
+.masthead__left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  .site-title {
+    font-size: 1em;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}
+
+.masthead__center {
+  text-align: center;
+}
+
+.site-author-name {
+  font-size: 1.05em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #333;
+  white-space: nowrap;
+}
+
+.masthead__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .greedy-nav {
+    width: auto;
+    a.site-title { display: none; } // hide duplicate title if any
+  }
+}
+
+@media (max-width: 768px) {
+  .masthead__layout {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "left right" "center center";
+  }
+  .masthead__left  { grid-area: left; }
+  .masthead__right { grid-area: right; }
+  .masthead__center {
+    grid-area: center;
+    padding: 0.2rem 0 0.3rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+}
+
 /* ── Avatar ─────────────────────────────────────────── */
 .author__avatar {
   width: 150px !important;
@@ -193,9 +249,10 @@ $dk-code:         #071320;
     border-bottom: 1px solid $dk-border;
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     .site-title {
-      color: $dk-heading !important;
+      color: $dk-link !important;
       &:hover { color: $dk-link-hover !important; }
     }
+    .site-author-name { color: $dk-heading; }
     .greedy-nav {
       background-color: $dk-masthead;
       a {

@@ -1,0 +1,45 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__layout">
+
+      <!-- Left: Bits & Beyond + theme switcher injected here by JS -->
+      <div class="masthead__left">
+        {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ '/' | relative_url }}">
+            <img src="{{ logo_path | relative_url }}" alt="{{ site.title }}">
+          </a>
+        {% endunless %}
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </div>
+
+      <!-- Center: Diep Dao -->
+      <div class="masthead__center">
+        <span class="site-author-name">Diep Dao</span>
+      </div>
+
+      <!-- Right: Navigation -->
+      <div class="masthead__right">
+        <nav id="site-nav" class="greedy-nav">
+          <ul class="visible-links">
+            {%- for link in site.data.navigation.main -%}
+              <li class="masthead__menu-item">
+                <a href="{{ link.url | relative_url }}"
+                  {% if link.description %}title="{{ link.description }}"{% endif %}>
+                  {{ link.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+          <button class="greedy-nav__toggle hidden" type="button">
+            <span class="visually-hidden">Toggle menu</span>
+            <div class="navicon"></div>
+          </button>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</div>
