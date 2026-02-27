@@ -1,0 +1,10 @@
+<!-- Prevent flash of wrong theme by applying immediately -->
+<script>
+  (function () {
+    var theme = localStorage.getItem('blog-theme') || 'system';
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (theme === 'dark' || (theme === 'system' && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
