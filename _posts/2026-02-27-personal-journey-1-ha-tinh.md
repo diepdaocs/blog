@@ -11,6 +11,19 @@ tags:
   - journey
 ---
 
+<div style="background:#f8f9fa; border-left:4px solid #add8e6; padding:16px 20px; margin-bottom:32px; border-radius:4px;">
+  <strong>My Journey — Full Series</strong>
+  <ol style="margin:10px 0 0 0; padding-left:20px;">
+    <li><strong>The Village — Ha Tinh ← you are here</strong></li>
+    <li><a href="/blog/personal/2026/02/27/personal-journey-2-tay-nguyen.html">Following My Uncle to the Highlands</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-journey-3-school-and-coffee.html">School, Coffee, and Learning to Want More</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-journey-4-high-school.html">Coming Home, and Leaving Again</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-journey-5-ho-chi-minh.html">Ho Chi Minh City and the Beginning of Everything</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-university-and-first-career.html">University, a Japanese Company, and the Man Who Changed Everything</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-singapore.html">Singapore, Family, and Finding My Ground</a></li>
+  </ol>
+</div>
+
 *This is the first in a series of posts about my life — from a small village in central Vietnam to Singapore. I'm writing it partly to remember, partly to make sense of the distance travelled.*
 
 ---
