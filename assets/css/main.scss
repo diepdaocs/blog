@@ -82,6 +82,16 @@
 .wm-4 { font-size: 0.88em; font-weight: 400; color: #5dade2; }
 .wm-5 { font-size: 0.78em; font-weight: 400; color: #85c1e9; }
 
+.wm-1, .wm-2, .wm-3, .wm-4, .wm-5 {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s, text-decoration 0.15s;
+  &:hover {
+    text-decoration: underline;
+    color: #1a3a4a;
+  }
+}
+
 /* ── Tag Cloud ───────────────────────────────────────── */
 .tagcloud {
   background: #f8f9fa;
