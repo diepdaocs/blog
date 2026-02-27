@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "WebFetch(domain:diepdaocs.github.io)",
+      "Bash(ruby:*)",
+      "WebFetch(domain:127.0.0.1)",
+      "Bash(export:*)",
+      "Bash(tasklist:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(py:*)"
+    ]
+  }
+}
