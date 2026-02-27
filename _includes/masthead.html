@@ -4,10 +4,8 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__wrap">
 
-      <!-- Left: theme switcher (injected by JS) · Bits & Beyond · nav · Diep Dao -->
+      <!-- Left: theme switcher (injected by JS) · nav · Diep Dao -->
       <div class="masthead__left">
-        <span class="site-brand">{{ site.title }}</span>
-
         <nav id="site-nav" class="greedy-nav">
           <a class="site-title" href="{{ '/' | relative_url }}" style="display:none">{{ site.title }}</a>
           <ul class="visible-links">
@@ -26,8 +24,12 @@
           </button>
           <ul class="hidden-links hidden"></ul>
         </nav>
-
         <a class="site-author-link" href="{{ '/' | relative_url }}">Diep Dao</a>
+      </div>
+
+      <!-- Right: Bits & Beyond (plain text, no link) -->
+      <div class="masthead__right">
+        <span class="site-brand">{{ site.title }}</span>
       </div>
 
     </div>
