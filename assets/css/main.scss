@@ -1,0 +1,14 @@
+---
+# Only the main SCSS file needs front matter
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+.author__avatar img {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: cover;
+  border-radius: 50% !important;
+  border: 3px solid #add8e6 !important;
+}
