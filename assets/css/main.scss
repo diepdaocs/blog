@@ -187,16 +187,17 @@
 }
 
 /* ── Theme Switcher ──────────────────────────────────── */
+#theme-switcher-slot { display: inline-flex; align-items: center; }
+
 #theme-switcher {
   display: inline-flex;
   align-items: center;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.15);
   border-radius: 30px;
   padding: 3px;
   gap: 2px;
-  margin-right: 1rem;
-  vertical-align: middle;
+  margin-left: 0.6rem;
   flex-shrink: 0;
 }
 
@@ -401,6 +402,7 @@ $dk-code:         #0d0d0d;
     background: rgba(255,255,255,0.08);
     border-color: rgba(255,255,255,0.15);
   }
+  .masthead__right .site-brand { color: $dk-text; }
   .theme-btn {
     color: rgba(255,255,255,0.6);
     &:hover { background: rgba(255,255,255,0.15); color: #fff; }

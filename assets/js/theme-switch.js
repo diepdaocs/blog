@@ -34,10 +34,10 @@
       '<button class="theme-btn" data-mode="dark"   title="Dark mode"><i class="fas fa-moon"></i></button>' +
       '<button class="theme-btn" data-mode="system" title="System default"><i class="fas fa-adjust"></i></button>';
 
-    // Inject at the very start of masthead__left (before nav)
-    var target = document.querySelector('.masthead__left');
-    if (target) {
-      target.insertBefore(switcher, target.firstChild);
+    // Inject into the dedicated slot in the top-right
+    var slot = document.getElementById('theme-switcher-slot');
+    if (slot) {
+      slot.appendChild(switcher);
     } else {
       document.body.appendChild(switcher);
     }
