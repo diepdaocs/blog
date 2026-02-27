@@ -10,52 +10,58 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   width: 100%;
   padding: 0.4rem 0;
-  gap: 0.5rem;
 }
 
+/* LEFT */
 .masthead__left {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  flex: 1;
-  min-width: 0;
+  flex-shrink: 0;
+  z-index: 2;
 }
 
+/* MIDDLE — truly centred regardless of side widths */
+.masthead__center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+  white-space: nowrap;
+  .site-brand { pointer-events: auto; }
+}
+
+/* RIGHT */
 .masthead__right {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   flex-shrink: 0;
+  z-index: 2;
+  .greedy-nav { background: transparent; }
 }
 
 .site-author-link {
-  font-size: 1.0em;
+  font-size: 1.05em;
   font-weight: 700;
   white-space: nowrap;
-  flex-shrink: 0;
   text-decoration: none;
   color: #494e52;
   &:hover { color: #000; }
 }
 
 .site-brand {
-  font-size: 1.0em;
+  font-size: 1.05em;
   font-weight: 400;
   color: #7a8288;
   white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* Nav fills remaining space; greedy-nav JS handles collapse */
-.masthead__left .greedy-nav {
-  background: transparent;
-  flex: 1;
-  min-width: 0;
 }
 
 @media (max-width: 480px) {
-  .site-brand { display: none; }
+  .masthead__center { display: none; }
 }
 
 /* ── Avatar ─────────────────────────────────────────── */

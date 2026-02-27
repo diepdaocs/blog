@@ -4,13 +4,19 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__wrap">
 
-      <!-- Left group: Diep Dao · Bits & Beyond · Nav items (collapse on small screens) -->
+      <!-- LEFT: Diep Dao -->
       <div class="masthead__left">
         <a class="site-author-link" href="{{ '/' | relative_url }}">Diep Dao</a>
-        <span class="site-brand">Bits &amp; Beyond</span>
+      </div>
 
+      <!-- MIDDLE: Bits & Beyond (absolutely centred) -->
+      <div class="masthead__center">
+        <span class="site-brand">Bits &amp; Beyond</span>
+      </div>
+
+      <!-- RIGHT: Nav items (collapse on small screens) + theme switcher -->
+      <div class="masthead__right">
         <nav id="site-nav" class="greedy-nav">
-          <!-- required by greedy-nav JS but hidden -->
           <a class="site-title" href="{{ '/' | relative_url }}" style="display:none">Diep Dao</a>
           <ul class="visible-links">
             {%- for link in site.data.navigation.main -%}
@@ -28,10 +34,6 @@
           </button>
           <ul class="hidden-links hidden"></ul>
         </nav>
-      </div>
-
-      <!-- Right: theme switcher -->
-      <div class="masthead__right">
         <div id="theme-switcher-slot"></div>
       </div>
 
