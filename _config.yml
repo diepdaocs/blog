@@ -1,7 +1,20 @@
 remote_theme: mmistakes/minimal-mistakes
 title: "Diep Dao"
-author: "Diep Dao"
 description: "A blog about interesting things."
+
+author:
+  name: "Diep Dao"
+  avatar: "/assets/images/profile.jpg"
+  bio: "Software Engineer with 10+ years of experience in AI, ML, and full-stack development."
+  location: "Singapore"
+  email: "diepdaocs@gmail.com"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/diepdaocs"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/diepdaocs"
 url: "https://diepdaocs.github.io"
 baseurl: "/blog"
 repository: "diepdaocs/blog"

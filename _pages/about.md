@@ -2,6 +2,7 @@
 layout: single
 title: "About Me"
 permalink: /about/
+author_profile: true
 ---
 
 Results-oriented Software Engineer with 10+ years of experience in designing and implementing AI-powered solutions. Proficient in leveraging cutting-edge technologies to solve complex business problems and deliver impactful outcomes. Skilled in full-stack development, machine learning, and data analytics.
