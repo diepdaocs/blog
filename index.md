@@ -2,4 +2,4 @@
 layout: home
 ---
 
-Explore my latest [posts](./_posts/) or get to know more [about me](./_pages/about.md).
+Explore my latest [posts]({{ "/posts/" | relative_url }}) or get to know more [about me]({{ "/about/" | relative_url }}).
