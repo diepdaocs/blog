@@ -4,19 +4,14 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__layout">
 
-      <!-- Left: Bits & Beyond + theme switcher injected here by JS -->
+      <!-- Left: Diep Dao + theme switcher injected here by JS -->
       <div class="masthead__left">
-        {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}">
-            <img src="{{ logo_path | relative_url }}" alt="{{ site.title }}">
-          </a>
-        {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <span class="site-author-name">Diep Dao</span>
       </div>
 
-      <!-- Center: Diep Dao -->
+      <!-- Center: Bits & Beyond -->
       <div class="masthead__center">
-        <span class="site-author-name">Diep Dao</span>
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       </div>
 
       <!-- Right: Navigation -->
