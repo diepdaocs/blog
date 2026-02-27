@@ -105,12 +105,13 @@
   grid-template-columns: 210px 1fr 190px;
   grid-template-areas: "left center right";
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
   padding: 1.5rem 0;
 }
 .home-grid__left  { grid-area: left; }
 .home-grid__posts { grid-area: center; }
 .home-grid__right { grid-area: right; }
+
 
 @media (max-width: 1024px) {
   .home-grid {
@@ -133,6 +134,8 @@
   padding: 1rem 1.1rem;
   position: sticky;
   top: 2rem;
+  height: 100%;
+  box-sizing: border-box;
 }
 .wordmap__title {
   font-size: 0.85em;
