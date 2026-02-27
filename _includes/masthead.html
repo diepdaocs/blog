@@ -4,25 +4,9 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__wrap">
 
-      <!-- Left: Diep Dao — theme switcher injected here by JS -->
+      <!-- Left: theme switcher (injected by JS) + nav menu + Diep Dao -->
       <div class="masthead__left">
-        <span class="site-author-name">Diep Dao</span>
-      </div>
-
-      <!-- Center: Bits & Beyond — absolutely centred so it's always true-centre -->
-      <div class="masthead__center">
-        {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}">
-            <img src="{{ logo_path | relative_url }}" alt="{{ site.title }}">
-          </a>
-        {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      </div>
-
-      <!-- Right: Navigation (greedy-nav kept intact for mobile collapse) -->
-      <div class="masthead__right">
         <nav id="site-nav" class="greedy-nav">
-          <!-- Hidden site-title required by greedy-nav JS for width calculation -->
           <a class="site-title" href="{{ '/' | relative_url }}" style="display:none">{{ site.title }}</a>
           <ul class="visible-links">
             {%- for link in site.data.navigation.main -%}
@@ -40,6 +24,17 @@
           </button>
           <ul class="hidden-links hidden"></ul>
         </nav>
+        <span class="site-author-name">Diep Dao</span>
+      </div>
+
+      <!-- Center: Bits & Beyond — absolutely centred -->
+      <div class="masthead__center">
+        {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ '/' | relative_url }}">
+            <img src="{{ logo_path | relative_url }}" alt="{{ site.title }}">
+          </a>
+        {% endunless %}
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       </div>
 
     </div>

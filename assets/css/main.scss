@@ -46,13 +46,9 @@
   white-space: nowrap;
 }
 
-.masthead__right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  z-index: 2;
-  flex-shrink: 0;
-  .greedy-nav { background: transparent; }
+.masthead__left .greedy-nav {
+  background: transparent;
+  flex: 0 1 auto;
 }
 
 @media (max-width: 600px) {

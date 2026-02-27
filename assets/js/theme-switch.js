@@ -34,11 +34,10 @@
       '<button class="theme-btn" data-mode="dark"   title="Dark mode"><i class="fas fa-moon"></i></button>' +
       '<button class="theme-btn" data-mode="system" title="System default"><i class="fas fa-adjust"></i></button>';
 
-    // Inject into the left side of the custom masthead
-    var target = document.querySelector('.masthead__left') ||
-                 document.querySelector('.masthead__inner-wrap');
+    // Inject at the very start of masthead__left (before nav)
+    var target = document.querySelector('.masthead__left');
     if (target) {
-      target.appendChild(switcher);
+      target.insertBefore(switcher, target.firstChild);
     } else {
       document.body.appendChild(switcher);
     }
