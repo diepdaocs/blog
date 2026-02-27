@@ -30,7 +30,7 @@ defaults:
       layout: single
 
 after_footer_scripts:
-  - /blog/assets/js/theme-switch.js
+  - /assets/js/theme-switch.js
 
 plugins:
   - jekyll-include-cache
