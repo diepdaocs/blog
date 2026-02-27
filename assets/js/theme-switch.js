@@ -30,10 +30,17 @@
     var switcher = document.createElement('div');
     switcher.id = 'theme-switcher';
     switcher.innerHTML =
-      '<button class="theme-btn" data-mode="light" title="Light mode"><i class="fas fa-sun"></i></button>' +
-      '<button class="theme-btn" data-mode="dark"  title="Dark mode"><i class="fas fa-moon"></i></button>' +
+      '<button class="theme-btn" data-mode="light"  title="Light mode"><i class="fas fa-sun"></i></button>' +
+      '<button class="theme-btn" data-mode="dark"   title="Dark mode"><i class="fas fa-moon"></i></button>' +
       '<button class="theme-btn" data-mode="system" title="System default"><i class="fas fa-adjust"></i></button>';
-    document.body.appendChild(switcher);
+
+    // Try to inject into the masthead left side
+    var masthead = document.querySelector('.masthead__inner-wrap');
+    if (masthead) {
+      masthead.insertBefore(switcher, masthead.firstChild);
+    } else {
+      document.body.appendChild(switcher);
+    }
 
     switcher.querySelectorAll('.theme-btn').forEach(function (btn) {
       btn.addEventListener('click', function () { setTheme(btn.dataset.mode); });
