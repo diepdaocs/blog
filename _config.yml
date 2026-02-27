@@ -5,5 +5,16 @@ description: "A blog about interesting things."
 url: "https://diepdaocs.github.io"
 baseurl: "/blog"
 repository: "diepdaocs/blog"
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: "_pages"
+    values:
+      layout: single
+
 plugins:
   - jekyll-include-cache
