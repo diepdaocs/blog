@@ -70,13 +70,33 @@
   display: block !important;
   margin: 0 auto 1em auto !important;
 }
+/* The theme wraps img in an <a> — make it fill the container */
+.author__avatar a {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  line-height: 0 !important;
+}
 .author__avatar img {
   width: 100% !important;
   height: 100% !important;
+  max-width: none !important;
   object-fit: cover !important;
+  object-position: center !important;
   border-radius: 0 !important;
   border: none !important;
+  padding: 0 !important;
   display: block !important;
+}
+
+/* ── Author social links — no box border ─────────────── */
+.author__urls-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+}
+.author__urls-wrapper .btn--inverse {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* ── Three-column home layout ────────────────────────── */
@@ -338,13 +358,13 @@ $dk-code:         #0d0d0d;
     .author__location { color: $dk-muted; font-size: 0.9em; }
     .author__urls a   { color: $dk-link; &:hover { color: $dk-link-hover; } }
     .author__urls-wrapper {
-      background-color: $dk-surface;
-      border: 1px solid $dk-border;
+      background-color: transparent;
+      border: none;
     }
     .btn--inverse {
       background-color: $dk-surface;
       color: $dk-text;
-      border: 1px solid $dk-border;
+      border: none;
       &:hover { background-color: $dk-surface-alt; color: $dk-heading; }
     }
   }
