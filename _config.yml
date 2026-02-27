@@ -31,3 +31,4 @@ defaults:
 
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
