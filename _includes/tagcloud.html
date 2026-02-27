@@ -1,0 +1,11 @@
+<div class="tagcloud">
+  <h3 class="tagcloud__title">Tags</h3>
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_count = tag[1] | size %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag_name | slugify }}" class="tag-pill">
+      {{ tag_name }}<span class="tag-pill__count">{{ tag_count }}</span>
+    </a>
+  {% endfor %}
+</div>

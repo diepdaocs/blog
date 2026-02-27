@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home-grid">
+
+  <!-- LEFT: Word Map -->
+  <aside class="home-grid__left">
+    {% include wordmap.html %}
+  </aside>
+
+  <!-- CENTER: Posts -->
+  <div class="home-grid__posts">
+    {{ content }}
+    <h3 class="archive__subtitle">Recent Posts</h3>
+    {% for post in site.posts %}
+      {% include archive-single.html %}
+    {% endfor %}
+  </div>
+
+  <!-- RIGHT: Tag Cloud -->
+  <aside class="home-grid__right">
+    {% include tagcloud.html %}
+  </aside>
+
+</div>
