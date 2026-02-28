@@ -16,6 +16,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/diepdaocs"
 url: "https://diepdaocs.github.io"
+copyright_url: "/blog/about/"
 baseurl: "/blog"
 repository: "diepdaocs/blog"
 collections:
