@@ -122,7 +122,7 @@ $header-font-family: $serif;
 .home-grid__right { grid-area: right; }
 
 /* Smaller, elegant post titles on home feed */
-.home-grid__posts {
+.home-grid__posts, .archive {
   .archive__item-title {
     font-size: 1.0em;
     line-height: 1.4;
@@ -154,7 +154,7 @@ $header-font-family: $serif;
     padding: 0.75rem 0.75rem;
     gap: 1rem;
   }
-  .home-grid__posts {
+  .home-grid__posts, .archive {
     .archive__item-title { font-size: 0.95em; }
     .archive__item-excerpt { font-size: 0.82em; }
   }
