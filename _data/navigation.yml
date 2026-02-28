@@ -10,5 +10,7 @@ main:
     url: /tags/
   - title: "About"
     url: /about/
+  - title: "Projects"
+    url: /projects/
   - title: "GitHub"
     url: "https://github.com/diepdaocs?tab=repositories"

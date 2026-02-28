@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c3483"/>
+      <stop offset="100%" style="stop-color:#8e44ad"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <!-- Agent nodes -->
+  <g opacity="0.9">
+    <!-- Central orchestrator -->
+    <circle cx="200" cy="120" r="32" fill="none" stroke="#fff" stroke-width="2.5"/>
+    <text x="200" y="126" text-anchor="middle" fill="#fff" font-size="14" font-family="sans-serif" font-weight="600">A2A</text>
+    <!-- Agent 1 - top left -->
+    <circle cx="100" cy="60" r="24" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+    <text x="100" y="56" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">Text</text>
+    <text x="100" y="68" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">2SQL</text>
+    <!-- Agent 2 - top right -->
+    <circle cx="300" cy="60" r="24" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+    <text x="300" y="56" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">Text2</text>
+    <text x="300" y="68" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">Dashboard</text>
+    <!-- Agent 3 - bottom left -->
+    <circle cx="100" cy="180" r="24" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+    <text x="100" y="176" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">Chat</text>
+    <text x="100" y="188" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">Agent</text>
+    <!-- Agent 4 - bottom right -->
+    <circle cx="300" cy="180" r="24" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+    <text x="300" y="176" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">Risk</text>
+    <text x="300" y="188" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">Agent</text>
+    <!-- Connection lines -->
+    <line x1="130" y1="75" x2="170" y2="105" stroke="#fff" stroke-width="1.2" opacity="0.6"/>
+    <line x1="270" y1="75" x2="230" y2="105" stroke="#fff" stroke-width="1.2" opacity="0.6"/>
+    <line x1="130" y1="165" x2="170" y2="135" stroke="#fff" stroke-width="1.2" opacity="0.6"/>
+    <line x1="270" y1="165" x2="230" y2="135" stroke="#fff" stroke-width="1.2" opacity="0.6"/>
+    <!-- Arrows on lines -->
+    <circle cx="150" cy="90" r="2" fill="#fff" opacity="0.8"/>
+    <circle cx="250" cy="90" r="2" fill="#fff" opacity="0.8"/>
+    <circle cx="150" cy="150" r="2" fill="#fff" opacity="0.8"/>
+    <circle cx="250" cy="150" r="2" fill="#fff" opacity="0.8"/>
+  </g>
+</svg>
