@@ -40,4 +40,4 @@ But I've also found that the most meaningful connections — with colleagues, wi
 
 If any of that resonates, this section is for you.
 
-Start with [Part 1 of My Journey](/blog/personal/2026/02/27/personal-journey-1-ha-tinh.html) — a village in Ha Tinh, and the beginning of everything.
+Start with [Part 1 of My Journey]({{ site.baseurl }}/personal/2026/02/27/personal-journey-1-ha-tinh.html) — a village in Ha Tinh, and the beginning of everything.

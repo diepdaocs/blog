@@ -12,7 +12,7 @@ tags:
   - journey
 ---
 
-*Part 5 of my personal journey series. [Read Part 4 here.](/blog/personal/2026/02/27/personal-journey-4-high-school.html)*
+*Part 5 of my personal journey series. [Read Part 4 here.]({{ site.baseurl }}/personal/2026/02/27/personal-journey-4-high-school.html)*
 
 ---
 

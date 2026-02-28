@@ -30,5 +30,5 @@ This series is for developers who want to understand what's actually happening u
 
 ## Articles in This Series
 
-- [Blockchain From First Principles: Cryptography, Consensus, and the Trustless Ledger](/blog/blockchain/2026/02/27/blockchain-introduction.html)
-- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know](/blog/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
+- [Blockchain From First Principles: Cryptography, Consensus, and the Trustless Ledger]({{ site.baseurl }}/blockchain/2026/02/27/blockchain-introduction.html)
+- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know]({{ site.baseurl }}/ai/blockchain/2026/02/27/ai-blockchain-promises.html)

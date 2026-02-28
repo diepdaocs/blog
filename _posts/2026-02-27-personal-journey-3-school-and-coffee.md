@@ -12,7 +12,7 @@ tags:
   - journey
 ---
 
-*Part 3 of my personal journey series. [Read Part 2 here.](/blog/personal/2026/02/27/personal-journey-2-tay-nguyen.html)*
+*Part 3 of my personal journey series. [Read Part 2 here.]({{ site.baseurl }}/personal/2026/02/27/personal-journey-2-tay-nguyen.html)*
 
 ---
 
