@@ -33,27 +33,7 @@ Tokenization is the process of representing ownership of real-world assets as bl
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────┐
-│                  Token Factory                       │
-│  ┌─────────────┐ ┌─────────────┐ ┌───────────────┐ │
-│  │   Equity    │ │    Bond     │ │   Derivative  │ │
-│  │  Template   │ │  Template   │ │   Template    │ │
-│  └──────┬──────┘ └──────┬──────┘ └───────┬───────┘ │
-└─────────┼───────────────┼────────────────┼──────────┘
-          │               │                │
-    ┌─────▼──────┐  ┌─────▼──────┐  ┌─────▼──────┐
-    │ AAPL Token │  │ US10Y Bond │  │  BTC Call   │
-    │  (ERC-20)  │  │  (ERC-20)  │  │ (ERC-1155)  │
-    └────────────┘  └────────────┘  └─────────────┘
-          │               │                │
-          └───────────────┼────────────────┘
-                          │
-                  ┌───────▼───────┐
-                  │   Ethereum    │
-                  │   Network     │
-                  └───────────────┘
-```
+<img src="/assets/images/arch-blockchain.svg" alt="Blockchain Tokenization Architecture" style="width:100%;max-width:820px;margin:1rem auto;display:block;border-radius:8px;">
 
 ---
 

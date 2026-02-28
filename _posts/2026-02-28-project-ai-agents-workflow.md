@@ -34,26 +34,7 @@ This project builds a multi-agent system where specialized AI agents collaborate
 
 ## Architecture
 
-```
-┌─────────────┐     ┌──────────────────┐     ┌──────────────┐
-│   Trader     │────▶│  Chat Interface  │────▶│  Orchestrator │
-│  (Browser)   │◀────│    (React)       │◀────│   Agent       │
-└─────────────┘     └──────────────────┘     └───────┬──────┘
-                                                      │
-                                              A2A Protocol
-                                                      │
-                              ┌────────────────────────┼─────────────────────┐
-                              │                        │                     │
-                        ┌─────▼──────┐          ┌─────▼──────┐       ┌─────▼──────┐
-                        │  Text2SQL  │          │ Text2Dash  │       │  Schema    │
-                        │   Agent    │          │   Agent    │       │  Agent     │
-                        └─────┬──────┘          └─────┬──────┘       └────────────┘
-                              │                       │
-                        ┌─────▼──────┐          ┌─────▼──────┐
-                        │ ClickHouse │          │ Dashboard  │
-                        │  (Query)   │          │  Renderer  │
-                        └────────────┘          └────────────┘
-```
+<img src="/assets/images/arch-ai-agents.svg" alt="AI Agents Workflow Architecture" style="width:100%;max-width:820px;margin:1rem auto;display:block;border-radius:8px;">
 
 ### Agent Roles
 
