@@ -24,7 +24,7 @@ When he offered to take me with him, my parents said yes. I was young enough tha
 
 ---
 
-## The Road West
+## The Road South
 
 The journey to the highlands felt enormous. Vietnam is a long country, and Tây Nguyên sits in the interior, elevated above the coast, connected by roads that wound through mountains and forest. For a child from a flat, coastal province, everything about it felt different — the altitude, the cooler air, the red earth, the scale of the trees.
 
