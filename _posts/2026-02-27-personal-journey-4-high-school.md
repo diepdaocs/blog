@@ -11,7 +11,7 @@ tags:
   - journey
 ---
 
-*Part 4 of my personal journey series. [Read Part 3 here.](/blog/personal/2026/02/27/personal-journey-3-school-and-coffee.html)*
+*Part 4 of my personal journey series. [Read Part 3 here.]({{ site.baseurl }}/personal/2026/02/27/personal-journey-3-school-and-coffee.html)*
 
 ---
 

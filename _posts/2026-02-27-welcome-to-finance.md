@@ -30,4 +30,4 @@ That's the angle I'll be writing from: a software engineer who had to learn fina
 
 ## Articles in This Series
 
-- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know](/blog/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
+- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know]({{ site.baseurl }}/ai/blockchain/2026/02/27/ai-blockchain-promises.html)

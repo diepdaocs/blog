@@ -31,5 +31,5 @@ I'll be writing from that perspective: practical, grounded, and honest about the
 
 ## Articles in This Series
 
-- [How Andrew Ng's Courses Changed the Way I Think About AI](/blog/ai/2026/02/27/learning-ml-andrew-ng.html)
-- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know](/blog/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
+- [How Andrew Ng's Courses Changed the Way I Think About AI]({{ site.baseurl }}/ai/2026/02/27/learning-ml-andrew-ng.html)
+- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know]({{ site.baseurl }}/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
