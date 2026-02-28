@@ -49,10 +49,10 @@
     var btn = document.getElementById('theme-toggle-btn');
     if (!btn) return;
     if (theme === 'dark') {
-      btn.innerHTML = '<i class="fas fa-sun"></i>';
+      btn.innerHTML = '<i class="far fa-sun"></i>';
       btn.title = 'Switch to light mode';
     } else {
-      btn.innerHTML = '<i class="fas fa-moon"></i>';
+      btn.innerHTML = '<i class="far fa-moon"></i>';
       btn.title = 'Switch to dark mode';
     }
   }

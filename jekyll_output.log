@@ -1,0 +1,406 @@
+Configuration file: /app/_config.yml
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: /app
+       Destination: /app/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    done in 7.405 seconds.
+ Auto-regeneration: enabled for '/app'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2026-02-28 15:17:46
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.246476395 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:17:49
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.218209416 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:17:53
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.183983237 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:17:56
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.213942888 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:17:59
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.165882211 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:03
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.169588432 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:06
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.200594066 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:09
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.271282669 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:13
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.23854994 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:16
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.191093548 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:19
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.566083933 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:23
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.890453574 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:27
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.784808302 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:31
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.424757329 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:34
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.463099602 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:38
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.653461806 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:42
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.408519147 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:45
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.250914445 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:48
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.236369194 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:52
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.203905686 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:55
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.193794074 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:18:58
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.135113852 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:02
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.144376913 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:05
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.115939203 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:08
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.097495665 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:11
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.11149763 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:14
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.190082288 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:18
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.151848898 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:21
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.175665617 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:24
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.176833892 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:28
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.173582404 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:31
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.125268888 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:34
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.140177379 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:37
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.178426376 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:41
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.175082497 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:44
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 4.699930789 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:49
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.154281938 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:52
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.166931701 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:55
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.135990394 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:19:58
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.199791604 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:02
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.178621435 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:05
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.166530778 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:08
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.175674004 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:12
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.282357569 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:15
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.155839306 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:18
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.238408674 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:22
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.215887054 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:25
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.40820079 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:28
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.200540406 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:32
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.205070042 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:35
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.21130815 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:38
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.623147276 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:42
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.186112691 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:45
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.182233175 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:49
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.165950061 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:52
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.168995716 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:55
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.167007387 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:20:58
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.172493662 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:02
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.148078517 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:05
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.155600255 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:08
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.143026671 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:11
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.124707322 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:15
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.139788571 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:18
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.149183737 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:21
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
+                    ...done in 3.142189 seconds.
+
+      Regenerating: 1 file(s) changed at 2026-02-28 15:21:24
+                    jekyll_output.log
+      Remote Theme: Using theme mmistakes/minimal-mistakes
+       Jekyll Feed: Generating feed for posts
