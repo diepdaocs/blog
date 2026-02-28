@@ -477,6 +477,11 @@ $dk-code:         #0d0d0d;
     &.active { background: $dk-link; color: #fff; }
   }
 
+  // Home page comments
+  .home-comments {
+    h3 { color: $dk-heading; }
+  }
+
   // Timeline nav blocks in personal posts
   div[style*="background:#f8f9fa"] {
     background: $dk-surface !important;
@@ -485,4 +490,11 @@ $dk-code:         #0d0d0d;
     a { color: $dk-link !important; &:hover { color: $dk-link-hover !important; } }
     strong { color: $dk-heading !important; }
   }
+}
+
+/* ── Home page comments section ────────────────────── */
+.home-comments {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem 1rem;
 }
