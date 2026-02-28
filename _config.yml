@@ -15,9 +15,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/diepdaocs"
-url: "https://diepdaocs.github.io"
-copyright_url: "/blog/about/"
-baseurl: "/blog"
+url: "https://diepdao.me"
+copyright_url: "/about/"
+baseurl: ""
 repository: "diepdaocs/blog"
 
 comments:
