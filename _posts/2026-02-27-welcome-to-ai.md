@@ -28,3 +28,8 @@ This series covers AI and Machine Learning from both a practical and conceptual 
 AI is not magic, and it's not going to replace good engineering judgment. The most impactful work I've done has always come from combining solid ML knowledge with strong software engineering practices — understanding the data, designing reliable pipelines, and knowing when *not* to use a complex model.
 
 I'll be writing from that perspective: practical, grounded, and honest about the trade-offs.
+
+## Articles in This Series
+
+- [How Andrew Ng's Courses Changed the Way I Think About AI](/blog/ai/2026/02/27/learning-ml-andrew-ng.html)
+- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know](/blog/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
