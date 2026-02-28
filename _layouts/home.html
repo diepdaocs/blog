@@ -28,20 +28,27 @@ layout: default
 {% if site.comments.provider == "giscus" %}
 <section class="home-comments">
   <h3 class="archive__subtitle">Comments</h3>
-  <script src="https://giscus.app/client.js"
-    data-repo="{{ site.comments.giscus.repo }}"
-    data-repo-id="{{ site.comments.giscus.repo_id }}"
-    data-category="{{ site.comments.giscus.category }}"
-    data-category-id="{{ site.comments.giscus.category_id }}"
-    data-mapping="{{ site.comments.giscus.mapping | default: 'pathname' }}"
-    data-reactions-enabled="{{ site.comments.giscus.reactions_enabled | default: '1' }}"
-    data-emit-metadata="{{ site.comments.giscus.emit_metadata | default: '0' }}"
-    data-input-position="{{ site.comments.giscus.input_position | default: 'top' }}"
-    data-theme="{{ site.comments.giscus.theme | default: 'preferred_color_scheme' }}"
-    data-lang="{{ site.comments.giscus.lang | default: 'en' }}"
-    {% if site.comments.giscus.lazy %}data-loading="lazy"{% endif %}
-    crossorigin="anonymous"
-    async>
+  <script>
+    (function() {
+      var theme = localStorage.getItem('blog-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var s = document.createElement('script');
+      s.src = 'https://giscus.app/client.js';
+      s.setAttribute('data-repo', '{{ site.comments.giscus.repo }}');
+      s.setAttribute('data-repo-id', '{{ site.comments.giscus.repo_id }}');
+      s.setAttribute('data-category', '{{ site.comments.giscus.category }}');
+      s.setAttribute('data-category-id', '{{ site.comments.giscus.category_id }}');
+      s.setAttribute('data-mapping', '{{ site.comments.giscus.mapping | default: "pathname" }}');
+      s.setAttribute('data-reactions-enabled', '{{ site.comments.giscus.reactions_enabled | default: "1" }}');
+      s.setAttribute('data-emit-metadata', '{{ site.comments.giscus.emit_metadata | default: "0" }}');
+      s.setAttribute('data-input-position', '{{ site.comments.giscus.input_position | default: "top" }}');
+      s.setAttribute('data-theme', theme);
+      s.setAttribute('data-lang', '{{ site.comments.giscus.lang | default: "en" }}');
+      {% if site.comments.giscus.lazy %}s.setAttribute('data-loading', 'lazy');{% endif %}
+      s.crossOrigin = 'anonymous';
+      s.async = true;
+      document.currentScript.parentNode.insertBefore(s, document.currentScript.nextSibling);
+    })();
   </script>
 </section>
 {% endif %}
