@@ -19,6 +19,21 @@ url: "https://diepdaocs.github.io"
 copyright_url: "/blog/about/"
 baseurl: "/blog"
 repository: "diepdaocs/blog"
+
+comments:
+  provider: "giscus"
+  giscus:
+    repo:              "diepdaocs/blog"
+    repo_id:           "REPLACE_WITH_REPO_ID"
+    category:          "Comments"
+    category_id:       "REPLACE_WITH_CATEGORY_ID"
+    mapping:           "pathname"
+    reactions_enabled: "1"
+    emit_metadata:     "0"
+    input_position:    "top"
+    theme:             "preferred_color_scheme"
+    lang:              "en"
+    lazy:              true
 collections:
   pages:
     output: true
@@ -29,6 +44,11 @@ defaults:
       path: "_pages"
     values:
       layout: single
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
 
 after_footer_scripts:
   - /assets/js/theme-switch.js

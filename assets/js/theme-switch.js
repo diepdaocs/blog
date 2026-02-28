@@ -15,6 +15,14 @@
     } else {
       document.documentElement.removeAttribute('data-theme');
     }
+    // Sync Giscus comment widget theme
+    var giscusFrame = document.querySelector('iframe.giscus-frame');
+    if (giscusFrame) {
+      giscusFrame.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: theme === 'dark' ? 'dark' : 'light' } } },
+        'https://giscus.app'
+      );
+    }
   }
 
   function updateButton(theme) {
