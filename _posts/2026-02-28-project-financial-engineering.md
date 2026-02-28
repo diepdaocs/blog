@@ -35,26 +35,7 @@ Both systems support multiple asset classes: FX, bonds, equities, options, and d
 
 ## Architecture
 
-```
-┌─────────────┐     ┌──────────────┐     ┌────────────┐
-│  Order Entry │────▶│  Order Book  │────▶│   Trade    │
-│   (Client)   │     │   Matching   │     │  Storage   │
-└─────────────┘     └──────────────┘     │ (ClickHouse)│
-                                          └─────┬──────┘
-                                                │
-                                          ┌─────▼──────┐
-                                          │   Event    │
-                                          │   Queue    │
-                                          └─────┬──────┘
-                                                │
-                    ┌───────────────────────────┼───────────────────────┐
-                    │                           │                       │
-              ┌─────▼──────┐            ┌──────▼──────┐         ┌─────▼──────┐
-              │   Risk     │            │    Risk     │         │  Dashboard │
-              │  Engine    │────────────▶│   Storage   │────────▶│  (React)   │
-              │ (PnL/Greeks)│            │ (ClickHouse)│         └────────────┘
-              └────────────┘            └─────────────┘
-```
+<img src="/assets/images/arch-finance.svg" alt="Trading & Risk Management System Architecture" style="width:100%;max-width:820px;margin:1rem auto;display:block;border-radius:8px;">
 
 ### Trading System
 
