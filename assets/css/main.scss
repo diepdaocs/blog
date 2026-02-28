@@ -2,15 +2,21 @@
 # Only the main SCSS file needs front matter
 ---
 
-/* Perplexity-inspired font stack */
-$serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
-$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+/* Perplexity Discover-inspired font stack */
+$serif: "PP Editorial New", "Editorial New", Ivar, Charter, "Sitka Text", Georgia, serif;
+$sans-serif: "FK Grotesk", "FK Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
 $global-font-family: $serif;
 $header-font-family: $serif;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
+
+/* Apply Perplexity-style typography globally */
+html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
+  font-family: $serif !important;
+  line-height: 1.6;
+}
 
 /* ── Custom Masthead Layout ──────────────────────────── */
 /* 3-column grid: equal 1fr sides keep center perfectly centred */
