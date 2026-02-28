@@ -25,7 +25,14 @@
       _giscusObserver.disconnect();
     }
     _giscusObserver = new MutationObserver(function () {
-      if (sendGiscusTheme(theme)) {
+      var giscusFrame = document.querySelector('iframe.giscus-frame');
+      if (giscusFrame) {
+        // Giscus iframe is injected, but might not be fully loaded to accept messages.
+        // Try sending now, but also add a load listener.
+        sendGiscusTheme(theme);
+        giscusFrame.addEventListener('load', function() {
+          sendGiscusTheme(getCurrentTheme());
+        });
         _giscusObserver.disconnect();
         _giscusObserver = null;
       }
@@ -40,7 +47,10 @@
       document.documentElement.removeAttribute('data-theme');
     }
     // Sync Giscus comment widget theme; watch for it if not yet in DOM
-    if (!sendGiscusTheme(theme)) {
+    var giscusFrame = document.querySelector('iframe.giscus-frame');
+    if (giscusFrame) {
+      sendGiscusTheme(theme);
+    } else {
       watchForGiscus(theme);
     }
   }
