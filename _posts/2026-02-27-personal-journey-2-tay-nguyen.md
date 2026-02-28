@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "My Journey — Part 2: Following My Uncle to the Highlands"
-date: 2026-02-27 09:30:00 +0800
+date: 2026-02-27 09:05:00 +0800
 categories:
   - personal
 tags:

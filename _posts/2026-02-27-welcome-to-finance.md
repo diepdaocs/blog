@@ -27,7 +27,3 @@ This series sits at the intersection of finance and engineering:
 Most software engineers don't need to understand finance deeply. But if you're building systems where money moves — whether that's a trading platform, a payments app, or a DeFi protocol — understanding the financial context makes you a dramatically better engineer.
 
 That's the angle I'll be writing from: a software engineer who had to learn finance on the job, and found it far more interesting than expected.
-
-## Articles in This Series
-
-- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know](/blog/ai/blockchain/2026/02/27/ai-blockchain-promises.html)

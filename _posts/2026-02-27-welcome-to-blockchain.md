@@ -27,8 +27,3 @@ I'll be exploring blockchain from an engineer's perspective:
 I hold a Blockchain Specialization certificate and have worked on cryptography and smart contract development for DeFi and tokenized assets. But beyond the credentials, what keeps me interested is the intersection of computer science, cryptography, and economics — three fields I find endlessly fascinating.
 
 This series is for developers who want to understand what's actually happening under the hood.
-
-## Articles in This Series
-
-- [Blockchain From First Principles: Cryptography, Consensus, and the Trustless Ledger](/blog/blockchain/2026/02/27/blockchain-introduction.html)
-- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know](/blog/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
