@@ -233,35 +233,24 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
 }
 
 /* ── Theme Switcher ──────────────────────────────────── */
-#theme-switcher-slot { display: inline-flex; align-items: center; }
-
-#theme-switcher {
+#theme-switcher-slot {
   display: inline-flex;
   align-items: center;
-  background: rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 30px;
-  padding: 3px;
-  gap: 2px;
-  margin-left: 0.6rem;
-  flex-shrink: 0;
+  margin-left: 0.5rem;
 }
 
-.theme-btn {
+.theme-toggle-btn {
   background: none;
   border: none;
-  border-radius: 24px;
-  width: 30px;
-  height: 30px;
   cursor: pointer;
-  font-size: 0.8em;
-  color: rgba(255,255,255,0.7);
+  color: #494e52;
+  font-size: 1.05em;
+  padding: 0 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s, color 0.15s;
-  &:hover { background: rgba(255,255,255,0.2); color: #fff; }
-  &.active { background: rgba(255,255,255,0.9); color: #1a3a54; }
+  transition: color 0.15s;
+  &:hover { color: #000; }
 }
 
 /* ── Dark Theme ──────────────────────────────────────── */
@@ -443,14 +432,9 @@ $dk-code:         #0d0d0d;
   }
 
   // Theme switcher in dark masthead
-  #theme-switcher {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(255,255,255,0.15);
-  }
-  .theme-btn {
-    color: rgba(255,255,255,0.6);
-    &:hover { background: rgba(255,255,255,0.15); color: #fff; }
-    &.active { background: $dk-link; color: #fff; }
+  .theme-toggle-btn {
+    color: $dk-heading;
+    &:hover { color: $dk-link-hover; }
   }
 
   // Home page comments
