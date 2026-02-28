@@ -85,6 +85,13 @@
     createSwitcher();
   }
 
+  // Force greedy-nav to recalculate after full layout is painted.
+  // The Minimal Mistakes greedy-nav JS measures widths on DOMContentLoaded
+  // but a CSS grid layout may not be settled yet at that point.
+  window.addEventListener('load', function () {
+    window.dispatchEvent(new Event('resize'));
+  });
+
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
     if (!localStorage.getItem(STORAGE_KEY)) {
       var t = getSystemTheme();
