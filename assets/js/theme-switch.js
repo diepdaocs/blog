@@ -1,5 +1,6 @@
 (function () {
   var STORAGE_KEY = 'blog-theme';
+  var _giscusObserver = null;
 
   function getSystemTheme() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -9,19 +10,38 @@
     return localStorage.getItem(STORAGE_KEY) || getSystemTheme();
   }
 
+  function sendGiscusTheme(theme) {
+    var giscusFrame = document.querySelector('iframe.giscus-frame');
+    if (!giscusFrame) return false;
+    giscusFrame.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme === 'dark' ? 'dark' : 'light' } } },
+      'https://giscus.app'
+    );
+    return true;
+  }
+
+  function watchForGiscus(theme) {
+    if (_giscusObserver) {
+      _giscusObserver.disconnect();
+    }
+    _giscusObserver = new MutationObserver(function () {
+      if (sendGiscusTheme(theme)) {
+        _giscusObserver.disconnect();
+        _giscusObserver = null;
+      }
+    });
+    _giscusObserver.observe(document.body, { childList: true, subtree: true });
+  }
+
   function applyTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       document.documentElement.removeAttribute('data-theme');
     }
-    // Sync Giscus comment widget theme
-    var giscusFrame = document.querySelector('iframe.giscus-frame');
-    if (giscusFrame) {
-      giscusFrame.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: theme === 'dark' ? 'dark' : 'light' } } },
-        'https://giscus.app'
-      );
+    // Sync Giscus comment widget theme; watch for it if not yet in DOM
+    if (!sendGiscusTheme(theme)) {
+      watchForGiscus(theme);
     }
   }
 
