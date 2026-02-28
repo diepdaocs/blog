@@ -2,6 +2,13 @@
 # Only the main SCSS file needs front matter
 ---
 
+/* Perplexity-inspired font stack */
+$serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+$global-font-family: $serif;
+$header-font-family: $serif;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
@@ -38,6 +45,7 @@
 }
 
 .site-author-link {
+  font-family: $sans-serif;
   font-size: 1.05em;
   font-weight: 700;
   white-space: nowrap;
@@ -47,6 +55,7 @@
 }
 
 .site-brand {
+  font-family: $sans-serif;
   font-size: 1.05em;
   font-weight: 400;
   color: #7a8288;
@@ -163,6 +172,7 @@
   box-sizing: border-box;
 }
 .wordmap__title {
+  font-family: $sans-serif;
   font-size: 0.85em;
   font-weight: 700;
   text-transform: uppercase;
@@ -201,6 +211,7 @@
   top: 2rem;
 }
 .tagcloud__title {
+  font-family: $sans-serif;
   font-size: 0.85em;
   font-weight: 700;
   text-transform: uppercase;
@@ -211,6 +222,7 @@
   border-bottom: 2px solid #add8e6;
 }
 .tag-pill {
+  font-family: $sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -381,7 +393,7 @@ $dk-code:         #0d0d0d;
 
   // Sidebar / author
   .sidebar {
-    .author__name     { color: $dk-heading; }
+    .author__name     { font-family: $sans-serif; color: $dk-heading; }
     .author__bio      { color: $dk-muted; }
     .author__location { color: $dk-muted; font-size: 0.9em; }
     .author__urls a   { color: $dk-link; &:hover { color: $dk-link-hover; } }
