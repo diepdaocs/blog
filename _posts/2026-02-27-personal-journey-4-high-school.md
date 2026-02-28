@@ -11,7 +11,18 @@ tags:
   - journey
 ---
 
-*Part 4 of my personal journey series. [Read Part 3 here.](/blog/personal/2026/02/27/personal-journey-3-school-and-coffee.html)*
+<div style="background:#f8f9fa; border-left:4px solid #add8e6; padding:16px 20px; margin-bottom:32px; border-radius:4px;">
+  <strong>My Journey — Full Series</strong>
+  <ol style="margin:10px 0 0 0; padding-left:20px;">
+    <li><a href="/blog/personal/2026/02/27/personal-journey-1-ha-tinh.html">The Village — Ha Tinh</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-journey-2-tay-nguyen.html">Following My Uncle to the Highlands</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-journey-3-school-and-coffee.html">School, Coffee, and Learning to Want More</a></li>
+    <li><strong>Coming Home, and Leaving Again ← you are here</strong></li>
+    <li><a href="/blog/personal/2026/02/27/personal-journey-5-ho-chi-minh.html">Ho Chi Minh City and the Beginning of Everything</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-university-and-first-career.html">University, a Japanese Company, and the Man Who Changed Everything</a></li>
+    <li><a href="/blog/personal/2026/02/27/personal-singapore.html">Singapore, Family, and Finding My Ground</a></li>
+  </ol>
+</div>
 
 ---
 

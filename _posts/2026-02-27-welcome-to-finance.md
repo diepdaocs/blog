@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Welcome to the Finance Series"
-date: 2026-02-27 09:15:00 +0800
+date: 2026-02-27 08:15:00 +0800
 categories:
   - finance
 tags:
@@ -27,3 +27,7 @@ This series sits at the intersection of finance and engineering:
 Most software engineers don't need to understand finance deeply. But if you're building systems where money moves — whether that's a trading platform, a payments app, or a DeFi protocol — understanding the financial context makes you a dramatically better engineer.
 
 That's the angle I'll be writing from: a software engineer who had to learn finance on the job, and found it far more interesting than expected.
+
+## Read the posts:
+
+- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know](/blog/ai/blockchain/2026/02/27/ai-blockchain-promises.html)

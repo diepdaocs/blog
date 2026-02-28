@@ -15,10 +15,6 @@ tags:
   - journey
 ---
 
-*Part 6 of my personal journey series.*
-
----
-
 <div style="background:#f8f9fa; border-left:4px solid #add8e6; padding:16px 20px; margin-bottom:32px; border-radius:4px;">
   <strong>My Journey — Full Series</strong>
   <ol style="margin:10px 0 0 0; padding-left:20px;">

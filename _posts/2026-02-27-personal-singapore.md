@@ -14,10 +14,6 @@ tags:
   - journey
 ---
 
-*Part 7 of my personal journey series. [Read Part 6 here.](/blog/personal/2026/02/27/personal-university-and-first-career.html)*
-
----
-
 <div style="background:#f8f9fa; border-left:4px solid #add8e6; padding:16px 20px; margin-bottom:32px; border-radius:4px;">
   <strong>My Journey — Full Series</strong>
   <ol style="margin:10px 0 0 0; padding-left:20px;">
