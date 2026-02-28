@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "My Journey — Part 3: School, Coffee, and Learning to Want More"
-date: 2026-02-27 09:10:00 +0800
+date: 2026-02-27 09:35:00 +0800
 categories:
   - personal
 tags:

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "My Journey — Part 5: Ho Chi Minh City and the Beginning of Everything"
-date: 2026-02-27 09:20:00 +0800
+date: 2026-02-27 09:45:00 +0800
 categories:
   - personal
 tags:

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "My Journey — Part 6: University, a Japanese Company, and the Man Who Changed Everything"
-date: 2026-02-27 09:25:00 +0800
+date: 2026-02-27 09:50:00 +0800
 categories:
   - personal
 tags:
