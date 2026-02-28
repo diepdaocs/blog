@@ -24,9 +24,9 @@ comments:
   provider: "giscus"
   giscus:
     repo:              "diepdaocs/blog"
-    repo_id:           "REPLACE_WITH_REPO_ID"
-    category:          "Comments"
-    category_id:       "REPLACE_WITH_CATEGORY_ID"
+    repo_id:           "R_kgDOOwHvKw"
+    category:          "General"
+    category_id:       "DIC_kwDOOwHvK84C3Y2Q"
     mapping:           "pathname"
     reactions_enabled: "1"
     emit_metadata:     "0"
