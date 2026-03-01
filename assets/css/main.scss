@@ -50,7 +50,17 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   white-space: nowrap;
   text-decoration: none;
   color: #494e52;
+  display: flex;
+  align-items: center;
   &:hover { color: #000; }
+}
+
+.site-logo-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* ── Avatar ─────────────────────────────────────────── */
@@ -250,7 +260,11 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   align-items: center;
   justify-content: center;
   transition: color 0.15s;
+  outline: none;
+  box-shadow: none;
   &:hover { color: #000; }
+  &:focus { outline: none; box-shadow: none; }
+  &:active { outline: none; box-shadow: none; }
 }
 
 /* ── Dark Theme ──────────────────────────────────────── */
