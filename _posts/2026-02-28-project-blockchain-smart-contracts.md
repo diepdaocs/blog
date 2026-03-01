@@ -184,4 +184,4 @@ This project demonstrates:
 
 ## Repository
 
-*Coming soon — the GitHub repository with full source code, deployment scripts, and test suite.*
+The full source code is available on GitHub: [diepdaocs/tokenized-assets](https://github.com/diepdaocs/tokenized-assets)
