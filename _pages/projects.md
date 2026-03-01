@@ -33,4 +33,14 @@ projects:
       - Ethereum
       - DeFi
       - Tokenization
+
+  - title: "Redis MinHash — Similarity Grouping"
+    url: /projects/redis-minhash-es/
+    image: /assets/images/project-redis-minhash.svg
+    excerpt: "A Redis-based MinHash implementation to group similar items at scale — using LSH to find near-duplicates without exhaustive pairwise comparison."
+    tags:
+      - Redis
+      - MinHash
+      - LSH
+      - Python
 ---

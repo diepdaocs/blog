@@ -159,4 +159,4 @@ This project demonstrates:
 
 ## Repository
 
-*Coming soon — the GitHub repository with full source code, agent definitions, and example conversations.*
+The full source code is available on GitHub: [diepdaocs/agentic-risk-dashboard](https://github.com/diepdaocs/agentic-risk-dashboard)

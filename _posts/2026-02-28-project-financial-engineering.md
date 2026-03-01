@@ -139,4 +139,4 @@ This project demonstrates:
 
 ## Repository
 
-*Coming soon — the GitHub repository with full source code, setup instructions, and sample data.*
+The full source code is available on GitHub: [diepdaocs/trading-risk-system](https://github.com/diepdaocs/trading-risk-system)
