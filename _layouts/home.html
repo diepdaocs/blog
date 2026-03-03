@@ -45,6 +45,7 @@ layout: default
       s.setAttribute('data-theme', theme);
       s.setAttribute('data-lang', '{{ site.comments.giscus.lang | default: "en" }}');
       {% if site.comments.giscus.lazy %}s.setAttribute('data-loading', 'lazy');{% endif %}
+      s.id = 'giscus-script';
       s.crossOrigin = 'anonymous';
       s.async = true;
       document.currentScript.parentNode.insertBefore(s, document.currentScript.nextSibling);

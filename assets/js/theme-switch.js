@@ -46,6 +46,13 @@
     } else {
       document.documentElement.removeAttribute('data-theme');
     }
+    // Keep the Giscus script tag's data-theme up-to-date so that when Giscus
+    // lazily creates the iframe it reads the current theme, not the stale
+    // value that was baked in at page-load time.
+    var giscusScript = document.getElementById('giscus-script');
+    if (giscusScript) {
+      giscusScript.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
+    }
     // Sync Giscus comment widget theme; watch for it if not yet in DOM
     var giscusFrame = document.querySelector('iframe.giscus-frame');
     if (giscusFrame) {
