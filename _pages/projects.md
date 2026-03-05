@@ -7,11 +7,11 @@ projects:
   - title: "Financial Engineering & Risk Management"
     url: /projects/financial-engineering/
     image: /assets/images/project-finance.svg
-    excerpt: "A simulation trading system with real-time risk calculation — order books, trade matching, PnL, Greeks, and multi-asset risk dashboards powered by ClickHouse."
+    excerpt: "A simulation trading system with real-time risk calculation — order books, trade matching, PnL, Greeks, and multi-asset risk dashboards."
     tags:
       - Java
-      - ClickHouse
-      - Kafka
+      - Time Series DB
+      - MessageQueue
       - Risk Engine
 
   - title: "AI & Agents Workflow"

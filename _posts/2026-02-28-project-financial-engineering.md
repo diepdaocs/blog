@@ -9,8 +9,8 @@ categories:
 tags:
   - trading
   - risk-management
-  - clickhouse
-  - kafka
+  - time-series-db
+  - message-queue
   - java
   - order-book
   - real-time
@@ -18,7 +18,7 @@ tags:
 
 Building a complete simulation trading and risk management system from scratch — the kind that powers real trading desks.
 
-This project demonstrates the full lifecycle: from order entry and trade matching to real-time risk calculation and dashboard delivery. It's designed to mirror the systems I've worked on at Standard Chartered Bank, simplified for demonstration but architecturally faithful.
+This project demonstrates the full lifecycle: from order entry and trade matching to real-time risk calculation and dashboard delivery. It's designed to mirror the systems used at real trading desks, simplified for demonstration but architecturally faithful.
 
 ---
 
@@ -26,7 +26,7 @@ This project demonstrates the full lifecycle: from order entry and trade matchin
 
 The system has two main subsystems:
 
-1. **Trading System** — an order book engine that accepts orders, matches trades, and stores executions in ClickHouse
+1. **Trading System** — an order book engine that accepts orders, matches trades, and stores executions in a Time Series Database
 2. **Risk System** — a real-time risk engine that computes PnL, Greeks, and other risk metrics, pushing updates to dashboards via an event queue
 
 Both systems support multiple asset classes: FX, bonds, equities, options, and derivatives.
@@ -50,7 +50,7 @@ Both systems support multiple asset classes: FX, bonds, equities, options, and d
 - Partial fills and order amendments
 
 **Trade Storage**
-- ClickHouse as the columnar store for high-throughput trade ingestion
+- Time Series Database as the columnar store for high-throughput trade ingestion
 - Designed for time-series queries: trade history, blotter views, aggregation by desk/portfolio
 
 ### Risk System
@@ -74,7 +74,7 @@ Both systems support multiple asset classes: FX, bonds, equities, options, and d
 **Event Pipeline**
 - Trade booked → event published to queue
 - Risk engine consumes event, calculates risk
-- Risk numbers stored in ClickHouse
+- Risk numbers stored in Time Series Database
 - Dashboard receives notification to refresh
 
 ---
@@ -98,9 +98,9 @@ Each trading desk sees only the risk metrics relevant to their book. An FX desk 
 | Component | Technology | Why |
 |-----------|-----------|-----|
 | Core Engine | Java | Low-latency, strong concurrency |
-| Message Queue | Kafka | High-throughput event streaming |
-| Time-Series DB | ClickHouse | Columnar storage, fast aggregation |
-| Caching | Hazelcast | In-memory grid for hot risk data |
+| Message Queue | MessageQueue | High-throughput event streaming |
+| Time-Series DB | Time Series Database | Columnar storage, fast aggregation |
+| Caching | CachingService | In-memory grid for hot risk data |
 | Dashboard | React | Real-time UI with WebSocket updates |
 
 ---
@@ -131,7 +131,7 @@ Different desks have different views:
 This project demonstrates:
 - How order books work and how trades are matched
 - Real-time risk calculation patterns used in investment banks
-- ClickHouse schema design for financial time-series data
+- Time Series Database schema design for financial data
 - Event-driven architecture for low-latency risk systems
 - How trading desks consume risk data differently
 
