@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgAicli" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e9"/>
+      <stop offset="100%" style="stop-color:#e0f2f1"/>
+    </linearGradient>
+    <filter id="shadowA" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+    <marker id="arrGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#2e7d32"/></marker>
+    <marker id="arrTeal"  markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#00695c"/></marker>
+    <marker id="arrBlue"  markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#1565c0"/></marker>
+    <marker id="arrOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#e65100"/></marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="520" rx="12" fill="url(#bgAicli)"/>
+
+  <!-- Title -->
+  <text x="410" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#1b5e20">@diepdao/aicli — Architecture</text>
+
+  <!-- ===== COPILOT LAYER ===== -->
+  <text x="30" y="60" font-size="11" font-weight="600" fill="#1565c0" letter-spacing="1.5">AI COPILOT LAYER</text>
+
+  <!-- GitHub Copilot -->
+  <rect x="30" y="70" width="150" height="64" rx="8" fill="#ffffff" stroke="#1565c0" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="105" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#1565c0">GitHub Copilot</text>
+  <text x="105" y="110" text-anchor="middle" font-size="9" fill="#5c6bc0">invokes aicli commands</text>
+  <text x="105" y="124" text-anchor="middle" font-size="9" fill="#90a4ae">via terminal / shell</text>
+
+  <!-- Claude Code -->
+  <rect x="215" y="70" width="150" height="64" rx="8" fill="#ffffff" stroke="#1565c0" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="290" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#1565c0">Claude Code</text>
+  <text x="290" y="110" text-anchor="middle" font-size="9" fill="#5c6bc0">reads ~/.claude/skills/</text>
+  <text x="290" y="124" text-anchor="middle" font-size="9" fill="#90a4ae">aicli/SKILL.md</text>
+
+  <!-- Cursor -->
+  <rect x="400" y="70" width="150" height="64" rx="8" fill="#ffffff" stroke="#1565c0" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="475" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#1565c0">Cursor / Other</text>
+  <text x="475" y="110" text-anchor="middle" font-size="9" fill="#5c6bc0">workspace instructions</text>
+  <text x="475" y="124" text-anchor="middle" font-size="9" fill="#90a4ae">+ SKILL.md descriptor</text>
+
+  <!-- SKILL.md badge -->
+  <rect x="590" y="70" width="200" height="64" rx="8" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="690" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#3949ab">SKILL.md</text>
+  <text x="690" y="110" text-anchor="middle" font-size="9" fill="#5c6bc0">describes commands,</text>
+  <text x="690" y="124" text-anchor="middle" font-size="9" fill="#5c6bc0">when + how to call aicli</text>
+
+  <!-- Arrows from copilots down -->
+  <line x1="105" y1="134" x2="105" y2="196" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrBlue)"/>
+  <line x1="290" y1="134" x2="290" y2="196" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrBlue)"/>
+  <line x1="475" y1="134" x2="475" y2="196" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrBlue)"/>
+  <!-- SKILL.md arrow to Claude -->
+  <line x1="590" y1="102" x2="366" y2="102" stroke="#3949ab" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrBlue)"/>
+
+  <!-- ===== AICLI CLI ===== -->
+  <text x="30" y="192" font-size="11" font-weight="600" fill="#1b5e20" letter-spacing="1.5">CLI LAYER</text>
+
+  <rect x="60" y="200" width="560" height="76" rx="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadowA)"/>
+  <text x="340" y="225" text-anchor="middle" font-size="14" font-weight="700" fill="#1b5e20">aicli  (npm install -g @diepdao/aicli)</text>
+  <!-- Commands row -->
+  <rect x="80"  y="235" width="110" height="28" rx="5" fill="#ffffff" stroke="#43a047" stroke-width="1"/>
+  <text x="135" y="253" text-anchor="middle" font-size="10" font-weight="600" fill="#2e7d32">aicli search &lt;tool&gt;</text>
+  <rect x="205" y="235" width="130" height="28" rx="5" fill="#ffffff" stroke="#43a047" stroke-width="1"/>
+  <text x="270" y="253" text-anchor="middle" font-size="10" font-weight="600" fill="#2e7d32">aicli get &lt;tool/topic&gt;</text>
+  <rect x="350" y="235" width="100" height="28" rx="5" fill="#ffffff" stroke="#43a047" stroke-width="1"/>
+  <text x="400" y="253" text-anchor="middle" font-size="10" font-weight="600" fill="#2e7d32">aicli help</text>
+  <rect x="465" y="235" width="140" height="28" rx="5" fill="#ffffff" stroke="#43a047" stroke-width="1"/>
+  <text x="535" y="253" text-anchor="middle" font-size="10" font-weight="600" fill="#2e7d32">--lang js|py|java|go</text>
+
+  <!-- Arrows from CLI down to modules -->
+  <line x1="175" y1="276" x2="175" y2="318" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrGreen)"/>
+  <line x1="340" y1="276" x2="340" y2="318" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrGreen)"/>
+  <line x1="505" y1="276" x2="505" y2="318" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <!-- ===== CORE MODULES ===== -->
+  <text x="30" y="314" font-size="11" font-weight="600" fill="#1b5e20" letter-spacing="1.5">CORE MODULES</text>
+
+  <!-- Registry -->
+  <rect x="60" y="322" width="220" height="90" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="170" y="346" text-anchor="middle" font-size="12" font-weight="700" fill="#00695c">Doc Registry</text>
+  <text x="170" y="363" text-anchor="middle" font-size="10" fill="#00897b">registry/index.json</text>
+  <text x="170" y="379" text-anchor="middle" font-size="9" fill="#4db6ac">tool → topic → source URL</text>
+  <text x="170" y="394" text-anchor="middle" font-size="9" fill="#4db6ac">kafka, redis, clickhouse…</text>
+
+  <!-- Fetcher + Cache -->
+  <rect x="230" y="322" width="220" height="90" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="340" y="346" text-anchor="middle" font-size="12" font-weight="700" fill="#e65100">Fetcher + Cache</text>
+  <text x="340" y="363" text-anchor="middle" font-size="10" fill="#ef6c00">fetcher/http.js + cache.js</text>
+  <text x="340" y="379" text-anchor="middle" font-size="9" fill="#ffb74d">axios + cheerio scraper</text>
+  <text x="340" y="394" text-anchor="middle" font-size="9" fill="#ffb74d">24h TTL → ~/.aicli/cache/</text>
+
+  <!-- Formatter -->
+  <rect x="400" y="322" width="220" height="90" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="510" y="346" text-anchor="middle" font-size="12" font-weight="700" fill="#7b1fa2">Formatter</text>
+  <text x="510" y="363" text-anchor="middle" font-size="10" fill="#9c27b0">formatter/markdown.js</text>
+  <text x="510" y="379" text-anchor="middle" font-size="9" fill="#ba68c8">normalise HTML → Markdown</text>
+  <text x="510" y="394" text-anchor="middle" font-size="9" fill="#ba68c8">clean output for LLM context</text>
+
+  <!-- Arrows from Fetcher down to data sources -->
+  <line x1="175" y1="412" x2="175" y2="448" stroke="#00695c" stroke-width="1.5" marker-end="url(#arrTeal)"/>
+  <line x1="340" y1="412" x2="340" y2="448" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrOrange)"/>
+  <line x1="510" y1="412" x2="510" y2="448" stroke="#7b1fa2" stroke-width="1.5" marker-end="url(#arrGreen)"/>
+
+  <!-- ===== DATA SOURCES ===== -->
+  <text x="30" y="444" font-size="11" font-weight="600" fill="#e65100" letter-spacing="1.5">DATA SOURCES &amp; OUTPUT</text>
+
+  <!-- Official Docs -->
+  <rect x="60" y="452" width="220" height="54" rx="8" fill="#ffffff" stroke="#00695c" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="170" y="474" text-anchor="middle" font-size="12" font-weight="700" fill="#00695c">Official Doc Sites</text>
+  <text x="170" y="490" text-anchor="middle" font-size="9" fill="#4db6ac">kafka.js.org · redis.io · clickhouse.com</text>
+
+  <!-- Local Cache -->
+  <rect x="230" y="452" width="220" height="54" rx="8" fill="#ffffff" stroke="#e65100" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="340" y="474" text-anchor="middle" font-size="12" font-weight="700" fill="#e65100">Local Cache</text>
+  <text x="340" y="490" text-anchor="middle" font-size="9" fill="#ffb74d">~/.aicli/cache/  (JSON, 24h TTL)</text>
+
+  <!-- Markdown stdout -->
+  <rect x="400" y="452" width="220" height="54" rx="8" fill="#ffffff" stroke="#7b1fa2" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="510" y="474" text-anchor="middle" font-size="12" font-weight="700" fill="#7b1fa2">Markdown to stdout</text>
+  <text x="510" y="490" text-anchor="middle" font-size="9" fill="#ba68c8">injected into copilot context window</text>
+
+  <!-- GitHub fetcher badge -->
+  <rect x="660" y="322" width="140" height="54" rx="8" fill="#f5f5f5" stroke="#424242" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="730" y="346" text-anchor="middle" font-size="11" font-weight="700" fill="#212121">GitHub Fetcher</text>
+  <text x="730" y="362" text-anchor="middle" font-size="9" fill="#616161">raw.githubusercontent.com</text>
+  <text x="730" y="376" text-anchor="middle" font-size="9" fill="#9e9e9e">READMEs &amp; wikis</text>
+
+  <!-- Arrow from Fetcher to GitHub fetcher -->
+  <line x1="620" y1="360" x2="658" y2="355" stroke="#e65100" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrOrange)"/>
+
+  <!-- npm install badge -->
+  <rect x="660" y="200" width="140" height="64" rx="8" fill="#ffffff" stroke="#cb3837" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="730" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#cb3837">npm registry</text>
+  <text x="730" y="239" text-anchor="middle" font-size="9" fill="#cb3837">@diepdao/aicli</text>
+  <text x="730" y="255" text-anchor="middle" font-size="9" fill="#9e9e9e">npm install -g</text>
+
+  <!-- Arrow npm to CLI -->
+  <line x1="660" y1="232" x2="622" y2="232" stroke="#cb3837" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrGreen)"/>
+</svg>

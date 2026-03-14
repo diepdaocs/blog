@@ -43,4 +43,14 @@ projects:
       - MinHash
       - LSH
       - Python
+
+  - title: "@diepdao/aicli — API Docs CLI for AI Copilots"
+    url: /projects/aicli-npm-tool/
+    image: /assets/images/project-aicli.svg
+    excerpt: "A global npm CLI that gives AI copilots instant access to live API documentation for Kafka, Redis, ClickHouse and more — no hallucination, no stale training data."
+    tags:
+      - CLI
+      - npm
+      - Developer Tools
+      - Copilot
 ---
