@@ -1,4 +1,4 @@
-# My Awesome Blog - README
+# Diep Dao Blog
 
 This is a Jekyll-based blog using the Minimal Mistakes theme.
 
