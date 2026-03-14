@@ -55,24 +55,7 @@ The copilot runs these commands, gets the current docs as structured text, and u
 
 ### Architecture
 
-```
-┌──────────────────────────────────────────────────┐
-│                  AI Copilot / Claude              │
-│  (reads SKILL.md, invokes aicli commands)         │
-└──────────────────────┬───────────────────────────┘
-                       │
-                  aicli (npm CLI)
-                       │
-         ┌─────────────┴─────────────┐
-         │                           │
-   Doc Registry              Fetcher / Parser
-   (topic index)          (scrapes + caches docs)
-         │                           │
-         └─────────────┬─────────────┘
-                       │
-              Formatted Output
-         (Markdown / plain text to stdout)
-```
+<img src="/assets/images/arch-aicli.svg" alt="@diepdao/aicli Architecture" style="width:100%;max-width:820px;margin:1rem auto;display:block;border-radius:8px;">
 
 The CLI has three layers:
 
