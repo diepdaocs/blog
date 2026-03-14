@@ -311,8 +311,8 @@ $dk-code:         #0a0a0a;
       .visible-links a::before { background-color: $dk-accent; }
       button { color: $dk-muted; background: transparent; }
       .hidden-links {
-        background-color: $dk-surface;
-        border-color: $dk-border;
+        background-color: $dk-surface !important;
+        border-color: $dk-border !important;
         a { color: $dk-text; &:hover { color: $dk-heading; } }
       }
     }
@@ -342,16 +342,16 @@ $dk-code:         #0a0a0a;
 
   // Code
   code {
-    background-color: $dk-surface-alt;
-    color: #93c5fd;
-    border: 1px solid $dk-border;
+    background-color: $dk-surface-alt !important;
+    color: #93c5fd !important;
+    border: 1px solid $dk-border !important;
   }
   pre {
-    background-color: $dk-code;
+    background-color: $dk-code !important;
     border: 1px solid $dk-border;
-    code { background: transparent; border: none; color: #7dd3f0; }
+    code { background: transparent !important; border: none !important; color: #7dd3f0 !important; }
   }
-  .highlight { background-color: $dk-code; }
+  .highlight { background-color: $dk-code !important; }
 
   // Page / single post
   .page__content {
