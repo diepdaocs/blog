@@ -270,18 +270,18 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
 }
 
 /* ── Dark Theme ──────────────────────────────────────── */
-$dk-bg:           #1a1a1a;
-$dk-surface:      #242424;
-$dk-surface-alt:  #2e2e2e;
-$dk-masthead:     #111111;
-$dk-border:       #3a3a3a;
-$dk-text:         #d4d4d4;
-$dk-muted:        #888888;
-$dk-heading:      #f0f0f0;
-$dk-link:         #6cb6ff;
-$dk-link-hover:   #96cbff;
-$dk-accent:       #4a90d9;
-$dk-code:         #0d0d0d;
+$dk-bg:           #0f0f0f;
+$dk-surface:      #1a1a1a;
+$dk-surface-alt:  #222222;
+$dk-masthead:     #0a0a0a;
+$dk-border:       #252525;
+$dk-text:         #e2e2e2;
+$dk-muted:        #717171;
+$dk-heading:      #f5f5f5;
+$dk-link:         #60a5fa;
+$dk-link-hover:   #93c5fd;
+$dk-accent:       #3b82f6;
+$dk-code:         #0a0a0a;
 
 [data-theme="dark"] {
   background-color: $dk-bg;
@@ -296,24 +296,24 @@ $dk-code:         #0d0d0d;
   .masthead {
     background-color: $dk-masthead;
     border-bottom: 1px solid $dk-border;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    box-shadow: none;
     .site-title {
-      color: $dk-link !important;
+      color: $dk-heading !important;
       &:hover { color: $dk-link-hover !important; }
     }
     .site-author-link { color: $dk-heading; &:hover { color: $dk-link-hover; } }
     .greedy-nav {
       background-color: $dk-masthead;
       a {
-        color: darken($dk-text, 5%);
-        &:hover { color: $dk-link-hover; }
+        color: $dk-muted;
+        &:hover { color: $dk-heading; }
       }
-      .visible-links a::before { background-color: $dk-link; }
-      button { color: $dk-text; background: transparent; }
+      .visible-links a::before { background-color: $dk-accent; }
+      button { color: $dk-muted; background: transparent; }
       .hidden-links {
         background-color: $dk-surface;
         border-color: $dk-border;
-        a { color: $dk-text; &:hover { color: $dk-link-hover; } }
+        a { color: $dk-text; &:hover { color: $dk-heading; } }
       }
     }
   }
@@ -368,15 +368,24 @@ $dk-code:         #0d0d0d;
   // Archive (posts list)
   .archive {
     .archive__subtitle {
-      color: $dk-heading;
-      border-bottom: 2px solid $dk-border;
+      color: $dk-muted;
+      border-bottom: 1px solid $dk-border;
+      font-size: 0.7em;
+      letter-spacing: 0.1em;
+    }
+    .archive__item {
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      margin: 0 -0.75rem;
+      transition: background-color 0.15s;
+      &:hover { background-color: $dk-surface; }
     }
     .archive__item-title a {
-      color: $dk-link;
+      color: $dk-heading;
       &:hover { color: $dk-link-hover; }
     }
     .archive__item-excerpt { color: $dk-muted; }
-    .page__meta             { color: darken($dk-muted, 10%); }
+    .page__meta             { color: lighten($dk-muted, 5%); }
   }
 
   // Sidebar / author
@@ -384,16 +393,16 @@ $dk-code:         #0d0d0d;
     .author__name     { font-family: $sans-serif; color: $dk-heading; }
     .author__bio      { color: $dk-muted; }
     .author__location { color: $dk-muted; font-size: 0.9em; }
-    .author__urls a   { color: $dk-link; &:hover { color: $dk-link-hover; } }
+    .author__urls a   { color: $dk-muted; &:hover { color: $dk-heading; } }
     .author__urls-wrapper {
       background-color: transparent;
       border: none;
     }
     .btn--inverse {
       background-color: $dk-surface;
-      color: $dk-text;
-      border: none;
-      &:hover { background-color: $dk-surface-alt; color: $dk-heading; }
+      color: $dk-muted;
+      border: 1px solid $dk-border;
+      &:hover { background-color: $dk-surface-alt; color: $dk-heading; border-color: $dk-surface-alt; }
     }
   }
 
@@ -421,30 +430,34 @@ $dk-code:         #0d0d0d;
   // Word Map
   .wordmap {
     background: $dk-surface;
-    border-color: $dk-border;
-    .wordmap__title { color: $dk-muted; border-bottom-color: $dk-accent; }
+    border: 1px solid $dk-border;
+    .wordmap__title { color: $dk-muted; border-bottom: 1px solid $dk-border; }
     .wm-1 { color: #f0f0f0; }
     .wm-2 { color: #d4d4d4; }
-    .wm-3 { color: #b0b0b0; }
-    .wm-4 { color: #888888; }
-    .wm-5 { color: #666666; }
+    .wm-3 { color: #aaaaaa; }
+    .wm-4 { color: #777777; }
+    .wm-5 { color: #555555; }
     .wm-1, .wm-2, .wm-3, .wm-4, .wm-5 {
-      &:hover { color: $dk-link-hover; text-decoration: underline; }
+      &:hover { color: $dk-link-hover; text-decoration: none; }
     }
   }
 
   // Tag Cloud
   .tagcloud {
     background: $dk-surface;
-    border-color: $dk-border;
-    .tagcloud__title { color: $dk-muted; border-bottom-color: $dk-accent; }
+    border: 1px solid $dk-border;
+    .tagcloud__title { color: $dk-muted; border-bottom: 1px solid $dk-border; }
   }
   .tag-pill {
-    background: $dk-surface-alt;
-    border-color: $dk-border;
-    color: $dk-link;
-    &:hover { background: $dk-accent; color: #fff; border-color: $dk-accent; text-decoration: none; }
-    .tag-pill__count { background: $dk-border; color: $dk-text; }
+    background: transparent;
+    border: 1px solid $dk-border;
+    color: $dk-muted;
+    &:hover { background: $dk-surface-alt; color: $dk-heading; border-color: $dk-surface-alt; text-decoration: none; }
+    .tag-pill__count {
+      background: $dk-surface-alt;
+      color: $dk-muted;
+      border-radius: 10px;
+    }
   }
 
   // Theme switcher in dark masthead
@@ -464,19 +477,20 @@ $dk-code:         #0d0d0d;
 
   .project-card {
     background: $dk-surface;
-    border-color: $dk-border;
+    border: 1px solid $dk-border;
     color: $dk-text;
     &:hover {
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      border-color: $dk-surface-alt;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
       color: $dk-text;
     }
   }
   .project-card__title { color: $dk-heading; }
   .project-card__excerpt { color: $dk-muted; }
   .project-card__tag {
-    background: $dk-surface-alt;
-    border-color: $dk-border;
-    color: $dk-link;
+    background: transparent;
+    border: 1px solid $dk-border;
+    color: $dk-muted;
   }
 
   // Timeline nav blocks in personal posts
