@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Bits & Bytes: How Computers Encode, Transmit, and Decode Everything"
-date: 2026-03-16 09:00:00 +0800
+date: 2026-03-16 10:00:00 +0800
 categories:
   - computer-science
 tags:
@@ -17,6 +17,8 @@ tags:
   - image
   - video
 ---
+
+This is the second deep-dive in the [Computer Science Series](/2026/02/27/welcome-to-computer-science/). The [first post](/2026/03/16/introduction-to-computer-science/) mapped the entire CS landscape — from hardware to generative AI. Now we zoom in on the very first layer: **bits and bytes**.
 
 Every YouTube video you stream, every emoji you send, every song you play — it all comes down to the same thing: billions of **ones and zeros** flying through cables and the air at the speed of light.
 
@@ -466,3 +468,5 @@ Each layer has one job, and the power comes from composing them. You can swap JP
 The next time you stream a video or send a message, you'll know exactly what's happening at every step of that journey — from the photons entering a camera lens all the way to the photons leaving your screen.
 
 In the next post in this series, we'll go deeper into **how CPUs actually execute instructions** — the fetch-decode-execute cycle, branch prediction, out-of-order execution, and why modern CPUs are so fast.
+
+Back to the series: [Welcome to the Computer Science Series](/2026/02/27/welcome-to-computer-science/)

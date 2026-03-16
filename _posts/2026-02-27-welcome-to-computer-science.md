@@ -29,6 +29,7 @@ Whether you're a student, a junior engineer, or a seasoned developer looking for
 
 ## Series Posts
 
-- [Bits & Bytes: How Computers Encode, Transmit, and Decode Everything](/computer-science/bits-and-bytes/) — how numbers, text, audio, images, and video are encoded; how data travels across the internet; how it's decoded and rendered
+1. [Introduction to Computer Science: From Bits to Generative AI](/2026/03/16/introduction-to-computer-science/) — a map of the entire CS landscape, from hardware and algorithms to machine learning and generative AI
+2. [Bits & Bytes: How Computers Encode, Transmit, and Decode Everything](/2026/03/16/bits-and-bytes/) — how numbers, text, audio, images, and video are encoded; how data travels across the internet; how it's decoded and rendered
 
 Stay tuned for more deep-dive posts.

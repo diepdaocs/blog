@@ -242,7 +242,11 @@ Each layer builds on the one below it. You can enter the field at any point, but
 
 ## What's Next
 
-Future posts in this series will go deep on each of these areas — with code, real-world examples, and the trade-offs you'll actually face as an engineer. If there's a topic you'd like me to prioritize, drop a comment below.
+The next post goes deep on the very first layer — **Bits & Bytes**: how numbers, text, audio, images, and video are encoded as binary; how data travels across the internet through TCP/IP, TLS, and CDNs; and how it's decoded and rendered on the receiving end.
+
+**[Read next: Bits & Bytes — How Computers Encode, Transmit, and Decode Everything →](/2026/03/16/bits-and-bytes/)**
+
+Future posts will continue down the map — hardware, operating systems, networking, databases, and more. If there's a topic you'd like me to prioritize, drop a comment below.
 
 Back to the series: [Welcome to the Computer Science Series](/2026/02/27/welcome-to-computer-science/)
 
