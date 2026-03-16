@@ -493,6 +493,12 @@ $dk-code:         #0a0a0a;
     color: $dk-muted;
   }
 
+  // Post diagram images
+  .post-diagram {
+    background: $dk-surface;
+    border-color: $dk-border;
+  }
+
   // Timeline nav blocks in personal posts
   div[style*="background:#f8f9fa"] {
     background: $dk-surface !important;
@@ -607,6 +613,23 @@ $dk-code:         #0a0a0a;
   border-radius: 12px;
   color: #1f618d;
   white-space: nowrap;
+}
+
+/* ── Post Diagram Image ─────────────────────────────── */
+.post-diagram {
+  border: 1px solid #e3edf4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  margin: 1.5rem 0;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 640px;
+    object-fit: contain;
+    object-position: top center;
+  }
 }
 
 /* ── Projects Grid — Responsive ────────────────────── */

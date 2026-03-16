@@ -15,7 +15,7 @@ tags:
   - networking
 ---
 
-This is the first deep-dive post in the [Computer Science Series](/2026/02/27/welcome-to-computer-science/). Whether you're just starting out or looking to consolidate your mental model of the field, this post gives you a map of the entire landscape — from the smallest unit of data a computer understands, all the way up to systems that can write code and generate images.
+This is the first deep-dive post in the [Computer Science Series](/computer-science/2026/02/27/welcome-to-computer-science/). Whether you're just starting out or looking to consolidate your mental model of the field, this post gives you a map of the entire landscape — from the smallest unit of data a computer understands, all the way up to systems that can write code and generate images.
 
 The structure below is inspired by Stanford's [CS101: Introduction to Computing Principles](https://online.stanford.edu/courses/soe-ycscs101-computer-science-101) — one of the best overviews of the field for any level of experience.
 
@@ -244,11 +244,11 @@ Each layer builds on the one below it. You can enter the field at any point, but
 
 The next post goes deep on the very first layer — **Bits & Bytes**: how numbers, text, audio, images, and video are encoded as binary; how data travels across the internet through TCP/IP, TLS, and CDNs; and how it's decoded and rendered on the receiving end.
 
-**[Read next: Bits & Bytes — How Computers Encode, Transmit, and Decode Everything →](/2026/03/16/bits-and-bytes/)**
+**[Read next: Bits & Bytes — How Computers Encode, Transmit, and Decode Everything →](/computer-science/2026/03/16/bits-and-bytes/)**
 
 Future posts will continue down the map — hardware, operating systems, networking, databases, and more. If there's a topic you'd like me to prioritize, drop a comment below.
 
-Back to the series: [Welcome to the Computer Science Series](/2026/02/27/welcome-to-computer-science/)
+Back to the series: [Welcome to the Computer Science Series](/computer-science/2026/02/27/welcome-to-computer-science/)
 
 ---
 
