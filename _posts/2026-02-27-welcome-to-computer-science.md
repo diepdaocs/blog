@@ -27,4 +27,8 @@ I've mentored fresh graduates and interns throughout my career, and one thing I'
 
 Whether you're a student, a junior engineer, or a seasoned developer looking for a fresh perspective, I hope you'll find something useful here.
 
-Stay tuned for the first deep-dive post.
+## Series Posts
+
+- [Bits & Bytes: How Computers Encode, Transmit, and Decode Everything](/computer-science/bits-and-bytes/) — how numbers, text, audio, images, and video are encoded; how data travels across the internet; how it's decoded and rendered
+
+Stay tuned for more deep-dive posts.
