@@ -1,6 +1,7 @@
 ---
 # Only the main SCSS file needs front matter
 ---
+@charset "UTF-8";
 
 /* Perplexity Discover-inspired font stack */
 $serif: "PP Editorial New", "Editorial New", Ivar, Charter, "Sitka Text", Georgia, serif;
@@ -18,7 +19,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   line-height: 1.6;
 }
 
-/* ── Custom Masthead Layout ──────────────────────────── */
+/* -- Custom Masthead Layout ---------------------------- */
 .masthead__wrap {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -34,7 +35,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   justify-self: start;
 }
 
-/* RIGHT — fills its 1fr column so greedy-nav can measure width */
+/* RIGHT -- fills its 1fr column so greedy-nav can measure width */
 .masthead__right {
   display: flex;
   align-items: center;
@@ -63,7 +64,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   vertical-align: middle;
 }
 
-/* ── Avatar ─────────────────────────────────────────── */
+/* -- Avatar ------------------------------------------- */
 .author__avatar {
   width: 150px !important;
   height: 150px !important;
@@ -73,7 +74,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   display: block !important;
   margin: 0 0 1em 0 !important;
 }
-/* The theme wraps img in an <a> — make it fill the container */
+/* The theme wraps img in an <a> -- make it fill the container */
 .author__avatar a {
   display: block !important;
   width: 100% !important;
@@ -92,7 +93,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   display: block !important;
 }
 
-/* ── Author social links — no box border ─────────────── */
+/* -- Author social links -- no box border --------------- */
 .author__urls-wrapper {
   border: none !important;
   box-shadow: none !important;
@@ -102,7 +103,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   box-shadow: none !important;
 }
 
-/* ── Three-column home layout ────────────────────────── */
+/* -- Three-column home layout -------------------------- */
 .home-grid {
   display: grid;
   grid-template-columns: 210px 1fr 190px;
@@ -154,7 +155,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   }
 }
 
-/* ── Word Map ────────────────────────────────────────── */
+/* -- Word Map ------------------------------------------ */
 .wordmap {
   background: #f8f9fa;
   border: 1px solid #e3edf4;
@@ -195,7 +196,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   &:hover { text-decoration: underline; color: #1a3a4a; }
 }
 
-/* ── Tag Cloud ───────────────────────────────────────── */
+/* -- Tag Cloud ----------------------------------------- */
 .tagcloud {
   background: #f8f9fa;
   border: 1px solid #e3edf4;
@@ -242,7 +243,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   line-height: 1.4;
 }
 
-/* ── Theme Switcher ──────────────────────────────────── */
+/* -- Theme Switcher ------------------------------------ */
 #theme-switcher-slot {
   display: inline-flex;
   align-items: center;
@@ -269,7 +270,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   &:active { outline: none; box-shadow: none; }
 }
 
-/* ── Dark Theme ──────────────────────────────────────── */
+/* -- Dark Theme ---------------------------------------- */
 $dk-bg:           #0f0f0f;
 $dk-surface:      #1a1a1a;
 $dk-surface-alt:  #222222;
@@ -493,6 +494,12 @@ $dk-code:         #0a0a0a;
     color: $dk-muted;
   }
 
+  // Post diagram images
+  .post-diagram {
+    background: $dk-surface;
+    border-color: $dk-border;
+  }
+
   // Timeline nav blocks in personal posts
   div[style*="background:#f8f9fa"] {
     background: $dk-surface !important;
@@ -503,14 +510,14 @@ $dk-code:         #0a0a0a;
   }
 }
 
-/* ── Home page comments section ────────────────────── */
+/* -- Home page comments section ---------------------- */
 .home-comments {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1.5rem 1rem;
 }
 
-/* ── Projects Page ─────────────────────────────────── */
+/* -- Projects Page ----------------------------------- */
 .projects-page {
   max-width: 960px;
   margin: 0 auto;
@@ -535,14 +542,14 @@ $dk-code:         #0a0a0a;
   line-height: 1.6;
 }
 
-/* ── Projects Grid ─────────────────────────────────── */
+/* -- Projects Grid ----------------------------------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-/* ── Project Card ──────────────────────────────────── */
+/* -- Project Card ------------------------------------ */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -609,7 +616,24 @@ $dk-code:         #0a0a0a;
   white-space: nowrap;
 }
 
-/* ── Projects Grid — Responsive ────────────────────── */
+/* -- Post Diagram Image ------------------------------- */
+.post-diagram {
+  border: 1px solid #e3edf4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  margin: 1.5rem 0;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 640px;
+    object-fit: contain;
+    object-position: top center;
+  }
+}
+
+/* -- Projects Grid -- Responsive ---------------------- */
 @media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);

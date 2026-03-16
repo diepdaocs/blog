@@ -29,7 +29,35 @@ Whether you're a student, a junior engineer, or a seasoned developer looking for
 
 ## Series Posts
 
-1. [Introduction to Computer Science: From Bits to Generative AI](/2026/03/16/introduction-to-computer-science/) — a map of the entire CS landscape, from hardware and algorithms to machine learning and generative AI
-2. [Bits & Bytes: How Computers Encode, Transmit, and Decode Everything](/2026/03/16/bits-and-bytes/) — how numbers, text, audio, images, and video are encoded; how data travels across the internet; how it's decoded and rendered
+<div class="projects-grid" style="margin-top: 1rem;">
+
+  <a href="/computer-science/2026/03/16/introduction-to-computer-science/" class="project-card">
+    <div class="project-card__body">
+      <h2 class="project-card__title">1. Introduction to Computer Science: From Bits to Generative AI</h2>
+      <p class="project-card__excerpt">A map of the entire CS landscape — from hardware, algorithms, and data structures to machine learning and generative AI.</p>
+      <div class="project-card__tags">
+        <span class="project-card__tag">introduction</span>
+        <span class="project-card__tag">algorithms</span>
+        <span class="project-card__tag">machine-learning</span>
+        <span class="project-card__tag">generative-ai</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/computer-science/2026/03/16/bits-and-bytes/" class="project-card">
+    <div class="project-card__body">
+      <h2 class="project-card__title">2. Bits & Bytes: How Computers Encode, Transmit, and Decode Everything</h2>
+      <p class="project-card__excerpt">How numbers, text, audio, images, and video are encoded as bits; how data travels across the internet; how it's decoded and rendered.</p>
+      <div class="project-card__tags">
+        <span class="project-card__tag">bits</span>
+        <span class="project-card__tag">bytes</span>
+        <span class="project-card__tag">encoding</span>
+        <span class="project-card__tag">networking</span>
+        <span class="project-card__tag">tcp-ip</span>
+      </div>
+    </div>
+  </a>
+
+</div>
 
 Stay tuned for more deep-dive posts.
