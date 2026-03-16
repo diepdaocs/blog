@@ -245,3 +245,10 @@ Each layer builds on the one below it. You can enter the field at any point, but
 Future posts in this series will go deep on each of these areas — with code, real-world examples, and the trade-offs you'll actually face as an engineer. If there's a topic you'd like me to prioritize, drop a comment below.
 
 Back to the series: [Welcome to the Computer Science Series](/2026/02/27/welcome-to-computer-science/)
+
+---
+
+## References
+
+- [Stanford CS101: Introduction to Computing Principles](https://online.stanford.edu/courses/soe-ycscs101-computer-science-101) — the course that inspired the structure of this post
+- [Stanford CS101 Syllabus](https://web.stanford.edu/class/cs101/syllabus.html)
