@@ -10,6 +10,8 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
+  - title: "Newsletter"
+    url: /newsletter/
   - title: "About"
     url: /about/
   - title: "GitHub"

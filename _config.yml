@@ -51,6 +51,16 @@ defaults:
     values:
       comments: true
 
+# Newsletter / mailing-list configuration (Mailchimp)
+# ----------------------------------------------------
+# 1. Log in at https://mailchimp.com
+# 2. Go to Audience → Signup forms → Embedded forms
+# 3. Click "Continue" — you'll see a form with an "action" URL in the HTML
+#    It looks like: https://YOUR_SUBDOMAIN.us1.list-manage.com/subscribe/post?u=XXXXX&id=XXXXX
+# 4. Copy that full action URL and paste it below, then rebuild the site.
+newsletter:
+  mailchimp_action: "https://diepdao.us11.list-manage.com/subscribe/post?u=a595d48084abe7160a3baa7ba&id=2d85377d2e"
+
 after_footer_scripts:
   - /assets/js/theme-switch.js
 
