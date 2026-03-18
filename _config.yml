@@ -51,15 +51,17 @@ defaults:
     values:
       comments: true
 
-# Newsletter / mailing-list configuration
-# ----------------------------------------
-# 1. Create a free account at https://mailchimp.com
-# 2. Go to Audience → Signup forms → Embedded forms
-# 3. Copy the form "action" URL (looks like:
-#    https://YOUR_SUBDOMAIN.us1.list-manage.com/subscribe/post?u=XXXXX&id=XXXXX)
-# 4. Paste it as the value below, then rebuild the site.
+# Newsletter / mailing-list configuration (Kit / ConvertKit)
+# -----------------------------------------------------------
+# 1. Create a free account at https://kit.com
+# 2. Go to Grow → Landing Pages & Forms → create a form
+# 3. Open the form, click "Settings" and note the Form ID from the URL
+#    (e.g. https://app.kit.com/forms/1234567 → Form ID = 1234567)
+# 4. Go to Settings → Developer → API keys and copy your Public API Key
+# 5. Paste both values below, then rebuild the site.
 newsletter:
-  mailchimp_action: ""   # <-- paste your Mailchimp form action URL here
+  kit_api_key: ""      # <-- your Kit public API key
+  kit_form_id: ""      # <-- your Kit form ID (numbers only)
 
 after_footer_scripts:
   - /assets/js/theme-switch.js

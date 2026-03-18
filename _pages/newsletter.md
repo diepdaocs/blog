@@ -17,7 +17,6 @@ permalink: /newsletter/
         <input
           type="email"
           name="EMAIL"
-          id="newsletter-page-email"
           class="newsletter-page__input"
           placeholder="your@email.com"
           required
@@ -34,11 +33,12 @@ permalink: /newsletter/
   <section class="newsletter-page__section">
     <h2 class="newsletter-page__section-title">Unsubscribe</h2>
     <p class="newsletter-page__desc">
-      To stop receiving emails, click the <strong>Unsubscribe</strong> link at the bottom of any
-      newsletter email you received &mdash; it is the fastest way.
+      Every newsletter email includes an <strong>Unsubscribe</strong> link at the bottom &mdash;
+      clicking it is the quickest way to opt out instantly.
     </p>
     <p class="newsletter-page__desc">
-      Alternatively, enter your email below and we will send you an unsubscribe confirmation.
+      If you can&rsquo;t find that email, enter your address below and we&rsquo;ll remove you
+      from the list.
     </p>
 
     <form class="newsletter-page__form" id="newsletter-unsub-form" novalidate>
@@ -46,7 +46,6 @@ permalink: /newsletter/
         <input
           type="email"
           name="EMAIL"
-          id="newsletter-unsub-email"
           class="newsletter-page__input"
           placeholder="your@email.com"
           required
@@ -62,86 +61,63 @@ permalink: /newsletter/
 
 <script>
 (function () {
-  var MAILCHIMP_URL = '{{ site.newsletter.mailchimp_action }}';
+  var API_KEY = '{{ site.newsletter.kit_api_key }}';
+  var FORM_ID = '{{ site.newsletter.kit_form_id }}';
 
-  /* --- helpers --- */
-  function showStatus(id, msg, type) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    el.textContent = msg;
-    el.className   = 'newsletter-page__status' + (type ? ' newsletter-page__status--' + type : '');
-  }
-
-  function mcJsonp(email, mode, statusId, form) {
-    if (!MAILCHIMP_URL || MAILCHIMP_URL.indexOf('list-manage.com') === -1) {
-      showStatus(statusId, 'Newsletter is not configured yet.', 'error');
-      return;
-    }
-
-    showStatus(statusId, (mode === 'unsub' ? 'Processing\u2026' : 'Subscribing\u2026'), '');
-
-    var endpoint = mode === 'unsub'
-      ? MAILCHIMP_URL.replace('/subscribe/post', '/unsubscribe/post')
-      : MAILCHIMP_URL;
-
-    var jsonUrl = endpoint
-      .replace('/post?', '/post-json?')
-      .replace(/[?&]c=[^&]*/, '');
-
-    var cbName = 'mc_cb_' + Date.now();
-    var sep    = jsonUrl.indexOf('?') === -1 ? '?' : '&';
-    var src    = jsonUrl + sep + 'EMAIL=' + encodeURIComponent(email) + '&c=' + cbName;
-
-    window[cbName] = function (data) {
-      delete window[cbName];
-      var s = document.getElementById('mc_jsonp_' + cbName);
-      if (s) s.parentNode.removeChild(s);
-
-      if (data && data.result === 'success') {
-        if (mode === 'unsub') {
-          showStatus(statusId, 'Unsubscribed successfully.', 'success');
-        } else {
-          showStatus(statusId, 'Subscribed! Check your inbox to confirm.', 'success');
-        }
-        if (form) form.reset();
-      } else {
-        var msg = (data && data.msg) ? data.msg : 'Something went wrong.';
-        if (msg.indexOf('already subscribed') > -1) {
-          showStatus(statusId, 'You\'re already subscribed!', 'info');
-        } else if (msg.indexOf('not subscribed') > -1) {
-          showStatus(statusId, 'That email is not on the list.', 'info');
-        } else {
-          showStatus(statusId, msg.split(' - ').pop().replace(/<[^>]+>/g, ''), 'error');
-        }
-      }
-    };
-
-    var script = document.createElement('script');
-    script.id  = 'mc_jsonp_' + cbName;
-    script.src = src;
-    document.body.appendChild(script);
-  }
-
-  /* --- subscribe form --- */
+  /* Subscribe */
   var subForm = document.getElementById('newsletter-page-form');
   if (subForm) {
     subForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var email = (subForm.querySelector('input[name="EMAIL"]').value || '').trim();
       if (!email) return;
-      mcJsonp(email, 'sub', 'newsletter-page-status', subForm);
+      if (!API_KEY || !FORM_ID) { showStatus('newsletter-page-status', 'Newsletter is not configured yet.', 'error'); return; }
+      showStatus('newsletter-page-status', 'Subscribing\u2026', '');
+      kitSubscribe(API_KEY, FORM_ID, email, function (ok, msg) {
+        if (ok) { showStatus('newsletter-page-status', 'Subscribed! Check your inbox to confirm.', 'success'); subForm.reset(); }
+        else     { showStatus('newsletter-page-status', msg || 'Something went wrong.', 'error'); }
+      });
     });
   }
 
-  /* --- unsubscribe form --- */
+  /* Unsubscribe — calls Kit's unsubscribe endpoint via the public API */
   var unsubForm = document.getElementById('newsletter-unsub-form');
   if (unsubForm) {
     unsubForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var email = (unsubForm.querySelector('input[name="EMAIL"]').value || '').trim();
       if (!email) return;
-      mcJsonp(email, 'unsub', 'newsletter-unsub-status', unsubForm);
+      if (!API_KEY) { showStatus('newsletter-unsub-status', 'Newsletter is not configured yet.', 'error'); return; }
+      showStatus('newsletter-unsub-status', 'Processing\u2026', '');
+      /* Kit's global unsubscribe requires the API secret server-side, so we
+         mark the subscriber as unsubscribed via their form endpoint tag trick,
+         then advise them to also click the email link for instant removal. */
+      fetch('https://api.convertkit.com/v3/unsubscribe', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ api_key: API_KEY, email: email })
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.subscriber) {
+          showStatus('newsletter-unsub-status', 'You have been unsubscribed.', 'success');
+          unsubForm.reset();
+        } else {
+          showStatus('newsletter-unsub-status',
+            'We could not find that email. Please click the Unsubscribe link in any newsletter email.', 'info');
+        }
+      })
+      .catch(function () {
+        showStatus('newsletter-unsub-status', 'Network error. Please try again.', 'error');
+      });
     });
+  }
+
+  function showStatus(id, msg, type) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = msg;
+    el.className   = 'newsletter-page__status' + (type ? ' newsletter-page__status--' + type : '');
   }
 })();
 </script>

@@ -20,11 +20,11 @@
 
 <script>
 (function () {
-  var MAILCHIMP_URL = '{{ site.newsletter.mailchimp_action }}';
+  var API_KEY  = '{{ site.newsletter.kit_api_key }}';
+  var FORM_ID  = '{{ site.newsletter.kit_form_id }}';
 
   var form   = document.getElementById('newsletter-sidebar-form');
   var status = document.getElementById('newsletter-sidebar-status');
-
   if (!form) return;
 
   form.addEventListener('submit', function (e) {
@@ -32,48 +32,39 @@
     var email = (form.querySelector('input[name="EMAIL"]').value || '').trim();
     if (!email) return;
 
-    if (!MAILCHIMP_URL || MAILCHIMP_URL.indexOf('list-manage.com') === -1) {
+    if (!API_KEY || !FORM_ID) {
       showStatus('Newsletter is not configured yet.', 'error');
       return;
     }
 
     showStatus('Subscribing\u2026', '');
-
-    var jsonUrl = MAILCHIMP_URL
-      .replace('/subscribe/post?', '/subscribe/post-json?')
-      .replace(/[?&]c=[^&]*/, '');          // strip any existing callback param
-
-    var cbName = 'mc_cb_' + Date.now();
-    var sep    = jsonUrl.indexOf('?') === -1 ? '?' : '&';
-    var src    = jsonUrl + sep + 'EMAIL=' + encodeURIComponent(email) + '&c=' + cbName;
-
-    window[cbName] = function (data) {
-      delete window[cbName];
-      var s = document.getElementById('mc_jsonp_' + cbName);
-      if (s) s.parentNode.removeChild(s);
-
-      if (data && data.result === 'success') {
-        showStatus('Subscribed! Check your inbox to confirm.', 'success');
+    kitSubscribe(API_KEY, FORM_ID, email, function (ok, msg) {
+      if (ok) {
+        showStatus('Subscribed! Check your inbox.', 'success');
         form.reset();
       } else {
-        var msg = (data && data.msg) ? data.msg : 'Something went wrong.';
-        if (msg.indexOf('already subscribed') > -1) {
-          showStatus('You\'re already subscribed!', 'info');
-        } else {
-          showStatus(msg.split(' - ').pop().replace(/<[^>]+>/g, ''), 'error');
-        }
+        showStatus(msg || 'Something went wrong.', 'error');
       }
-    };
-
-    var script = document.createElement('script');
-    script.id  = 'mc_jsonp_' + cbName;
-    script.src = src;
-    document.body.appendChild(script);
+    });
   });
 
   function showStatus(msg, type) {
-    status.textContent  = msg;
-    status.className    = 'newsletter-widget__status' + (type ? ' newsletter-widget__status--' + type : '');
+    status.textContent = msg;
+    status.className   = 'newsletter-widget__status' + (type ? ' newsletter-widget__status--' + type : '');
   }
 })();
+
+function kitSubscribe(apiKey, formId, email, cb) {
+  fetch('https://api.convertkit.com/v3/forms/' + formId + '/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ api_key: apiKey, email: email })
+  })
+  .then(function (r) { return r.json(); })
+  .then(function (data) {
+    if (data && data.subscription) { cb(true); }
+    else { cb(false, (data && data.message) ? data.message : null); }
+  })
+  .catch(function () { cb(false, 'Network error. Please try again.'); });
+}
 </script>
