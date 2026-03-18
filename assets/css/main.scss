@@ -509,6 +509,11 @@ $dk-code:         #0a0a0a;
     strong { color: $dk-heading !important; }
   }
 
+  // Minimal Mistakes page/content wrappers
+  .page__inner-wrap,
+  .initial-content,
+  .page__content { background-color: $dk-bg; }
+
   // Newsletter widget (sidebar)
   .newsletter-widget {
     background: $dk-surface;
@@ -767,7 +772,7 @@ $dk-code:         #0a0a0a;
 .newsletter-page__row {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  align-items: stretch;
 }
 .newsletter-page__input {
   font-family: $sans-serif;

@@ -109,10 +109,19 @@ permalink: /newsletter/
     var cbName = 'mc_cb_' + Date.now();
     var sep    = url.indexOf('?') === -1 ? '?' : '&';
 
-    window[cbName] = function (data) {
+    function cleanup() {
       delete window[cbName];
       var s = document.getElementById('mc_s_' + cbName);
       if (s) s.parentNode.removeChild(s);
+    }
+
+    var timer = setTimeout(function () {
+      if (window[cbName]) { cleanup(); cb(false, 'Request timed out. Please try again.'); }
+    }, 10000);
+
+    window[cbName] = function (data) {
+      clearTimeout(timer);
+      cleanup();
       if (data && data.result === 'success') {
         cb(true);
       } else {
