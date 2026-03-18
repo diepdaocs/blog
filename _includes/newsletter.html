@@ -1,0 +1,79 @@
+<div class="newsletter-widget">
+  <h3 class="newsletter-widget__title">Newsletter</h3>
+  <p class="newsletter-widget__desc">New posts, straight to your inbox.</p>
+  <form class="newsletter-widget__form" id="newsletter-sidebar-form" novalidate>
+    <input
+      type="email"
+      name="EMAIL"
+      class="newsletter-widget__input"
+      placeholder="your@email.com"
+      required
+      aria-label="Email address"
+    />
+    <button type="submit" class="newsletter-widget__btn">Subscribe</button>
+    <p class="newsletter-widget__status" id="newsletter-sidebar-status" aria-live="polite"></p>
+  </form>
+  <p class="newsletter-widget__unsub-link">
+    <a href="/newsletter/#unsubscribe">Unsubscribe</a>
+  </p>
+</div>
+
+<script>
+(function () {
+  var MAILCHIMP_URL = '{{ site.newsletter.mailchimp_action }}';
+
+  var form   = document.getElementById('newsletter-sidebar-form');
+  var status = document.getElementById('newsletter-sidebar-status');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = (form.querySelector('input[name="EMAIL"]').value || '').trim();
+    if (!email) return;
+
+    if (!MAILCHIMP_URL || MAILCHIMP_URL.indexOf('list-manage.com') === -1) {
+      showStatus('Newsletter is not configured yet.', 'error');
+      return;
+    }
+
+    showStatus('Subscribing\u2026', '');
+
+    var jsonUrl = MAILCHIMP_URL
+      .replace('/subscribe/post?', '/subscribe/post-json?')
+      .replace(/[?&]c=[^&]*/, '');          // strip any existing callback param
+
+    var cbName = 'mc_cb_' + Date.now();
+    var sep    = jsonUrl.indexOf('?') === -1 ? '?' : '&';
+    var src    = jsonUrl + sep + 'EMAIL=' + encodeURIComponent(email) + '&c=' + cbName;
+
+    window[cbName] = function (data) {
+      delete window[cbName];
+      var s = document.getElementById('mc_jsonp_' + cbName);
+      if (s) s.parentNode.removeChild(s);
+
+      if (data && data.result === 'success') {
+        showStatus('Subscribed! Check your inbox to confirm.', 'success');
+        form.reset();
+      } else {
+        var msg = (data && data.msg) ? data.msg : 'Something went wrong.';
+        if (msg.indexOf('already subscribed') > -1) {
+          showStatus('You\'re already subscribed!', 'info');
+        } else {
+          showStatus(msg.split(' - ').pop().replace(/<[^>]+>/g, ''), 'error');
+        }
+      }
+    };
+
+    var script = document.createElement('script');
+    script.id  = 'mc_jsonp_' + cbName;
+    script.src = src;
+    document.body.appendChild(script);
+  });
+
+  function showStatus(msg, type) {
+    status.textContent  = msg;
+    status.className    = 'newsletter-widget__status' + (type ? ' newsletter-widget__status--' + type : '');
+  }
+})();
+</script>
