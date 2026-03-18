@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 580" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgarch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#eff6ff"/>
+    </linearGradient>
+    <filter id="sh" x="-4%" y="-4%" width="110%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/>
+    </filter>
+    <marker id="aBlue"  markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#1d4ed8"/></marker>
+    <marker id="aGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d"/></marker>
+    <marker id="aPurp"  markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#7c3aed"/></marker>
+    <marker id="aAmber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#b45309"/></marker>
+    <marker id="aRed"   markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#b91c1c"/></marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="580" rx="14" fill="url(#bgarch)"/>
+
+  <!-- Title -->
+  <text x="430" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Personalized Agents — System Architecture</text>
+  <text x="430" y="54" text-anchor="middle" font-size="10.5" fill="#64748b">User Profile → OpenClaw Workspace → Specialized Agents → Personalized Output</text>
+
+  <!-- ═══════════════════════════════════════
+       ROW 1: USER LAYER
+  ═══════════════════════════════════════ -->
+  <text x="30" y="88" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">USER LAYER</text>
+
+  <!-- User box -->
+  <rect x="30" y="96" width="160" height="72" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="110" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">User</text>
+  <text x="110" y="137" text-anchor="middle" font-size="10" fill="#3b82f6">Goals · Preferences</text>
+  <text x="110" y="153" text-anchor="middle" font-size="9" fill="#93c5fd">Context &amp; History</text>
+
+  <!-- arrow user → profile builder -->
+  <line x1="190" y1="132" x2="238" y2="132" stroke="#1d4ed8" stroke-width="1.8" marker-end="url(#aBlue)"/>
+
+  <!-- Profile Builder -->
+  <rect x="240" y="96" width="180" height="72" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="330" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">Profile Builder</text>
+  <text x="330" y="135" text-anchor="middle" font-size="10" fill="#3b82f6">USER.md · SOUL.md</text>
+  <text x="330" y="150" text-anchor="middle" font-size="9" fill="#93c5fd">IDENTITY.md · MEMORY.md</text>
+  <text x="330" y="163" text-anchor="middle" font-size="9" fill="#93c5fd">Builds agent personality</text>
+
+  <!-- arrow profile → gateway -->
+  <line x1="420" y1="132" x2="468" y2="132" stroke="#1d4ed8" stroke-width="1.8" marker-end="url(#aBlue)"/>
+
+  <!-- OpenClaw Gateway -->
+  <rect x="470" y="88" width="200" height="80" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.2" filter="url(#sh)"/>
+  <text x="570" y="113" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">OpenClaw Gateway</text>
+  <text x="570" y="130" text-anchor="middle" font-size="10" fill="#2563eb">openclaw agent serve</text>
+  <text x="570" y="146" text-anchor="middle" font-size="9" fill="#60a5fa">Skill Discovery · Auth · Routing</text>
+  <text x="570" y="159" text-anchor="middle" font-size="9" fill="#60a5fa">openclaw doctor · diagnostics</text>
+
+  <!-- LLM backend (top right) -->
+  <rect x="700" y="96" width="140" height="72" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="770" y="120" text-anchor="middle" font-size="11" font-weight="600" fill="#7c3aed">LLM Backend</text>
+  <text x="770" y="136" text-anchor="middle" font-size="9" fill="#8b5cf6">Claude / GPT-4o</text>
+  <text x="770" y="150" text-anchor="middle" font-size="9" fill="#a78bfa">Gemini / Ollama</text>
+  <text x="770" y="163" text-anchor="middle" font-size="9" fill="#c4b5fd">Anthropic API Key</text>
+
+  <!-- arrow gateway ↔ LLM -->
+  <line x1="670" y1="128" x2="698" y2="128" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aPurp)"/>
+
+  <!-- ═══════════════════════════════════════
+       ROW 2: WORKSPACE LAYER
+  ═══════════════════════════════════════ -->
+  <text x="30" y="207" font-size="10" font-weight="600" fill="#15803d" letter-spacing="1.2">WORKSPACE LAYER</text>
+
+  <!-- arrow gateway → workspace bus -->
+  <line x1="570" y1="168" x2="570" y2="210" stroke="#1d4ed8" stroke-width="1.8" marker-end="url(#aBlue)"/>
+
+  <!-- Workspace bus bar -->
+  <rect x="30" y="212" width="800" height="36" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="1.8"/>
+  <text x="430" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d" letter-spacing="1.5">WORKSPACE — workspace/ directory  (AGENTS.md · TOOLS.md · HEARTBEAT.md)</text>
+
+  <!-- ═══════════════════════════════════════
+       ROW 3: SKILL AGENTS
+  ═══════════════════════════════════════ -->
+  <text x="30" y="278" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">SKILL AGENTS  (workspace/skills/ — auto-discovered)</text>
+
+  <!-- arrows workspace → skill agents -->
+  <line x1="130" y1="248" x2="130" y2="290" stroke="#15803d" stroke-width="1.5" marker-end="url(#aGreen)"/>
+  <line x1="290" y1="248" x2="290" y2="290" stroke="#15803d" stroke-width="1.5" marker-end="url(#aGreen)"/>
+  <line x1="450" y1="248" x2="450" y2="290" stroke="#15803d" stroke-width="1.5" marker-end="url(#aGreen)"/>
+  <line x1="610" y1="248" x2="610" y2="290" stroke="#15803d" stroke-width="1.5" marker-end="url(#aGreen)"/>
+  <line x1="760" y1="248" x2="760" y2="290" stroke="#15803d" stroke-width="1.5" marker-end="url(#aGreen)"/>
+
+  <!-- Memory Agent -->
+  <rect x="40" y="292" width="178" height="88" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="129" y="315" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">Memory Agent</text>
+  <text x="129" y="332" text-anchor="middle" font-size="10" fill="#8b5cf6">MEMORY.md store</text>
+  <text x="129" y="348" text-anchor="middle" font-size="9" fill="#a78bfa">Long-term preferences</text>
+  <text x="129" y="363" text-anchor="middle" font-size="9" fill="#a78bfa">Cross-session recall</text>
+  <text x="129" y="374" text-anchor="middle" font-size="8" fill="#c4b5fd" font-style="italic">skill: memory/</text>
+
+  <!-- Context Agent -->
+  <rect x="200" y="292" width="178" height="88" rx="8" fill="#fff7ed" stroke="#b45309" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="289" y="315" text-anchor="middle" font-size="12" font-weight="700" fill="#b45309">Context Agent</text>
+  <text x="289" y="332" text-anchor="middle" font-size="10" fill="#d97706">Current session state</text>
+  <text x="289" y="348" text-anchor="middle" font-size="9" fill="#fbbf24">Goal tracking</text>
+  <text x="289" y="363" text-anchor="middle" font-size="9" fill="#fbbf24">Conversation window</text>
+  <text x="289" y="374" text-anchor="middle" font-size="8" fill="#fde68a" font-style="italic">skill: context/</text>
+
+  <!-- Task Agent -->
+  <rect x="360" y="292" width="178" height="88" rx="8" fill="#f0fdf4" stroke="#15803d" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="449" y="315" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">Task Agent</text>
+  <text x="449" y="332" text-anchor="middle" font-size="10" fill="#16a34a">Executes user tasks</text>
+  <text x="449" y="348" text-anchor="middle" font-size="9" fill="#4ade80">File organizer</text>
+  <text x="449" y="363" text-anchor="middle" font-size="9" fill="#4ade80">Daily briefing</text>
+  <text x="449" y="374" text-anchor="middle" font-size="8" fill="#86efac" font-style="italic">skill: file-organizer/</text>
+
+  <!-- Persona Agent -->
+  <rect x="520" y="292" width="178" height="88" rx="8" fill="#fff1f2" stroke="#b91c1c" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="609" y="315" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">Persona Agent</text>
+  <text x="609" y="332" text-anchor="middle" font-size="10" fill="#dc2626">SOUL.md · tone</text>
+  <text x="609" y="348" text-anchor="middle" font-size="9" fill="#f87171">Communication style</text>
+  <text x="609" y="363" text-anchor="middle" font-size="9" fill="#f87171">Values &amp; priorities</text>
+  <text x="609" y="374" text-anchor="middle" font-size="8" fill="#fca5a5" font-style="italic">workspace/SOUL.md</text>
+
+  <!-- Heartbeat Agent -->
+  <rect x="680" y="292" width="150" height="88" rx="8" fill="#fefce8" stroke="#a16207" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="755" y="315" text-anchor="middle" font-size="12" font-weight="700" fill="#a16207">Heartbeat</text>
+  <text x="755" y="332" text-anchor="middle" font-size="10" fill="#ca8a04">Scheduled tasks</text>
+  <text x="755" y="348" text-anchor="middle" font-size="9" fill="#facc15">HEARTBEAT.md rules</text>
+  <text x="755" y="363" text-anchor="middle" font-size="9" fill="#facc15">Proactive nudges</text>
+  <text x="755" y="374" text-anchor="middle" font-size="8" fill="#fde047" font-style="italic">workspace/HEARTBEAT.md</text>
+
+  <!-- ═══════════════════════════════════════
+       ROW 4: INTERFACE LAYER
+  ═══════════════════════════════════════ -->
+  <text x="30" y="410" font-size="10" font-weight="600" fill="#b45309" letter-spacing="1.2">INTERFACE LAYER</text>
+
+  <!-- arrows skill agents → output bus -->
+  <line x1="129" y1="380" x2="129" y2="428" stroke="#7c3aed" stroke-width="1.4" marker-end="url(#aPurp)"/>
+  <line x1="289" y1="380" x2="289" y2="428" stroke="#b45309" stroke-width="1.4" marker-end="url(#aAmber)"/>
+  <line x1="449" y1="380" x2="449" y2="428" stroke="#15803d" stroke-width="1.4" marker-end="url(#aGreen)"/>
+  <line x1="609" y1="380" x2="609" y2="428" stroke="#b91c1c" stroke-width="1.4" marker-end="url(#aRed)"/>
+  <line x1="755" y1="380" x2="755" y2="428" stroke="#a16207" stroke-width="1.4" marker-end="url(#aAmber)"/>
+
+  <!-- Output bus -->
+  <rect x="30" y="430" width="800" height="36" rx="18" fill="#fff7ed" stroke="#b45309" stroke-width="1.8"/>
+  <text x="430" y="453" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309" letter-spacing="1.5">PERSONALIZED OUTPUT  —  context-aware · tone-matched · goal-aligned responses</text>
+
+  <!-- ═══════════════════════════════════════
+       ROW 5: DELIVERY
+  ═══════════════════════════════════════ -->
+
+  <!-- arrow output bus → delivery boxes -->
+  <line x1="200" y1="466" x2="200" y2="490" stroke="#b45309" stroke-width="1.4" marker-end="url(#aAmber)"/>
+  <line x1="430" y1="466" x2="430" y2="490" stroke="#b45309" stroke-width="1.4" marker-end="url(#aAmber)"/>
+  <line x1="660" y1="466" x2="660" y2="490" stroke="#b45309" stroke-width="1.4" marker-end="url(#aAmber)"/>
+
+  <!-- CLI TUI -->
+  <rect x="80" y="492" width="240" height="58" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="200" y="516" text-anchor="middle" font-size="11" font-weight="600" fill="#1d4ed8">CLI / TUI</text>
+  <text x="200" y="532" text-anchor="middle" font-size="9" fill="#3b82f6">openclaw agent run  ·  openclaw tui</text>
+  <text x="200" y="544" text-anchor="middle" font-size="8" fill="#93c5fd">Terminal-native interface</text>
+
+  <!-- Single-turn / Gateway API -->
+  <rect x="310" y="492" width="240" height="58" rx="8" fill="#fff" stroke="#15803d" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="430" y="516" text-anchor="middle" font-size="11" font-weight="600" fill="#15803d">Gateway API</text>
+  <text x="430" y="532" text-anchor="middle" font-size="9" fill="#16a34a">openclaw agent serve  (HTTP)</text>
+  <text x="430" y="544" text-anchor="middle" font-size="8" fill="#4ade80">Integrate with apps &amp; scripts</text>
+
+  <!-- Custom Skills -->
+  <rect x="540" y="492" width="240" height="58" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="660" y="516" text-anchor="middle" font-size="11" font-weight="600" fill="#7c3aed">Custom Skills</text>
+  <text x="660" y="532" text-anchor="middle" font-size="9" fill="#8b5cf6">workspace/skills/&lt;your-skill&gt;/</text>
+  <text x="660" y="544" text-anchor="middle" font-size="8" fill="#a78bfa">Auto-discovered · zero install</text>
+
+  <!-- Footer -->
+  <text x="430" y="572" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  Personalized Agents with OpenClaw  ·  github.com/diepdaocs/agents</text>
+</svg>

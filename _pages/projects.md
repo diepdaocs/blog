@@ -4,6 +4,16 @@ title: "Projects"
 permalink: /projects/
 description: "Hands-on systems I've designed and built — spanning financial engineering, AI agents, and blockchain smart contracts."
 projects:
+  - title: "Personalized Agents"
+    url: /projects/personalized-agents/
+    image: /assets/images/project-personalized-agents.svg
+    excerpt: "Build AI agents that truly know you — persistent memory, custom skills, and tone-matched responses powered by OpenClaw and your own workspace profile."
+    tags:
+      - OpenClaw
+      - LLM
+      - Python
+      - Personalization
+
   - title: "Financial Engineering & Risk Management"
     url: /projects/financial-engineering/
     image: /assets/images/project-finance.svg
