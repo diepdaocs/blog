@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bgpa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f4c81"/>
+      <stop offset="100%" style="stop-color:#1a7a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bgpa)"/>
+
+  <!-- Central User node -->
+  <circle cx="200" cy="120" r="34" fill="rgba(255,255,255,0.12)" stroke="#fff" stroke-width="2.5"/>
+  <text x="200" y="115" text-anchor="middle" fill="#fff" font-size="10" font-family="sans-serif">You</text>
+  <text x="200" y="129" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" opacity="0.8">Profile</text>
+
+  <!-- Agent nodes -->
+  <!-- Top -->
+  <circle cx="200" cy="38" r="22" fill="rgba(255,255,255,0.15)" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="200" y="34" text-anchor="middle" fill="#7dd3fc" font-size="8" font-family="sans-serif">Memory</text>
+  <text x="200" y="45" text-anchor="middle" fill="#7dd3fc" font-size="8" font-family="sans-serif">Agent</text>
+
+  <!-- Right -->
+  <circle cx="330" cy="120" r="22" fill="rgba(255,255,255,0.15)" stroke="#86efac" stroke-width="1.5"/>
+  <text x="330" y="116" text-anchor="middle" fill="#86efac" font-size="8" font-family="sans-serif">Task</text>
+  <text x="330" y="127" text-anchor="middle" fill="#86efac" font-size="8" font-family="sans-serif">Agent</text>
+
+  <!-- Bottom -->
+  <circle cx="200" cy="202" r="22" fill="rgba(255,255,255,0.15)" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="200" y="198" text-anchor="middle" fill="#fca5a5" font-size="8" font-family="sans-serif">Skills</text>
+  <text x="200" y="209" text-anchor="middle" fill="#fca5a5" font-size="8" font-family="sans-serif">Agent</text>
+
+  <!-- Left -->
+  <circle cx="70" cy="120" r="22" fill="rgba(255,255,255,0.15)" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="70" y="116" text-anchor="middle" fill="#c4b5fd" font-size="8" font-family="sans-serif">Context</text>
+  <text x="70" y="127" text-anchor="middle" fill="#c4b5fd" font-size="8" font-family="sans-serif">Agent</text>
+
+  <!-- Connection lines -->
+  <line x1="200" y1="60" x2="200" y2="86" stroke="#7dd3fc" stroke-width="1.2" opacity="0.6"/>
+  <line x1="308" y1="120" x2="234" y2="120" stroke="#86efac" stroke-width="1.2" opacity="0.6"/>
+  <line x1="200" y1="180" x2="200" y2="154" stroke="#fca5a5" stroke-width="1.2" opacity="0.6"/>
+  <line x1="92" y1="120" x2="166" y2="120" stroke="#c4b5fd" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Dots on lines -->
+  <circle cx="200" cy="73" r="2.5" fill="#7dd3fc" opacity="0.9"/>
+  <circle cx="271" cy="120" r="2.5" fill="#86efac" opacity="0.9"/>
+  <circle cx="200" cy="167" r="2.5" fill="#fca5a5" opacity="0.9"/>
+  <circle cx="129" cy="120" r="2.5" fill="#c4b5fd" opacity="0.9"/>
+
+  <!-- Label -->
+  <text x="200" y="228" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="9" font-family="sans-serif">OpenClaw · Personalized Agents</text>
+</svg>
