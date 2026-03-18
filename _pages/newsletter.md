@@ -37,8 +37,7 @@ permalink: /newsletter/
       clicking it is the quickest way to opt out instantly.
     </p>
     <p class="newsletter-page__desc">
-      If you can&rsquo;t find that email, enter your address below and we&rsquo;ll remove you
-      from the list.
+      Alternatively, enter your email below to be removed from the list.
     </p>
 
     <form class="newsletter-page__form" id="newsletter-unsub-form" novalidate>
@@ -61,63 +60,73 @@ permalink: /newsletter/
 
 <script>
 (function () {
-  var API_KEY = '{{ site.newsletter.kit_api_key }}';
-  var FORM_ID = '{{ site.newsletter.kit_form_id }}';
+  var MC_URL = '{{ site.newsletter.mailchimp_action }}';
 
-  /* Subscribe */
-  var subForm = document.getElementById('newsletter-page-form');
-  if (subForm) {
-    subForm.addEventListener('submit', function (e) {
+  function handleForm(formId, statusId, mode) {
+    var form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var email = (subForm.querySelector('input[name="EMAIL"]').value || '').trim();
+      var email = (form.querySelector('input[name="EMAIL"]').value || '').trim();
       if (!email) return;
-      if (!API_KEY || !FORM_ID) { showStatus('newsletter-page-status', 'Newsletter is not configured yet.', 'error'); return; }
-      showStatus('newsletter-page-status', 'Subscribing\u2026', '');
-      kitSubscribe(API_KEY, FORM_ID, email, function (ok, msg) {
-        if (ok) { showStatus('newsletter-page-status', 'Subscribed! Check your inbox to confirm.', 'success'); subForm.reset(); }
-        else     { showStatus('newsletter-page-status', msg || 'Something went wrong.', 'error'); }
-      });
-    });
-  }
+      if (!MC_URL || MC_URL.indexOf('list-manage.com') === -1) {
+        showStatus(statusId, 'Newsletter is not configured yet.', 'error'); return;
+      }
+      showStatus(statusId, (mode === 'unsub' ? 'Processing\u2026' : 'Subscribing\u2026'), '');
 
-  /* Unsubscribe — calls Kit's unsubscribe endpoint via the public API */
-  var unsubForm = document.getElementById('newsletter-unsub-form');
-  if (unsubForm) {
-    unsubForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email = (unsubForm.querySelector('input[name="EMAIL"]').value || '').trim();
-      if (!email) return;
-      if (!API_KEY) { showStatus('newsletter-unsub-status', 'Newsletter is not configured yet.', 'error'); return; }
-      showStatus('newsletter-unsub-status', 'Processing\u2026', '');
-      /* Kit's global unsubscribe requires the API secret server-side, so we
-         mark the subscriber as unsubscribed via their form endpoint tag trick,
-         then advise them to also click the email link for instant removal. */
-      fetch('https://api.convertkit.com/v3/unsubscribe', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ api_key: API_KEY, email: email })
-      })
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (data && data.subscriber) {
-          showStatus('newsletter-unsub-status', 'You have been unsubscribed.', 'success');
-          unsubForm.reset();
+      var url = (mode === 'unsub')
+        ? MC_URL.replace('/subscribe/post', '/unsubscribe/post')
+        : MC_URL;
+
+      mcJsonp(url, email, function (ok, msg) {
+        if (ok) {
+          showStatus(statusId,
+            mode === 'unsub' ? 'You have been unsubscribed.' : 'Subscribed! Check your inbox to confirm.',
+            'success');
+          form.reset();
         } else {
-          showStatus('newsletter-unsub-status',
-            'We could not find that email. Please click the Unsubscribe link in any newsletter email.', 'info');
+          showStatus(statusId, msg || 'Something went wrong.', 'error');
         }
-      })
-      .catch(function () {
-        showStatus('newsletter-unsub-status', 'Network error. Please try again.', 'error');
       });
     });
   }
+
+  handleForm('newsletter-page-form',  'newsletter-page-status',  'sub');
+  handleForm('newsletter-unsub-form', 'newsletter-unsub-status', 'unsub');
 
   function showStatus(id, msg, type) {
     var el = document.getElementById(id);
     if (!el) return;
     el.textContent = msg;
     el.className   = 'newsletter-page__status' + (type ? ' newsletter-page__status--' + type : '');
+  }
+
+  function mcJsonp(baseUrl, email, cb) {
+    var url    = baseUrl
+      .replace('/subscribe/post?',   '/subscribe/post-json?')
+      .replace('/unsubscribe/post?', '/unsubscribe/post-json?')
+      .replace(/[?&]c=[^&]*/g, '');
+    var cbName = 'mc_cb_' + Date.now();
+    var sep    = url.indexOf('?') === -1 ? '?' : '&';
+
+    window[cbName] = function (data) {
+      delete window[cbName];
+      var s = document.getElementById('mc_s_' + cbName);
+      if (s) s.parentNode.removeChild(s);
+      if (data && data.result === 'success') {
+        cb(true);
+      } else {
+        var msg = (data && data.msg) ? data.msg.split(' - ').pop().replace(/<[^>]+>/g, '') : null;
+        if (msg && (msg.indexOf('already subscribed') > -1)) cb(true, 'You\u2019re already subscribed!');
+        else if (msg && msg.indexOf('not subscribed') > -1)  cb(false, 'That email is not on the list.');
+        else cb(false, msg);
+      }
+    };
+
+    var script = document.createElement('script');
+    script.id  = 'mc_s_' + cbName;
+    script.src = url + sep + 'EMAIL=' + encodeURIComponent(email) + '&c=' + cbName;
+    document.body.appendChild(script);
   }
 })();
 </script>

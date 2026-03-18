@@ -20,8 +20,7 @@
 
 <script>
 (function () {
-  var API_KEY  = '{{ site.newsletter.kit_api_key }}';
-  var FORM_ID  = '{{ site.newsletter.kit_form_id }}';
+  var MC_URL = '{{ site.newsletter.mailchimp_action }}';
 
   var form   = document.getElementById('newsletter-sidebar-form');
   var status = document.getElementById('newsletter-sidebar-status');
@@ -32,19 +31,15 @@
     var email = (form.querySelector('input[name="EMAIL"]').value || '').trim();
     if (!email) return;
 
-    if (!API_KEY || !FORM_ID) {
+    if (!MC_URL || MC_URL.indexOf('list-manage.com') === -1) {
       showStatus('Newsletter is not configured yet.', 'error');
       return;
     }
 
     showStatus('Subscribing\u2026', '');
-    kitSubscribe(API_KEY, FORM_ID, email, function (ok, msg) {
-      if (ok) {
-        showStatus('Subscribed! Check your inbox.', 'success');
-        form.reset();
-      } else {
-        showStatus(msg || 'Something went wrong.', 'error');
-      }
+    mcJsonp(MC_URL, 'subscribe', email, function (ok, msg) {
+      if (ok) { showStatus('Subscribed! Check your inbox to confirm.', 'success'); form.reset(); }
+      else    { showStatus(msg || 'Something went wrong.', 'error'); }
     });
   });
 
@@ -54,17 +49,33 @@
   }
 })();
 
-function kitSubscribe(apiKey, formId, email, cb) {
-  fetch('https://api.convertkit.com/v3/forms/' + formId + '/subscribe', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ api_key: apiKey, email: email })
-  })
-  .then(function (r) { return r.json(); })
-  .then(function (data) {
-    if (data && data.subscription) { cb(true); }
-    else { cb(false, (data && data.message) ? data.message : null); }
-  })
-  .catch(function () { cb(false, 'Network error. Please try again.'); });
+function mcJsonp(baseUrl, mode, email, cb) {
+  var url = baseUrl
+    .replace('/subscribe/post?',   '/subscribe/post-json?')
+    .replace('/unsubscribe/post?', '/unsubscribe/post-json?')
+    .replace(/[?&]c=[^&]*/g, '');
+
+  var cbName = 'mc_cb_' + Date.now();
+  var sep    = url.indexOf('?') === -1 ? '?' : '&';
+  var src    = url + sep + 'EMAIL=' + encodeURIComponent(email) + '&c=' + cbName;
+
+  window[cbName] = function (data) {
+    delete window[cbName];
+    var s = document.getElementById('mc_s_' + cbName);
+    if (s) s.parentNode.removeChild(s);
+
+    if (data && data.result === 'success') {
+      cb(true);
+    } else {
+      var msg = (data && data.msg) ? data.msg.split(' - ').pop().replace(/<[^>]+>/g, '') : null;
+      if (msg && msg.indexOf('already subscribed') > -1) cb(true, 'You\u2019re already subscribed!');
+      else cb(false, msg);
+    }
+  };
+
+  var script  = document.createElement('script');
+  script.id   = 'mc_s_' + cbName;
+  script.src  = src;
+  document.body.appendChild(script);
 }
 </script>
