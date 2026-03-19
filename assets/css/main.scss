@@ -204,6 +204,7 @@ html, body, p, li, h1, h2, h3, h4, h5, h6, .page__content {
   padding: 1rem 1.1rem;
   position: sticky;
   top: 2rem;
+  margin-top: 1.5rem;
 }
 .tagcloud__title {
   font-family: $sans-serif;
@@ -521,10 +522,10 @@ $dk-code:         #0a0a0a;
     .newsletter-widget__title { color: $dk-muted; border-bottom-color: $dk-border; }
     .newsletter-widget__desc  { color: $dk-muted; }
     .newsletter-widget__input {
-      background: $dk-surface-alt;
-      border-color: $dk-border;
-      color: $dk-text;
-      &:focus { border-color: $dk-accent; box-shadow: 0 0 0 2px rgba(59,130,246,0.2); }
+      background: $dk-surface-alt !important;
+      border-color: $dk-border !important;
+      color: $dk-text !important;
+      &:focus { border-color: $dk-accent !important; box-shadow: 0 0 0 2px rgba(59,130,246,0.2); }
     }
     .newsletter-widget__btn {
       background: $dk-accent;
@@ -541,10 +542,10 @@ $dk-code:         #0a0a0a;
   .newsletter-page__desc  { color: $dk-muted; }
   .newsletter-page__divider { border-top-color: $dk-border; }
   .newsletter-page__input {
-    background: $dk-surface-alt;
-    border-color: $dk-border;
-    color: $dk-text;
-    &:focus { border-color: $dk-accent; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); }
+    background: $dk-surface-alt !important;
+    border-color: $dk-border !important;
+    color: $dk-text !important;
+    &:focus { border-color: $dk-accent !important; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); }
   }
   .newsletter-page__btn {
     background: $dk-accent;
@@ -772,12 +773,14 @@ $dk-code:         #0a0a0a;
 .newsletter-page__row {
   display: flex;
   gap: 0.5rem;
-  align-items: stretch;
+  align-items: center;
 }
 .newsletter-page__input {
   font-family: $sans-serif;
   font-size: 0.95em;
-  padding: 8px 12px;
+  padding: 0 12px;
+  height: 40px;
+  box-sizing: border-box;
   border: 1px solid #c8d9e6;
   border-radius: 6px;
   background: #fff;
@@ -791,7 +794,9 @@ $dk-code:         #0a0a0a;
   font-family: $sans-serif;
   font-size: 0.95em;
   font-weight: 600;
-  padding: 8px 18px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 18px;
   background: #2980b9;
   color: #fff;
   border: none;
