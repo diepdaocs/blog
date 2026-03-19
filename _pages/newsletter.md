@@ -4,6 +4,9 @@ title: "Newsletter"
 permalink: /newsletter/
 ---
 
+{% assign _mc_u  = site.newsletter.mailchimp_action | split: "u="  | last | split: "&" | first %}
+{% assign _mc_id = site.newsletter.mailchimp_action | split: "id=" | last | split: "&" | first %}
+
 <div class="newsletter-page">
 
   <section class="newsletter-page__section">
@@ -12,11 +15,20 @@ permalink: /newsletter/
       Get new posts delivered straight to your inbox. No spam &mdash; unsubscribe anytime.
     </p>
 
-    <form class="newsletter-page__form" id="newsletter-page-form" novalidate>
+    <form class="newsletter-page__form"
+          action="https://diepdao.us11.list-manage.com/subscribe/post"
+          method="POST"
+          target="_blank"
+          rel="noopener noreferrer">
+      <input type="hidden" name="u"  value="{{ _mc_u }}">
+      <input type="hidden" name="id" value="{{ _mc_id }}">
+      <div style="position:absolute;left:-5000px" aria-hidden="true">
+        <input type="text" name="b_{{ _mc_u }}_{{ _mc_id }}" tabindex="-1" value="">
+      </div>
       <div class="newsletter-page__row">
         <input
           type="email"
-          name="EMAIL"
+          name="MERGE0"
           class="newsletter-page__input"
           placeholder="your@email.com"
           required
@@ -24,7 +36,6 @@ permalink: /newsletter/
         />
         <button type="submit" class="newsletter-page__btn">Subscribe</button>
       </div>
-      <p class="newsletter-page__status" id="newsletter-page-status" aria-live="polite"></p>
     </form>
   </section>
 
@@ -40,11 +51,20 @@ permalink: /newsletter/
       Alternatively, enter your email below to be removed from the list.
     </p>
 
-    <form class="newsletter-page__form" id="newsletter-unsub-form" novalidate>
+    <form class="newsletter-page__form"
+          action="https://diepdao.us11.list-manage.com/unsubscribe/post"
+          method="POST"
+          target="_blank"
+          rel="noopener noreferrer">
+      <input type="hidden" name="u"  value="{{ _mc_u }}">
+      <input type="hidden" name="id" value="{{ _mc_id }}">
+      <div style="position:absolute;left:-5000px" aria-hidden="true">
+        <input type="text" name="b_{{ _mc_u }}_{{ _mc_id }}" tabindex="-1" value="">
+      </div>
       <div class="newsletter-page__row">
         <input
           type="email"
-          name="EMAIL"
+          name="email"
           class="newsletter-page__input"
           placeholder="your@email.com"
           required
@@ -52,90 +72,7 @@ permalink: /newsletter/
         />
         <button type="submit" class="newsletter-page__btn newsletter-page__btn--unsub">Unsubscribe</button>
       </div>
-      <p class="newsletter-page__status" id="newsletter-unsub-status" aria-live="polite"></p>
     </form>
   </section>
 
 </div>
-
-<script>
-(function () {
-  var MC_URL = '{{ site.newsletter.mailchimp_action }}';
-
-  function handleForm(formId, statusId, mode) {
-    var form = document.getElementById(formId);
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email = (form.querySelector('input[name="EMAIL"]').value || '').trim();
-      if (!email) return;
-      if (!MC_URL || MC_URL.indexOf('list-manage.com') === -1) {
-        showStatus(statusId, 'Newsletter is not configured yet.', 'error'); return;
-      }
-      showStatus(statusId, (mode === 'unsub' ? 'Processing\u2026' : 'Subscribing\u2026'), '');
-
-      var url = (mode === 'unsub')
-        ? MC_URL.replace('/subscribe/post', '/unsubscribe/post')
-        : MC_URL;
-
-      mcJsonp(url, email, function (ok, msg) {
-        if (ok) {
-          showStatus(statusId,
-            mode === 'unsub' ? 'You have been unsubscribed.' : 'Subscribed! Check your inbox to confirm.',
-            'success');
-          form.reset();
-        } else {
-          showStatus(statusId, msg || 'Something went wrong.', 'error');
-        }
-      });
-    });
-  }
-
-  handleForm('newsletter-page-form',  'newsletter-page-status',  'sub');
-  handleForm('newsletter-unsub-form', 'newsletter-unsub-status', 'unsub');
-
-  function showStatus(id, msg, type) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    el.textContent = msg;
-    el.className   = 'newsletter-page__status' + (type ? ' newsletter-page__status--' + type : '');
-  }
-
-  function mcJsonp(baseUrl, email, cb) {
-    var url    = baseUrl
-      .replace('/subscribe/post?',   '/subscribe/post-json?')
-      .replace('/unsubscribe/post?', '/unsubscribe/post-json?')
-      .replace(/[?&]c=[^&]*/g, '');
-    var cbName = 'mc_cb_' + Date.now();
-    var sep    = url.indexOf('?') === -1 ? '?' : '&';
-
-    function cleanup() {
-      delete window[cbName];
-      var s = document.getElementById('mc_s_' + cbName);
-      if (s) s.parentNode.removeChild(s);
-    }
-
-    var timer = setTimeout(function () {
-      if (window[cbName]) { cleanup(); cb(false, 'Request timed out. Please try again.'); }
-    }, 10000);
-
-    window[cbName] = function (data) {
-      clearTimeout(timer);
-      cleanup();
-      if (data && data.result === 'success') {
-        cb(true);
-      } else {
-        var msg = (data && data.msg) ? data.msg.split(' - ').pop().replace(/<[^>]+>/g, '') : null;
-        if (msg && (msg.indexOf('already subscribed') > -1)) cb(true, 'You\u2019re already subscribed!');
-        else if (msg && msg.indexOf('not subscribed') > -1)  cb(false, 'That email is not on the list.');
-        else cb(false, msg);
-      }
-    };
-
-    var script = document.createElement('script');
-    script.id  = 'mc_s_' + cbName;
-    script.src = url + sep + 'EMAIL=' + encodeURIComponent(email) + '&c=' + cbName;
-    document.body.appendChild(script);
-  }
-})();
-</script>

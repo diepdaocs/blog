@@ -1,89 +1,30 @@
+{% assign _mc_u  = site.newsletter.mailchimp_action | split: "u="  | last | split: "&" | first %}
+{% assign _mc_id = site.newsletter.mailchimp_action | split: "id=" | last | split: "&" | first %}
+
 <div class="newsletter-widget">
   <h3 class="newsletter-widget__title">Newsletter</h3>
   <p class="newsletter-widget__desc">New posts, straight to your inbox.</p>
-  <form class="newsletter-widget__form" id="newsletter-sidebar-form" novalidate>
+  <form class="newsletter-widget__form"
+        action="https://diepdao.us11.list-manage.com/subscribe/post"
+        method="POST"
+        target="_blank"
+        rel="noopener noreferrer">
+    <input type="hidden" name="u"  value="{{ _mc_u }}">
+    <input type="hidden" name="id" value="{{ _mc_id }}">
+    <div style="position:absolute;left:-5000px" aria-hidden="true">
+      <input type="text" name="b_{{ _mc_u }}_{{ _mc_id }}" tabindex="-1" value="">
+    </div>
     <input
       type="email"
-      name="EMAIL"
+      name="MERGE0"
       class="newsletter-widget__input"
       placeholder="your@email.com"
       required
       aria-label="Email address"
     />
     <button type="submit" class="newsletter-widget__btn">Subscribe</button>
-    <p class="newsletter-widget__status" id="newsletter-sidebar-status" aria-live="polite"></p>
   </form>
   <p class="newsletter-widget__unsub-link">
     <a href="/newsletter/#unsubscribe">Unsubscribe</a>
   </p>
 </div>
-
-<script>
-(function () {
-  var MC_URL = '{{ site.newsletter.mailchimp_action }}';
-
-  var form   = document.getElementById('newsletter-sidebar-form');
-  var status = document.getElementById('newsletter-sidebar-status');
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = (form.querySelector('input[name="EMAIL"]').value || '').trim();
-    if (!email) return;
-
-    if (!MC_URL || MC_URL.indexOf('list-manage.com') === -1) {
-      showStatus('Newsletter is not configured yet.', 'error');
-      return;
-    }
-
-    showStatus('Subscribing\u2026', '');
-    mcJsonp(MC_URL, 'subscribe', email, function (ok, msg) {
-      if (ok) { showStatus('Subscribed! Check your inbox to confirm.', 'success'); form.reset(); }
-      else    { showStatus(msg || 'Something went wrong.', 'error'); }
-    });
-  });
-
-  function showStatus(msg, type) {
-    status.textContent = msg;
-    status.className   = 'newsletter-widget__status' + (type ? ' newsletter-widget__status--' + type : '');
-  }
-})();
-
-function mcJsonp(baseUrl, mode, email, cb) {
-  var url = baseUrl
-    .replace('/subscribe/post?',   '/subscribe/post-json?')
-    .replace('/unsubscribe/post?', '/unsubscribe/post-json?')
-    .replace(/[?&]c=[^&]*/g, '');
-
-  var cbName = 'mc_cb_' + Date.now();
-  var sep    = url.indexOf('?') === -1 ? '?' : '&';
-  var src    = url + sep + 'EMAIL=' + encodeURIComponent(email) + '&c=' + cbName;
-
-  function cleanup() {
-    delete window[cbName];
-    var s = document.getElementById('mc_s_' + cbName);
-    if (s) s.parentNode.removeChild(s);
-  }
-
-  var timer = setTimeout(function () {
-    if (window[cbName]) { cleanup(); cb(false, 'Request timed out. Please try again.'); }
-  }, 10000);
-
-  window[cbName] = function (data) {
-    clearTimeout(timer);
-    cleanup();
-    if (data && data.result === 'success') {
-      cb(true);
-    } else {
-      var msg = (data && data.msg) ? data.msg.split(' - ').pop().replace(/<[^>]+>/g, '') : null;
-      if (msg && msg.indexOf('already subscribed') > -1) cb(true, 'You\u2019re already subscribed!');
-      else cb(false, msg);
-    }
-  };
-
-  var script  = document.createElement('script');
-  script.id   = 'mc_s_' + cbName;
-  script.src  = src;
-  document.body.appendChild(script);
-}
-</script>
