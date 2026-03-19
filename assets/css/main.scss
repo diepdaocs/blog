@@ -773,13 +773,13 @@ $dk-code:         #0a0a0a;
 .newsletter-page__row {
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  align-items: stretch;
 }
 .newsletter-page__input {
   font-family: $sans-serif;
   font-size: 0.95em;
   padding: 0 12px;
-  height: 40px;
+  min-height: 40px;
   box-sizing: border-box;
   border: 1px solid #c8d9e6;
   border-radius: 6px;
@@ -794,7 +794,7 @@ $dk-code:         #0a0a0a;
   font-family: $sans-serif;
   font-size: 0.95em;
   font-weight: 600;
-  height: 40px;
+  min-height: 40px;
   box-sizing: border-box;
   padding: 0 18px;
   background: #2980b9;
@@ -804,6 +804,9 @@ $dk-code:         #0a0a0a;
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover { background: #1f618d; }
   &--unsub {
     background: #7f8c8d;
