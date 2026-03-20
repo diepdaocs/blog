@@ -1,4 +1,4 @@
-# diepdao.me
+# My Blog
 
 This is a Jekyll-based blog using the Minimal Mistakes theme.
 
