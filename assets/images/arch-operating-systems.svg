@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf5ff"/>
+      <stop offset="100%" style="stop-color:#f0fdf4"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/></filter>
+    <marker id="aP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#7c3aed"/></marker>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d"/></marker>
+  </defs>
+
+  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Operating Systems — The Software That Manages Everything</text>
+  <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">Apps → System Calls → Kernel → Hardware  ·  Processes · Virtual Memory · File System</text>
+
+  <!-- APPS LAYER -->
+  <text x="30" y="78" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">APPLICATION LAYER  (user mode — restricted access)</text>
+
+  <rect x="30"  y="86" width="155" height="58" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="107" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">Chrome</text>
+  <text x="107" y="124" text-anchor="middle" font-size="9.5" fill="#3b82f6">PID 1234</text>
+  <text x="107" y="138" text-anchor="middle" font-size="9" fill="#93c5fd">isolated memory space</text>
+
+  <rect x="200" y="86" width="155" height="58" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="277" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">Spotify</text>
+  <text x="277" y="124" text-anchor="middle" font-size="9.5" fill="#3b82f6">PID 5678</text>
+  <text x="277" y="138" text-anchor="middle" font-size="9" fill="#93c5fd">isolated memory space</text>
+
+  <rect x="370" y="86" width="155" height="58" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="447" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">Python Script</text>
+  <text x="447" y="124" text-anchor="middle" font-size="9.5" fill="#3b82f6">PID 9012</text>
+  <text x="447" y="138" text-anchor="middle" font-size="9" fill="#93c5fd">isolated memory space</text>
+
+  <rect x="540" y="86" width="295" height="58" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="687" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#1d4ed8">Every process believes it owns all memory</text>
+  <text x="687" y="124" text-anchor="middle" font-size="9.5" fill="#3b82f6">virtual address 0x0000 → 0xFFFF…  (illusion by OS)</text>
+  <text x="687" y="138" text-anchor="middle" font-size="9" fill="#93c5fd">MMU translates virtual → physical on every access</text>
+
+  <!-- System call boundary -->
+  <rect x="30" y="155" width="800" height="30" rx="6" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="430" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#5b21b6" letter-spacing="1">SYSTEM CALL INTERFACE  —  open · read · write · fork · mmap · connect · exit</text>
+
+  <!-- arrows down -->
+  <line x1="107" y1="144" x2="107" y2="154" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#aP)"/>
+  <line x1="277" y1="144" x2="277" y2="154" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#aP)"/>
+  <line x1="447" y1="144" x2="447" y2="154" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#aP)"/>
+
+  <!-- KERNEL LAYER -->
+  <text x="30" y="207" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">KERNEL  (kernel mode — full hardware access)</text>
+
+  <!-- Process Manager -->
+  <rect x="30"  y="215" width="178" height="100" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="119" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">Process Manager</text>
+  <text x="119" y="256" text-anchor="middle" font-size="10" fill="#8b5cf6">fork · exec · wait</text>
+  <text x="119" y="272" text-anchor="middle" font-size="9" fill="#a78bfa">Scheduler (CFS)</text>
+  <text x="119" y="288" text-anchor="middle" font-size="9" fill="#a78bfa">context switch ~1–10 µs</text>
+  <text x="119" y="304" text-anchor="middle" font-size="9" fill="#c4b5fd">signals · IPC · pipes</text>
+
+  <!-- Memory Manager -->
+  <rect x="220" y="215" width="178" height="100" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="309" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">Memory Manager</text>
+  <text x="309" y="256" text-anchor="middle" font-size="10" fill="#8b5cf6">virtual address space</text>
+  <text x="309" y="272" text-anchor="middle" font-size="9" fill="#a78bfa">page tables (4 KB pages)</text>
+  <text x="309" y="288" text-anchor="middle" font-size="9" fill="#a78bfa">page faults → load from SSD</text>
+  <text x="309" y="304" text-anchor="middle" font-size="9" fill="#c4b5fd">malloc / free / mmap</text>
+
+  <!-- File System -->
+  <rect x="410" y="215" width="178" height="100" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="499" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">File System</text>
+  <text x="499" y="256" text-anchor="middle" font-size="10" fill="#8b5cf6">inodes · directories</text>
+  <text x="499" y="272" text-anchor="middle" font-size="9" fill="#a78bfa">permissions (rwx)</text>
+  <text x="499" y="288" text-anchor="middle" font-size="9" fill="#a78bfa">journaling (no corruption)</text>
+  <text x="499" y="304" text-anchor="middle" font-size="9" fill="#c4b5fd">ext4 · APFS · NTFS · ZFS</text>
+
+  <!-- Device Drivers -->
+  <rect x="600" y="215" width="178" height="100" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="689" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">Device Drivers</text>
+  <text x="689" y="256" text-anchor="middle" font-size="10" fill="#8b5cf6">keyboard · mouse</text>
+  <text x="689" y="272" text-anchor="middle" font-size="9" fill="#a78bfa">display · network card</text>
+  <text x="689" y="288" text-anchor="middle" font-size="9" fill="#a78bfa">disk controller</text>
+  <text x="689" y="304" text-anchor="middle" font-size="9" fill="#c4b5fd">USB · PCIe · SATA</text>
+
+  <!-- HARDWARE LAYER -->
+  <line x1="119" y1="315" x2="119" y2="340" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#aG)"/>
+  <line x1="309" y1="315" x2="309" y2="340" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#aG)"/>
+  <line x1="499" y1="315" x2="499" y2="340" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#aG)"/>
+  <line x1="689" y1="315" x2="689" y2="340" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#aG)"/>
+
+  <text x="30" y="337" font-size="10" font-weight="600" fill="#15803d" letter-spacing="1.2">HARDWARE</text>
+  <rect x="30" y="344" width="800" height="40" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="430" y="369" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">CPU  ·  RAM  ·  SSD / HDD  ·  Network Card  ·  GPU  ·  USB Devices</text>
+
+  <!-- Thread concurrency note -->
+  <text x="30" y="412" font-size="10" font-weight="600" fill="#b45309" letter-spacing="1.2">CONCURRENCY — THREADS SHARING MEMORY</text>
+  <rect x="30"  y="420" width="380" height="72" rx="8" fill="#fff7ed" stroke="#b45309" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="220" y="440" text-anchor="middle" font-size="10.5" font-weight="600" fill="#b45309">Thread 1                                Thread 2</text>
+  <text x="220" y="458" text-anchor="middle" font-size="9.5" fill="#92400e">read balance = 100        read balance = 100</text>
+  <text x="220" y="473" text-anchor="middle" font-size="9.5" fill="#92400e">write balance = 50        write balance = 50   ← lost!</text>
+  <text x="220" y="486" text-anchor="middle" font-size="9" fill="#b45309" font-style="italic">Race condition — fix with mutex lock</text>
+
+  <rect x="430" y="420" width="400" height="72" rx="8" fill="#f0fdf4" stroke="#15803d" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="630" y="440" text-anchor="middle" font-size="10.5" font-weight="600" fill="#15803d">Scheduler — who runs next?</text>
+  <text x="630" y="458" text-anchor="middle" font-size="9.5" fill="#166534">Timer interrupt every ~1ms → save state → pick next thread</text>
+  <text x="630" y="473" text-anchor="middle" font-size="9.5" fill="#166534">Linux CFS: run whoever has had least CPU time</text>
+  <text x="630" y="486" text-anchor="middle" font-size="9" fill="#4ade80" font-style="italic">Context switch overhead: ~1–10 µs</text>
+
+  <text x="430" y="514" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 3  ·  Operating Systems</text>
+</svg>

@@ -204,7 +204,7 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
     </div>
   </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/21/computer-architecture/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">2. Computer Architecture: Inside the CPU</h2>
       <p class="project-card__excerpt">The fetch-decode-execute cycle, pipelining, branch prediction, out-of-order execution, the memory hierarchy, and why cache misses hurt so much.</p>
@@ -212,12 +212,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">cpu</span>
         <span class="project-card__tag">architecture</span>
         <span class="project-card__tag">cache</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/22/operating-systems/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">3. Operating Systems: The Software That Runs Everything Else</h2>
       <p class="project-card__excerpt">Processes, threads, virtual memory, the file system, system calls, and the concurrency primitives that every application depends on.</p>
@@ -225,12 +224,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">os</span>
         <span class="project-card__tag">processes</span>
         <span class="project-card__tag">memory</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/23/algorithms/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">4. Algorithms: Thinking About Efficiency</h2>
       <p class="project-card__excerpt">Complexity analysis, sorting, searching, divide and conquer, dynamic programming, greedy algorithms, and how to reason about correctness.</p>
@@ -238,12 +236,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">algorithms</span>
         <span class="project-card__tag">complexity</span>
         <span class="project-card__tag">dynamic-programming</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/24/data-structures/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">5. Data Structures: The Right Container for the Right Job</h2>
       <p class="project-card__excerpt">Arrays, linked lists, hash tables, trees, heaps, and graphs — the trade-offs behind each, and the real problems they solve.</p>
@@ -251,12 +248,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">data-structures</span>
         <span class="project-card__tag">hash-tables</span>
         <span class="project-card__tag">graphs</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/25/networks-and-security/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">6. Networks & Security: How the Internet Works and How to Protect It</h2>
       <p class="project-card__excerpt">TCP/IP, DNS, TLS, HTTP/2 and HTTP/3, cryptographic primitives, common attack vectors, and how authentication and authorisation really work.</p>
@@ -264,12 +260,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">networking</span>
         <span class="project-card__tag">security</span>
         <span class="project-card__tag">cryptography</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/26/databases/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">7. Databases: Storing and Querying Data at Scale</h2>
       <p class="project-card__excerpt">The relational model, ACID transactions, B-tree indexes, MVCC, query optimisation, and when to reach for NoSQL instead.</p>
@@ -277,12 +272,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">databases</span>
         <span class="project-card__tag">sql</span>
         <span class="project-card__tag">nosql</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/27/application-development/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">8. Application Development: Building Software That Lasts</h2>
       <p class="project-card__excerpt">API design, architecture patterns, software engineering practices, testing strategies, CI/CD, and the craft of writing maintainable code.</p>
@@ -290,12 +284,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">software-engineering</span>
         <span class="project-card__tag">api-design</span>
         <span class="project-card__tag">testing</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/28/distributed-systems/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">9. Distributed Systems: When One Machine Is Not Enough</h2>
       <p class="project-card__excerpt">CAP theorem, consistency models, consensus algorithms (Raft, Paxos), replication, sharding, caching, and the real meaning of "five nines" reliability.</p>
@@ -303,24 +296,23 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">distributed-systems</span>
         <span class="project-card__tag">consistency</span>
         <span class="project-card__tag">consensus</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/29/machine-learning/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">10. Machine Learning: Teaching Computers to Learn</h2>
       <p class="project-card__excerpt">Supervised and unsupervised learning, gradient descent, decision trees, SVMs, ensemble methods, and when classical ML beats deep learning.</p>
       <div class="project-card__tags">
         <span class="project-card__tag">machine-learning</span>
         <span class="project-card__tag">gradient-descent</span>
-        <span class="project-card__tag">coming soon</span>
+        <span class="project-card__tag">decision-trees</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/30/deep-learning/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">11. Deep Learning: Neural Networks and the Transformer Revolution</h2>
       <p class="project-card__excerpt">Backpropagation, CNNs, RNNs, the attention mechanism, transformers, pretraining, fine-tuning, and why scale changed everything.</p>
@@ -328,12 +320,11 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">deep-learning</span>
         <span class="project-card__tag">transformers</span>
         <span class="project-card__tag">attention</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
-  <div class="project-card project-card--upcoming">
+  <a href="/computer-science/2026/03/31/large-language-models/" class="project-card">
     <div class="project-card__body">
       <h2 class="project-card__title">12. Large Language Models: How AI Understands and Generates Language</h2>
       <p class="project-card__excerpt">Tokenisation, the transformer architecture in depth, pretraining on internet-scale data, RLHF, inference, prompting, and what LLMs can and cannot do.</p>
@@ -341,10 +332,9 @@ The posts will go deep on each layer, in order from the bottom up. This is not t
         <span class="project-card__tag">llm</span>
         <span class="project-card__tag">generative-ai</span>
         <span class="project-card__tag">rlhf</span>
-        <span class="project-card__tag">coming soon</span>
       </div>
     </div>
-  </div>
+  </a>
 
 </div>
 

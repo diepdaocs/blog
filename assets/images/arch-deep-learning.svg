@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf5ff"/>
+      <stop offset="100%" style="stop-color:#eff6ff"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/></filter>
+    <marker id="aP" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#7c3aed"/></marker>
+    <marker id="aB" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#1d4ed8"/></marker>
+    <marker id="aR" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Deep Learning — Neural Networks &amp; the Transformer</text>
+  <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">Neuron · Backpropagation · CNN · Attention · Transformer Architecture</text>
+
+  <!-- NEURAL NETWORK -->
+  <text x="30" y="78" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">NEURAL NETWORK  — layers of neurons learning features</text>
+  <rect x="30" y="85" width="390" height="220" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Input layer label -->
+  <text x="67" y="104" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="600">Input</text>
+  <!-- Hidden layer labels -->
+  <text x="167" y="104" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="600">Hidden 1</text>
+  <text x="267" y="104" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="600">Hidden 2</text>
+  <!-- Output layer label -->
+  <text x="377" y="104" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="600">Output</text>
+
+  <!-- Input neurons (x1..x4) -->
+  <circle cx="67" cy="125" r="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="67" y="129" text-anchor="middle" font-size="9" fill="#5b21b6">x₁</text>
+  <circle cx="67" cy="160" r="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="67" y="164" text-anchor="middle" font-size="9" fill="#5b21b6">x₂</text>
+  <circle cx="67" cy="195" r="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="67" y="199" text-anchor="middle" font-size="9" fill="#5b21b6">x₃</text>
+  <circle cx="67" cy="230" r="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="67" y="234" text-anchor="middle" font-size="9" fill="#5b21b6">x₄</text>
+
+  <!-- Hidden 1 neurons -->
+  <circle cx="167" cy="130" r="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="167" cy="165" r="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="167" cy="200" r="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="167" cy="235" r="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="167" cy="270" r="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+
+  <!-- Hidden 2 neurons -->
+  <circle cx="267" cy="140" r="14" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="267" cy="175" r="14" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="267" cy="210" r="14" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="267" cy="245" r="14" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+
+  <!-- Output neurons -->
+  <circle cx="377" cy="162" r="14" fill="#7c3aed" stroke="#5b21b6" stroke-width="1.8"/>
+  <text x="377" y="166" text-anchor="middle" font-size="8" fill="#fff">cat</text>
+  <circle cx="377" cy="205" r="14" fill="#7c3aed" stroke="#5b21b6" stroke-width="1.8"/>
+  <text x="377" y="209" text-anchor="middle" font-size="8" fill="#fff">dog</text>
+
+  <!-- Connections (simplified) -->
+  <g stroke="#a78bfa" stroke-width="0.8" opacity="0.5">
+    <line x1="81" y1="125" x2="153" y2="130"/>
+    <line x1="81" y1="125" x2="153" y2="165"/>
+    <line x1="81" y1="125" x2="153" y2="200"/>
+    <line x1="81" y1="160" x2="153" y2="130"/>
+    <line x1="81" y1="160" x2="153" y2="165"/>
+    <line x1="81" y1="160" x2="153" y2="200"/>
+    <line x1="81" y1="195" x2="153" y2="165"/>
+    <line x1="81" y1="195" x2="153" y2="200"/>
+    <line x1="81" y1="195" x2="153" y2="235"/>
+    <line x1="81" y1="230" x2="153" y2="200"/>
+    <line x1="81" y1="230" x2="153" y2="235"/>
+    <line x1="81" y1="230" x2="153" y2="270"/>
+
+    <line x1="181" y1="130" x2="253" y2="140"/>
+    <line x1="181" y1="130" x2="253" y2="175"/>
+    <line x1="181" y1="165" x2="253" y2="140"/>
+    <line x1="181" y1="165" x2="253" y2="175"/>
+    <line x1="181" y1="165" x2="253" y2="210"/>
+    <line x1="181" y1="200" x2="253" y2="175"/>
+    <line x1="181" y1="200" x2="253" y2="210"/>
+    <line x1="181" y1="200" x2="253" y2="245"/>
+    <line x1="181" y1="235" x2="253" y2="210"/>
+    <line x1="181" y1="235" x2="253" y2="245"/>
+    <line x1="181" y1="270" x2="253" y2="245"/>
+
+    <line x1="281" y1="140" x2="363" y2="162"/>
+    <line x1="281" y1="175" x2="363" y2="162"/>
+    <line x1="281" y1="175" x2="363" y2="205"/>
+    <line x1="281" y1="210" x2="363" y2="162"/>
+    <line x1="281" y1="210" x2="363" y2="205"/>
+    <line x1="281" y1="245" x2="363" y2="205"/>
+  </g>
+
+  <!-- Backprop arrow -->
+  <path d="M363,205 Q300,290 200,290 Q130,290 85,240" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#aR)"/>
+  <text x="220" y="306" text-anchor="middle" font-size="9" fill="#dc2626">backpropagation — error flows backward, weights updated</text>
+
+  <!-- Neuron formula -->
+  <text x="170" y="270" text-anchor="middle" font-size="8.5" fill="#7c3aed">ReLU(w₁x₁+w₂x₂+…+b)</text>
+
+  <!-- CNN -->
+  <text x="440" y="78" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">CNN  — spatial feature detection with sliding filters</text>
+  <rect x="440" y="85" width="390" height="104" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Image grid -->
+  <rect x="452" y="98" width="56" height="56" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="480" y="124" text-anchor="middle" font-size="8" fill="#1d4ed8">image</text>
+  <text x="480" y="136" text-anchor="middle" font-size="8" fill="#1d4ed8">224×224</text>
+  <text x="480" y="148" text-anchor="middle" font-size="8" fill="#1d4ed8">pixels</text>
+
+  <!-- Filters -->
+  <text x="525" y="128" text-anchor="middle" font-size="14" fill="#94a3b8">→</text>
+  <rect x="538" y="100" width="30" height="30" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="553" y="119" text-anchor="middle" font-size="8" fill="#075985">3×3</text>
+  <text x="553" y="105" text-anchor="middle" font-size="7.5" fill="#0284c7">filter</text>
+  <rect x="538" y="136" width="30" height="30" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="553" y="155" text-anchor="middle" font-size="8" fill="#075985">3×3</text>
+
+  <text x="587" y="128" text-anchor="middle" font-size="14" fill="#94a3b8">→</text>
+
+  <!-- Feature maps -->
+  <rect x="596" y="98" width="46" height="22" rx="3" fill="#dcfce7" stroke="#15803d" stroke-width="1"/>
+  <text x="619" y="113" text-anchor="middle" font-size="7.5" fill="#166534">edges</text>
+  <rect x="596" y="124" width="46" height="22" rx="3" fill="#dcfce7" stroke="#15803d" stroke-width="1"/>
+  <text x="619" y="139" text-anchor="middle" font-size="7.5" fill="#166534">corners</text>
+  <rect x="596" y="150" width="46" height="22" rx="3" fill="#dcfce7" stroke="#15803d" stroke-width="1"/>
+  <text x="619" y="165" text-anchor="middle" font-size="7.5" fill="#166534">textures</text>
+
+  <text x="656" y="128" text-anchor="middle" font-size="14" fill="#94a3b8">→</text>
+
+  <rect x="664" y="100" width="45" height="68" rx="4" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="686" y="124" text-anchor="middle" font-size="7.5" fill="#78350f">deeper</text>
+  <text x="686" y="136" text-anchor="middle" font-size="7.5" fill="#78350f">features</text>
+  <text x="686" y="148" text-anchor="middle" font-size="7.5" fill="#78350f">(eyes,</text>
+  <text x="686" y="160" text-anchor="middle" font-size="7.5" fill="#78350f">whiskers)</text>
+
+  <text x="720" y="128" text-anchor="middle" font-size="14" fill="#94a3b8">→</text>
+
+  <rect x="728" y="104" width="90" height="60" rx="6" fill="#7c3aed" stroke="#5b21b6" stroke-width="1.5"/>
+  <text x="773" y="128" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">cat: 94%</text>
+  <text x="773" y="143" text-anchor="middle" font-size="9" fill="#ddd6fe">dog: 5%</text>
+  <text x="773" y="156" text-anchor="middle" font-size="9" fill="#ddd6fe">bird: 1%</text>
+
+  <!-- TRANSFORMER / ATTENTION -->
+  <text x="30" y="328" font-size="10" font-weight="600" fill="#b45309" letter-spacing="1.2">TRANSFORMER  — attention lets every token see every other token</text>
+  <rect x="30" y="336" width="800" height="148" rx="8" fill="#fff" stroke="#d97706" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Input tokens -->
+  <text x="80" y="356" text-anchor="middle" font-size="9" fill="#b45309" font-weight="600">Tokens</text>
+  <rect x="45"  y="362" width="68" height="22" rx="4" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="79" y="377" text-anchor="middle" font-size="9.5" fill="#78350f">The</text>
+  <rect x="45"  y="388" width="68" height="22" rx="4" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="79" y="403" text-anchor="middle" font-size="9.5" fill="#78350f">cat</text>
+  <rect x="45"  y="414" width="68" height="22" rx="4" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="79" y="429" text-anchor="middle" font-size="9.5" fill="#78350f">sat</text>
+  <rect x="45"  y="440" width="68" height="22" rx="4" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="79" y="455" text-anchor="middle" font-size="9.5" fill="#78350f">mat</text>
+
+  <!-- Attention head (the key visual) -->
+  <text x="250" y="356" text-anchor="middle" font-size="9" fill="#b45309" font-weight="600">Self-Attention  (each token attends to all others)</text>
+
+  <!-- Attention grid - "cat" pays most attention to "sat" -->
+  <rect x="150" y="362" width="220" height="110" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Headers -->
+  <text x="190" y="376" text-anchor="middle" font-size="7.5" fill="#64748b">The</text>
+  <text x="220" y="376" text-anchor="middle" font-size="7.5" fill="#64748b">cat</text>
+  <text x="250" y="376" text-anchor="middle" font-size="7.5" fill="#64748b">sat</text>
+  <text x="280" y="376" text-anchor="middle" font-size="7.5" fill="#64748b">mat</text>
+  <!-- Row labels -->
+  <text x="163" y="396" font-size="7.5" fill="#64748b">The</text>
+  <text x="163" y="416" font-size="7.5" fill="#64748b">cat</text>
+  <text x="163" y="436" font-size="7.5" fill="#64748b">sat</text>
+  <text x="163" y="456" font-size="7.5" fill="#64748b">mat</text>
+
+  <!-- Attention weights (higher = darker) -->
+  <rect x="178" y="383" width="24" height="16" rx="2" fill="#fde68a" opacity="0.7"/><text x="190" y="395" text-anchor="middle" font-size="7" fill="#78350f">0.6</text>
+  <rect x="208" y="383" width="24" height="16" rx="2" fill="#fde68a" opacity="0.3"/><text x="220" y="395" text-anchor="middle" font-size="7" fill="#78350f">0.2</text>
+  <rect x="238" y="383" width="24" height="16" rx="2" fill="#fde68a" opacity="0.2"/><text x="250" y="395" text-anchor="middle" font-size="7" fill="#78350f">0.1</text>
+  <rect x="268" y="383" width="24" height="16" rx="2" fill="#fde68a" opacity="0.1"/><text x="280" y="395" text-anchor="middle" font-size="7" fill="#78350f">0.1</text>
+
+  <rect x="178" y="403" width="24" height="16" rx="2" fill="#fb923c" opacity="0.5"/><text x="190" y="415" text-anchor="middle" font-size="7" fill="#7c2d12">0.3</text>
+  <rect x="208" y="403" width="24" height="16" rx="2" fill="#fb923c" opacity="0.8"/><text x="220" y="415" text-anchor="middle" font-size="7" fill="#7c2d12">0.5</text>
+  <rect x="238" y="403" width="24" height="16" rx="2" fill="#f97316" opacity="0.9"/><text x="250" y="415" text-anchor="middle" font-size="7" fill="#431407" font-weight="700">0.8</text>
+  <rect x="268" y="403" width="24" height="16" rx="2" fill="#fb923c" opacity="0.3"/><text x="280" y="415" text-anchor="middle" font-size="7" fill="#7c2d12">0.2</text>
+
+  <rect x="178" y="423" width="24" height="16" rx="2" fill="#fde68a" opacity="0.2"/><text x="190" y="435" text-anchor="middle" font-size="7" fill="#78350f">0.1</text>
+  <rect x="208" y="423" width="24" height="16" rx="2" fill="#fb923c" opacity="0.7"/><text x="220" y="435" text-anchor="middle" font-size="7" fill="#7c2d12">0.5</text>
+  <rect x="238" y="423" width="24" height="16" rx="2" fill="#fde68a" opacity="0.3"/><text x="250" y="435" text-anchor="middle" font-size="7" fill="#78350f">0.2</text>
+  <rect x="268" y="423" width="24" height="16" rx="2" fill="#fb923c" opacity="0.5"/><text x="280" y="435" text-anchor="middle" font-size="7" fill="#7c2d12">0.3</text>
+
+  <text x="250" y="462" text-anchor="middle" font-size="8" fill="#b45309">"cat" attends most to "sat" (0.8)</text>
+  <text x="250" y="472" text-anchor="middle" font-size="8" fill="#94a3b8">cat → sat (subject → predicate)</text>
+
+  <!-- Transformer stack -->
+  <text x="500" y="356" text-anchor="middle" font-size="9" fill="#b45309" font-weight="600">Transformer Block (stacked N times)</text>
+
+  <rect x="385" y="362" width="220" height="28" rx="4" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="495" y="381" text-anchor="middle" font-size="9.5" fill="#78350f">Multi-Head Self-Attention</text>
+
+  <rect x="385" y="396" width="220" height="28" rx="4" fill="#fff7ed" stroke="#d97706" stroke-width="1.2"/>
+  <text x="495" y="415" text-anchor="middle" font-size="9.5" fill="#92400e">Feed-Forward Network (per token)</text>
+
+  <rect x="385" y="430" width="220" height="24" rx="4" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="495" y="447" text-anchor="middle" font-size="9" fill="#78350f">Layer Norm + Residual Connections</text>
+
+  <text x="495" y="468" text-anchor="middle" font-size="9" fill="#64748b">Stack 12–96 blocks → deep transformer</text>
+  <text x="495" y="480" text-anchor="middle" font-size="8.5" fill="#94a3b8">GPT-4 ≈ 96 layers, each with 96 attention heads</text>
+
+  <!-- Why transformers won -->
+  <rect x="625" y="362" width="195" height="118" rx="8" fill="#f0fdf4" stroke="#15803d" stroke-width="1.5"/>
+  <text x="722" y="380" text-anchor="middle" font-size="10" font-weight="700" fill="#15803d">Why Transformers Won</text>
+  <text x="640" y="398" font-size="9" fill="#166534">✓ All tokens in parallel (fast GPU)</text>
+  <text x="640" y="413" font-size="9" fill="#166534">✓ Direct long-range attention</text>
+  <text x="640" y="428" font-size="9" fill="#166534">✓ Scales with more data</text>
+  <text x="640" y="443" font-size="9" fill="#166534">✓ Works for text, image, code</text>
+  <text x="640" y="458" font-size="9" fill="#dc2626">✗ O(n²) attention — context limit</text>
+  <text x="640" y="472" font-size="9" fill="#dc2626">✗ Needs huge data + compute</text>
+
+  <text x="430" y="512" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 11  ·  Deep Learning</text>
+</svg>
