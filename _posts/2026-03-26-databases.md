@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Databases: Storing and Querying Data at Scale"
-date: 2026-03-26 10:00:00 +0800
+date: 2026-01-09 10:00:00 +0800
+permalink: /computer-science/2026/03/26/databases/
 categories:
   - computer-science
 tags:

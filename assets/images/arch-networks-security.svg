@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 580" font-family="Inter, system-ui, sans-serif">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#f0fdf4"/>
@@ -9,7 +9,7 @@
     <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d"/></marker>
   </defs>
 
-  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+  <rect width="860" height="580" rx="14" fill="url(#bg)"/>
   <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Networks &amp; Security — From URL to Encrypted Response</text>
   <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">DNS · TCP Handshake · TLS · HTTP · Cryptography · Common Attacks</text>
 
@@ -88,7 +88,7 @@
 
   <!-- CRYPTOGRAPHY + ATTACKS -->
   <text x="30" y="374" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">CRYPTOGRAPHY</text>
-  <rect x="30" y="382" width="390" height="100" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="30" y="382" width="390" height="140" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
   <text x="50" y="402" font-size="10" font-weight="600" fill="#5b21b6">Symmetric (AES-256)</text>
   <text x="50" y="418" font-size="9.5" fill="#7c3aed">same key encrypts + decrypts  · fast</text>
   <text x="50" y="434" font-size="9" fill="#94a3b8">used for bulk data after TLS handshake</text>
@@ -96,20 +96,19 @@
   <text x="50" y="458" font-size="10" font-weight="600" fill="#5b21b6">Asymmetric (RSA / ECDSA)</text>
   <text x="50" y="474" font-size="9.5" fill="#7c3aed">public key encrypts · private key decrypts</text>
   <text x="50" y="488" font-size="9" fill="#94a3b8">used for TLS handshake · code signing · SSH</text>
-  <text x="50" y="500" font-size="9" fill="#7c3aed">embedding("king")−embedding("man")+embedding("woman")≈embedding("queen")</text>
-  <text x="220" y="500" text-anchor="middle" font-size="9" fill="#94a3b8">SHA-256 hash: one-way fingerprint · verify integrity</text>
+  <text x="50" y="504" font-size="9" fill="#94a3b8">SHA-256 hash: one-way fingerprint · verify integrity</text>
 
   <text x="440" y="374" font-size="10" font-weight="600" fill="#b91c1c" letter-spacing="1.2">COMMON ATTACKS + DEFENCES</text>
-  <rect x="440" y="382" width="390" height="100" rx="8" fill="#fff1f2" stroke="#b91c1c" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="440" y="382" width="390" height="140" rx="8" fill="#fff1f2" stroke="#b91c1c" stroke-width="1.5" filter="url(#sh)"/>
   <text x="460" y="402" font-size="10" font-weight="600" fill="#b91c1c">SQL Injection</text>
   <text x="460" y="418" font-size="9" fill="#7f1d1d">User input becomes SQL code → leak all data</text>
   <text x="460" y="430" font-size="9" fill="#16a34a">Fix: parameterized queries (cursor.execute(q, params))</text>
-  <line x1="460" y1="438" x2="818" y2="438" stroke="#fecdd3" stroke-width="1"/>
-  <text x="460" y="454" font-size="10" font-weight="600" fill="#b91c1c">XSS  (Cross-Site Scripting)</text>
-  <text x="460" y="470" font-size="9" fill="#7f1d1d">Attacker injects &lt;script&gt; that runs in victim's browser</text>
-  <text x="460" y="482" font-size="9" fill="#16a34a">Fix: escape all output  (&lt; → &amp;lt;, &gt; → &amp;gt;)</text>
-  <line x1="460" y1="490" x2="818" y2="490" stroke="#fecdd3" stroke-width="1"/>
-  <text x="460" y="506" font-size="9" fill="#7f1d1d">Phishing · MitM → Fix: HTTPS · check URLs · use 2FA</text>
+  <line x1="460" y1="440" x2="818" y2="440" stroke="#fecdd3" stroke-width="1"/>
+  <text x="460" y="456" font-size="10" font-weight="600" fill="#b91c1c">XSS  (Cross-Site Scripting)</text>
+  <text x="460" y="472" font-size="9" fill="#7f1d1d">Attacker injects &lt;script&gt; that runs in victim's browser</text>
+  <text x="460" y="484" font-size="9" fill="#16a34a">Fix: escape all output  (&lt; → &amp;lt;, &gt; → &amp;gt;)</text>
+  <line x1="460" y1="494" x2="818" y2="494" stroke="#fecdd3" stroke-width="1"/>
+  <text x="460" y="508" font-size="9" fill="#7f1d1d">Phishing · MitM → Fix: HTTPS · check URLs · use 2FA</text>
 
-  <text x="430" y="516" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 6  ·  Networks &amp; Security</text>
+  <text x="430" y="572" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 6  ·  Networks &amp; Security</text>
 </svg>

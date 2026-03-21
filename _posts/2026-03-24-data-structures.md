@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Data Structures: The Right Container for the Right Job"
-date: 2026-03-24 10:00:00 +0800
+date: 2026-01-07 10:00:00 +0800
+permalink: /computer-science/2026/03/24/data-structures/
 categories:
   - computer-science
 tags:

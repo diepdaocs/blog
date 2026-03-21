@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Bits & Bytes: How Computers Encode, Transmit, and Decode Everything"
-date: 2026-03-16 10:00:00 +0800
+date: 2026-01-02 10:00:00 +0800
+permalink: /computer-science/2026/03/16/bits-and-bytes/
 categories:
   - computer-science
 tags:

@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Machine Learning: Teaching Computers to Learn"
-date: 2026-03-29 10:00:00 +0800
+date: 2026-01-12 10:00:00 +0800
+permalink: /computer-science/2026/03/29/machine-learning/
 categories:
   - computer-science
 tags:

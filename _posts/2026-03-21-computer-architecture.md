@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Computer Architecture: Inside the CPU"
-date: 2026-03-21 10:00:00 +0800
+date: 2026-01-04 10:00:00 +0800
+permalink: /computer-science/2026/03/21/computer-architecture/
 categories:
   - computer-science
 tags:
