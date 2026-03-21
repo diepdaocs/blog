@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf5ff"/>
+      <stop offset="100%" style="stop-color:#eff6ff"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/></filter>
+    <marker id="aP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#7c3aed"/></marker>
+    <marker id="aB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#1d4ed8"/></marker>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d"/></marker>
+  </defs>
+  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Distributed Systems — When One Machine Is Not Enough</text>
+  <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">CAP Theorem · Raft Consensus · Replication · Sharding · Caching</text>
+
+  <!-- RAFT CONSENSUS -->
+  <text x="30" y="78" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">RAFT CONSENSUS  — how nodes agree on a leader</text>
+  <rect x="30" y="85" width="390" height="195" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Leader node -->
+  <rect x="150" y="100" width="110" height="70" rx="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="2" filter="url(#sh)"/>
+  <text x="205" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Leader</text>
+  <text x="205" y="141" text-anchor="middle" font-size="9.5" fill="#ddd6fe">Node A</text>
+  <text x="205" y="156" text-anchor="middle" font-size="8.5" fill="#c4b5fd">sends heartbeats</text>
+
+  <!-- Follower nodes -->
+  <rect x="48" y="200" width="100" height="60" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="98" y="223" text-anchor="middle" font-size="11" font-weight="600" fill="#5b21b6">Follower</text>
+  <text x="98" y="238" text-anchor="middle" font-size="9" fill="#7c3aed">Node B</text>
+  <text x="98" y="251" text-anchor="middle" font-size="8" fill="#a78bfa">replicates log</text>
+
+  <rect x="260" y="200" width="100" height="60" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="310" y="223" text-anchor="middle" font-size="11" font-weight="600" fill="#5b21b6">Follower</text>
+  <text x="310" y="238" text-anchor="middle" font-size="9" fill="#7c3aed">Node C</text>
+  <text x="310" y="251" text-anchor="middle" font-size="8" fill="#a78bfa">replicates log</text>
+
+  <!-- Arrows -->
+  <line x1="175" y1="170" x2="128" y2="199" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#aP)"/>
+  <line x1="235" y1="170" x2="280" y2="199" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#aP)"/>
+  <text x="100" y="180" font-size="8.5" fill="#7c3aed">heartbeat</text>
+  <text x="275" y="180" font-size="8.5" fill="#7c3aed">heartbeat</text>
+
+  <!-- Log replication -->
+  <text x="55" y="280" font-size="9" fill="#475569">Write: "x = 5"</text>
+  <text x="55" y="293" font-size="9" fill="#7c3aed">1. Leader appends to log</text>
+  <text x="55" y="306" font-size="9" fill="#7c3aed">2. Sends to followers</text>
+  <text x="55" y="319" font-size="9" fill="#15803d">3. Majority confirm (2/3)</text>
+  <text x="55" y="332" font-size="9" fill="#15803d">4. Commit ✓ reply to client</text>
+  <text x="250" y="280" font-size="9" fill="#64748b">Tolerance: 1 failure (3 nodes)</text>
+  <text x="250" y="293" font-size="9" fill="#64748b">2 failures: need 5 nodes</text>
+  <text x="250" y="308" font-size="8.5" fill="#94a3b8">Used in: etcd, CockroachDB</text>
+  <text x="250" y="320" font-size="8.5" fill="#94a3b8">Consul, TiKV, YugabyteDB</text>
+
+  <!-- CAP THEOREM -->
+  <text x="440" y="78" font-size="10" font-weight="600" fill="#b45309" letter-spacing="1.2">CAP THEOREM  — pick 2 of 3 (P is always required)</text>
+  <rect x="440" y="85" width="390" height="195" rx="8" fill="#fff" stroke="#d97706" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Triangle -->
+  <polygon points="625,100 720,230 530,230" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+  <!-- C vertex -->
+  <circle cx="625" cy="100" r="32" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="625" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">C</text>
+  <text x="625" y="110" text-anchor="middle" font-size="8.5" fill="#2563eb">Consistency</text>
+  <text x="625" y="122" text-anchor="middle" font-size="7.5" fill="#3b82f6">reads see latest write</text>
+
+  <!-- A vertex -->
+  <circle cx="530" cy="232" r="32" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="530" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">A</text>
+  <text x="530" y="242" text-anchor="middle" font-size="8.5" fill="#16a34a">Availability</text>
+  <text x="530" y="254" text-anchor="middle" font-size="7.5" fill="#4ade80">always get response</text>
+
+  <!-- P vertex -->
+  <circle cx="720" cy="232" r="32" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="720" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">P</text>
+  <text x="720" y="242" text-anchor="middle" font-size="8.5" fill="#b45309">Partition</text>
+  <text x="720" y="254" text-anchor="middle" font-size="7.5" fill="#d97706">tolerant (required)</text>
+
+  <!-- Labels on edges -->
+  <text x="565" y="155" font-size="8.5" fill="#1d4ed8" text-anchor="middle">CP systems</text>
+  <text x="565" y="165" font-size="8" fill="#64748b" text-anchor="middle">HBase, ZooKeeper</text>
+  <text x="690" y="155" font-size="8.5" fill="#15803d" text-anchor="middle">AP systems</text>
+  <text x="690" y="165" font-size="8" fill="#64748b" text-anchor="middle">Cassandra, DynamoDB</text>
+  <text x="625" y="248" font-size="8.5" fill="#92400e" text-anchor="middle">CA (only single node)</text>
+
+  <!-- REPLICATION + SHARDING -->
+  <text x="30" y="302" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">REPLICATION  — copies for safety and scale</text>
+  <rect x="30" y="310" width="390" height="92" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Primary -->
+  <rect x="48" y="324" width="90" height="60" rx="6" fill="#1d4ed8" stroke="#1e40af" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="93" y="347" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Primary</text>
+  <text x="93" y="362" text-anchor="middle" font-size="9" fill="#bfdbfe">writes here</text>
+  <text x="93" y="375" text-anchor="middle" font-size="8.5" fill="#93c5fd">source of truth</text>
+
+  <line x1="138" y1="354" x2="158" y2="354" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#aB)"/>
+  <text x="148" y="346" text-anchor="middle" font-size="7.5" fill="#64748b">async</text>
+
+  <!-- Replicas -->
+  <rect x="160" y="324" width="80" height="60" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="200" y="347" text-anchor="middle" font-size="10" font-weight="600" fill="#1d4ed8">Replica 1</text>
+  <text x="200" y="362" text-anchor="middle" font-size="8.5" fill="#3b82f6">reads only</text>
+  <text x="200" y="375" text-anchor="middle" font-size="8" fill="#93c5fd">slightly stale</text>
+
+  <line x1="240" y1="354" x2="258" y2="354" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#aB)"/>
+
+  <rect x="260" y="324" width="80" height="60" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="300" y="347" text-anchor="middle" font-size="10" font-weight="600" fill="#1d4ed8">Replica 2</text>
+  <text x="300" y="362" text-anchor="middle" font-size="8.5" fill="#3b82f6">reads only</text>
+  <text x="300" y="375" text-anchor="middle" font-size="8" fill="#93c5fd">slightly stale</text>
+
+  <text x="360" y="343" font-size="9.5" fill="#1d4ed8">3× read</text>
+  <text x="360" y="356" font-size="9.5" fill="#1d4ed8">throughput</text>
+  <text x="360" y="373" font-size="8.5" fill="#64748b">failover on</text>
+  <text x="360" y="383" font-size="8.5" fill="#64748b">primary crash</text>
+
+  <text x="440" y="302" font-size="10" font-weight="600" fill="#15803d" letter-spacing="1.2">SHARDING  — split data for write scale</text>
+  <rect x="440" y="310" width="390" height="92" rx="8" fill="#fff" stroke="#15803d" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Shards -->
+  <rect x="452" y="324" width="100" height="64" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+  <text x="502" y="343" text-anchor="middle" font-size="10" font-weight="700" fill="#14532d">Shard 1</text>
+  <text x="502" y="358" text-anchor="middle" font-size="8.5" fill="#166534">user_id % 3 = 0</text>
+  <text x="502" y="371" text-anchor="middle" font-size="8" fill="#4ade80">users 0, 3, 6, 9…</text>
+  <text x="502" y="382" text-anchor="middle" font-size="8" fill="#86efac">1/3 of all data</text>
+
+  <rect x="562" y="324" width="100" height="64" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+  <text x="612" y="343" text-anchor="middle" font-size="10" font-weight="700" fill="#14532d">Shard 2</text>
+  <text x="612" y="358" text-anchor="middle" font-size="8.5" fill="#166534">user_id % 3 = 1</text>
+  <text x="612" y="371" text-anchor="middle" font-size="8" fill="#4ade80">users 1, 4, 7, 10…</text>
+  <text x="612" y="382" text-anchor="middle" font-size="8" fill="#86efac">1/3 of all data</text>
+
+  <rect x="672" y="324" width="100" height="64" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+  <text x="722" y="343" text-anchor="middle" font-size="10" font-weight="700" fill="#14532d">Shard 3</text>
+  <text x="722" y="358" text-anchor="middle" font-size="8.5" fill="#166534">user_id % 3 = 2</text>
+  <text x="722" y="371" text-anchor="middle" font-size="8" fill="#4ade80">users 2, 5, 8, 11…</text>
+  <text x="722" y="382" text-anchor="middle" font-size="8" fill="#86efac">1/3 of all data</text>
+
+  <text x="785" y="342" font-size="9" fill="#15803d">Each shard</text>
+  <text x="785" y="355" font-size="9" fill="#15803d">handles 1/3</text>
+  <text x="785" y="368" font-size="9" fill="#64748b">of writes.</text>
+  <text x="785" y="381" font-size="9" fill="#b91c1c">No cross-shard</text>
+  <text x="785" y="392" font-size="9" fill="#b91c1c">JOINs!</text>
+
+  <!-- Consistency models -->
+  <rect x="30" y="414" width="800" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="430" y="433" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a5f">Consistency Models — how fresh is the data you read?</text>
+  <text x="130" y="450" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1d4ed8">Strong</text>
+  <text x="130" y="464" text-anchor="middle" font-size="9" fill="#3b82f6">always latest write</text>
+  <text x="130" y="476" text-anchor="middle" font-size="8.5" fill="#64748b">slower, safer</text>
+  <text x="350" y="450" text-anchor="middle" font-size="9.5" font-weight="600" fill="#7c3aed">Causal</text>
+  <text x="350" y="464" text-anchor="middle" font-size="9" fill="#8b5cf6">reads follow writes</text>
+  <text x="350" y="476" text-anchor="middle" font-size="8.5" fill="#64748b">your own writes visible</text>
+  <text x="570" y="450" text-anchor="middle" font-size="9.5" font-weight="600" fill="#d97706">Eventual</text>
+  <text x="570" y="464" text-anchor="middle" font-size="9" fill="#b45309">will converge, eventually</text>
+  <text x="570" y="476" text-anchor="middle" font-size="8.5" fill="#64748b">faster, briefly stale</text>
+  <text x="760" y="450" text-anchor="middle" font-size="9.5" font-weight="600" fill="#15803d">Use case fit</text>
+  <text x="760" y="464" text-anchor="middle" font-size="8.5" fill="#64748b">banking → strong</text>
+  <text x="760" y="476" text-anchor="middle" font-size="8.5" fill="#64748b">likes/views → eventual</text>
+
+  <text x="430" y="512" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 9  ·  Distributed Systems</text>
+</svg>

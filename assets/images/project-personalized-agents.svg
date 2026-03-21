@@ -45,6 +45,5 @@
   <circle cx="200" cy="167" r="2.5" fill="#fca5a5" opacity="0.9"/>
   <circle cx="129" cy="120" r="2.5" fill="#c4b5fd" opacity="0.9"/>
 
-  <!-- Label -->
-  <text x="200" y="228" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="9" font-family="sans-serif">OpenClaw · Personalized Agents</text>
+
 </svg>

@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#fff7ed"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/></filter>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d"/></marker>
+    <marker id="aO" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#d97706"/></marker>
+  </defs>
+  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Machine Learning — Teaching Computers to Learn</text>
+  <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">Supervised Learning · Gradient Descent · Decision Trees · Random Forests</text>
+
+  <!-- ML PIPELINE -->
+  <text x="30" y="78" font-size="10" font-weight="600" fill="#15803d" letter-spacing="1.2">THE ML PIPELINE</text>
+
+  <rect x="30"  y="86" width="115" height="64" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="87"  y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">Data</text>
+  <text x="87"  y="123" text-anchor="middle" font-size="9" fill="#166534">examples</text>
+  <text x="87"  y="136" text-anchor="middle" font-size="9" fill="#4ade80">with labels</text>
+
+  <line x1="145" y1="118" x2="162" y2="118" stroke="#15803d" stroke-width="1.8" marker-end="url(#aG)"/>
+
+  <rect x="164" y="86" width="115" height="64" rx="8" fill="#bbf7d0" stroke="#15803d" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="221" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">Features</text>
+  <text x="221" y="123" text-anchor="middle" font-size="9" fill="#166534">measurable</text>
+  <text x="221" y="136" text-anchor="middle" font-size="9" fill="#4ade80">properties</text>
+
+  <line x1="279" y1="118" x2="296" y2="118" stroke="#15803d" stroke-width="1.8" marker-end="url(#aG)"/>
+
+  <rect x="298" y="86" width="115" height="64" rx="8" fill="#86efac" stroke="#15803d" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="355" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#14532d">Training</text>
+  <text x="355" y="123" text-anchor="middle" font-size="9" fill="#166534">gradient descent</text>
+  <text x="355" y="136" text-anchor="middle" font-size="9" fill="#14532d">minimize loss</text>
+
+  <line x1="413" y1="118" x2="430" y2="118" stroke="#15803d" stroke-width="1.8" marker-end="url(#aG)"/>
+
+  <rect x="432" y="86" width="115" height="64" rx="8" fill="#16a34a" stroke="#15803d" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="489" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Model</text>
+  <text x="489" y="123" text-anchor="middle" font-size="9" fill="#bbf7d0">learned weights</text>
+  <text x="489" y="136" text-anchor="middle" font-size="9" fill="#dcfce7">decision rules</text>
+
+  <line x1="547" y1="118" x2="564" y2="118" stroke="#15803d" stroke-width="1.8" marker-end="url(#aG)"/>
+
+  <rect x="566" y="86" width="265" height="64" rx="8" fill="#fff" stroke="#15803d" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="698" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">Predictions on new data</text>
+  <text x="698" y="123" text-anchor="middle" font-size="9" fill="#166534">spam or not? · cat or dog?</text>
+  <text x="698" y="136" text-anchor="middle" font-size="9" fill="#4ade80">house price? · failure time?</text>
+
+  <!-- GRADIENT DESCENT -->
+  <text x="30" y="175" font-size="10" font-weight="600" fill="#d97706" letter-spacing="1.2">GRADIENT DESCENT  — learning by walking downhill</text>
+  <rect x="30" y="182" width="390" height="150" rx="8" fill="#fff" stroke="#d97706" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Loss curve -->
+  <path d="M55,310 Q100,230 160,200 Q210,185 260,180 Q300,178 330,178" fill="none" stroke="#d97706" stroke-width="2.5"/>
+  <!-- Ball rolling down -->
+  <circle cx="95" cy="244" r="8" fill="#d97706"/>
+  <text x="95" y="248" text-anchor="middle" font-size="8" fill="#fff">●</text>
+  <!-- Arrow showing step -->
+  <line x1="95" y1="244" x2="120" y2="230" stroke="#d97706" stroke-width="1.5" marker-end="url(#aO)" stroke-dasharray="4,2"/>
+
+  <!-- Axes -->
+  <line x1="50" y1="315" x2="345" y2="315" stroke="#94a3b8" stroke-width="1.2"/>
+  <line x1="50" y1="315" x2="50"  y2="185" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="200" y="326" text-anchor="middle" font-size="8.5" fill="#64748b">training steps →</text>
+  <text x="35"  y="250" text-anchor="middle" font-size="8.5" fill="#64748b" transform="rotate(-90 35 250)">loss (error) →</text>
+
+  <text x="200" y="200" text-anchor="middle" font-size="9.5" fill="#d97706">always step in the direction</text>
+  <text x="200" y="213" text-anchor="middle" font-size="9.5" fill="#d97706">that reduces error most</text>
+  <text x="200" y="300" text-anchor="middle" font-size="9" fill="#94a3b8">weights = weights − lr × gradient</text>
+
+  <!-- DECISION TREE -->
+  <text x="440" y="175" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">DECISION TREE  — transparent, interpretable</text>
+  <rect x="440" y="182" width="390" height="150" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Root -->
+  <rect x="565" y="194" width="130" height="28" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="630" y="213" text-anchor="middle" font-size="9.5" fill="#5b21b6">Income &gt; $50k?</text>
+
+  <!-- Level 1 -->
+  <rect x="460" y="242" width="120" height="26" rx="4" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="520" y="259" text-anchor="middle" font-size="9" fill="#5b21b6">Credit score &gt; 700?</text>
+  <rect x="680" y="242" width="120" height="26" rx="4" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.2"/>
+  <text x="740" y="259" text-anchor="middle" font-size="9.5" fill="#881337">REJECT</text>
+
+  <!-- Level 2 -->
+  <rect x="452" y="290" width="80" height="22" rx="4" fill="#dcfce7" stroke="#15803d" stroke-width="1.2"/>
+  <text x="492" y="305" text-anchor="middle" font-size="9.5" fill="#14532d">APPROVE</text>
+  <rect x="540" y="290" width="80" height="22" rx="4" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="580" y="305" text-anchor="middle" font-size="9.5" fill="#78350f">Years &gt; 3?</text>
+
+  <!-- Level 3 -->
+  <rect x="515" y="322" width="66" height="20" rx="3" fill="#dcfce7" stroke="#15803d"/>
+  <text x="548" y="336" text-anchor="middle" font-size="8.5" fill="#14532d">APPROVE</text>
+  <rect x="584" y="322" width="66" height="20" rx="3" fill="#fee2e2" stroke="#b91c1c"/>
+  <text x="617" y="336" text-anchor="middle" font-size="8.5" fill="#881337">REJECT</text>
+
+  <!-- Tree connections -->
+  <line x1="565" y1="222" x2="519" y2="241" stroke="#7c3aed" stroke-width="1.2"/>
+  <line x1="695" y1="222" x2="740" y2="241" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="537" y="237" font-size="7.5" fill="#15803d">Yes</text>
+  <text x="706" y="237" font-size="7.5" fill="#b91c1c">No</text>
+  <line x1="490" y1="268" x2="492" y2="289" stroke="#7c3aed" stroke-width="1.2"/>
+  <line x1="550" y1="268" x2="560" y2="289" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="475" y="284" font-size="7.5" fill="#15803d">Yes</text>
+  <text x="555" y="284" font-size="7.5" fill="#b91c1c">No</text>
+  <line x1="547" y1="312" x2="542" y2="321" stroke="#7c3aed" stroke-width="1.2"/>
+  <line x1="580" y1="312" x2="600" y2="321" stroke="#7c3aed" stroke-width="1.2"/>
+
+  <!-- Text labels in tree box -->
+  <text x="452" y="200" font-size="9" fill="#7c3aed">Each split:</text>
+  <text x="452" y="213" font-size="9" fill="#94a3b8">find feature + threshold</text>
+  <text x="452" y="226" font-size="9" fill="#94a3b8">that reduces error most</text>
+
+  <!-- OVERFITTING vs UNDERFITTING + RANDOM FORESTS -->
+  <text x="30" y="352" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">OVERFITTING vs UNDERFITTING  ·  RANDOM FOREST  (100 trees, majority vote)</text>
+  <rect x="30" y="360" width="253" height="118" rx="8" fill="#fff1f2" stroke="#b91c1c" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="156" y="380" text-anchor="middle" font-size="11" font-weight="700" fill="#b91c1c">Overfitting</text>
+  <text x="156" y="396" text-anchor="middle" font-size="9.5" fill="#7f1d1d">model too complex</text>
+  <text x="156" y="410" text-anchor="middle" font-size="9" fill="#7f1d1d">memorizes training data</text>
+  <text x="156" y="424" text-anchor="middle" font-size="9" fill="#94a3b8">perfect on train set</text>
+  <text x="156" y="438" text-anchor="middle" font-size="9" fill="#b91c1c">fails on new data</text>
+  <text x="156" y="456" text-anchor="middle" font-size="8.5" fill="#94a3b8">Fix: more data · simpler model · dropout</text>
+  <text x="156" y="470" text-anchor="middle" font-size="8.5" fill="#94a3b8">regularization · cross-validation</text>
+
+  <rect x="293" y="360" width="168" height="118" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="377" y="380" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">Just Right</text>
+  <text x="377" y="396" text-anchor="middle" font-size="9" fill="#166534">generalizes well</text>
+  <text x="377" y="410" text-anchor="middle" font-size="9" fill="#166534">good on train</text>
+  <text x="377" y="424" text-anchor="middle" font-size="9" fill="#166534">good on test</text>
+  <text x="377" y="446" text-anchor="middle" font-size="10" fill="#15803d" font-weight="600">Random Forest</text>
+  <text x="377" y="461" text-anchor="middle" font-size="8.5" fill="#166534">100 trees, each on</text>
+  <text x="377" y="475" text-anchor="middle" font-size="8.5" fill="#166534">random data subset</text>
+
+  <rect x="471" y="360" width="359" height="118" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="650" y="380" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a5f">Classical ML vs Deep Learning</text>
+  <text x="490" y="400" font-size="9.5" fill="#1d4ed8" font-weight="600">Classical ML (XGBoost)</text>
+  <text x="490" y="415" font-size="8.5" fill="#475569">tabular / structured data</text>
+  <text x="490" y="428" font-size="8.5" fill="#475569">hundreds to thousands of rows</text>
+  <text x="490" y="441" font-size="8.5" fill="#475569">interpretable decisions</text>
+  <text x="490" y="454" font-size="8.5" fill="#475569">fast training (seconds)</text>
+  <text x="690" y="400" font-size="9.5" fill="#7c3aed" font-weight="600">Deep Learning</text>
+  <text x="690" y="415" font-size="8.5" fill="#475569">images · audio · text</text>
+  <text x="690" y="428" font-size="8.5" fill="#475569">millions of examples</text>
+  <text x="690" y="441" font-size="8.5" fill="#475569">black box (harder to explain)</text>
+  <text x="690" y="454" font-size="8.5" fill="#475569">needs GPU, hours/days</text>
+  <line x1="645" y1="393" x2="645" y2="462" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="430" y="512" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 10  ·  Machine Learning</text>
+</svg>

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff7ed"/>
+      <stop offset="100%" style="stop-color:#eff6ff"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/></filter>
+  </defs>
+
+  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Algorithms — Complexity &amp; Key Techniques</text>
+  <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">Big O Notation  ·  Sorting  ·  Searching  ·  Dynamic Programming  ·  Graph Algorithms</text>
+
+  <!-- BIG-O COMPLEXITY CHART -->
+  <text x="30" y="78" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">BIG-O COMPLEXITY  (how operations grow as input n grows)</text>
+
+  <!-- Chart background -->
+  <rect x="30" y="85" width="350" height="200" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Axes -->
+  <line x1="60" y1="268" x2="370" y2="268" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="60" y1="268" x2="60"  y2="92"  stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="215" y="282" text-anchor="middle" font-size="9" fill="#64748b">input size n →</text>
+  <text x="45"  y="180" text-anchor="middle" font-size="9" fill="#64748b" transform="rotate(-90 45 180)">operations →</text>
+
+  <!-- O(1) line -->
+  <line x1="60" y1="250" x2="370" y2="250" stroke="#16a34a" stroke-width="2"/>
+  <text x="374" y="254" font-size="9" fill="#16a34a" font-weight="600">O(1)</text>
+
+  <!-- O(log n) curve (approximated) -->
+  <path d="M60,250 Q120,218 180,210 Q240,204 300,200 Q340,198 370,197" fill="none" stroke="#0284c7" stroke-width="2"/>
+  <text x="374" y="201" font-size="9" fill="#0284c7" font-weight="600">O(log n)</text>
+
+  <!-- O(n) line -->
+  <line x1="60" y1="250" x2="370" y2="150" stroke="#d97706" stroke-width="2"/>
+  <text x="374" y="154" font-size="9" fill="#d97706" font-weight="600">O(n)</text>
+
+  <!-- O(n log n) -->
+  <path d="M60,250 Q130,195 200,175 Q270,155 370,130" fill="none" stroke="#9333ea" stroke-width="2"/>
+  <text x="374" y="134" font-size="9" fill="#9333ea" font-weight="600">O(n log n)</text>
+
+  <!-- O(n²) curve -->
+  <path d="M60,250 Q100,235 130,210 Q180,175 220,140 Q260,105 300,97" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="304" y="97" font-size="9" fill="#dc2626" font-weight="600">O(n²)</text>
+
+  <!-- Legend -->
+  <rect x="38" y="93" width="10" height="6" fill="#16a34a" rx="1"/>
+  <text x="52" y="101" font-size="8.5" fill="#15803d">O(1) — array lookup</text>
+  <rect x="38" y="105" width="10" height="6" fill="#0284c7" rx="1"/>
+  <text x="52" y="113" font-size="8.5" fill="#0284c7">O(log n) — binary search</text>
+  <rect x="38" y="117" width="10" height="6" fill="#d97706" rx="1"/>
+  <text x="52" y="125" font-size="8.5" fill="#d97706">O(n) — linear scan</text>
+  <rect x="38" y="129" width="10" height="6" fill="#9333ea" rx="1"/>
+  <text x="52" y="137" font-size="8.5" fill="#9333ea">O(n log n) — merge sort</text>
+  <rect x="38" y="141" width="10" height="6" fill="#dc2626" rx="1"/>
+  <text x="52" y="149" font-size="8.5" fill="#dc2626">O(n²) — bubble sort</text>
+
+  <!-- MERGE SORT -->
+  <text x="405" y="78" font-size="10" font-weight="600" fill="#9333ea" letter-spacing="1.2">MERGE SORT  O(n log n)</text>
+  <rect x="405" y="85" width="430" height="200" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Level 0 -->
+  <rect x="560" y="95" width="130" height="28" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="625" y="114" text-anchor="middle" font-size="10" fill="#5b21b6">[5, 3, 8, 1, 9, 2]</text>
+
+  <!-- Level 1 -->
+  <rect x="440" y="144" width="115" height="28" rx="5" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.3"/>
+  <text x="497" y="163" text-anchor="middle" font-size="10" fill="#5b21b6">[5, 3, 8]</text>
+  <rect x="690" y="144" width="115" height="28" rx="5" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.3"/>
+  <text x="747" y="163" text-anchor="middle" font-size="10" fill="#5b21b6">[1, 9, 2]</text>
+
+  <!-- Level 2 -->
+  <rect x="415" y="196" width="68" height="26" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="449" y="213" text-anchor="middle" font-size="9.5" fill="#4c1d95">[5]</text>
+  <rect x="490" y="196" width="68" height="26" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="524" y="213" text-anchor="middle" font-size="9.5" fill="#4c1d95">[3, 8]</text>
+  <rect x="662" y="196" width="68" height="26" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="696" y="213" text-anchor="middle" font-size="9.5" fill="#4c1d95">[1]</text>
+  <rect x="740" y="196" width="68" height="26" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="774" y="213" text-anchor="middle" font-size="9.5" fill="#4c1d95">[9, 2]</text>
+
+  <!-- Merge result -->
+  <rect x="560" y="249" width="130" height="28" rx="5" fill="#dcfce7" stroke="#15803d" stroke-width="1.8"/>
+  <text x="625" y="268" text-anchor="middle" font-size="10" font-weight="600" fill="#14532d">[1, 2, 3, 5, 8, 9] ✓</text>
+
+  <!-- connecting lines split -->
+  <line x1="625" y1="123" x2="497" y2="143" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="625" y1="123" x2="747" y2="143" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="497" y1="172" x2="449" y2="195" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="497" y1="172" x2="524" y2="195" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="747" y1="172" x2="696" y2="195" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="747" y1="172" x2="774" y2="195" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <!-- merge upward -->
+  <line x1="449" y1="222" x2="625" y2="248" stroke="#15803d" stroke-width="1.2"/>
+  <line x1="524" y1="222" x2="625" y2="248" stroke="#15803d" stroke-width="1.2"/>
+  <line x1="696" y1="222" x2="625" y2="248" stroke="#15803d" stroke-width="1.2"/>
+  <line x1="774" y1="222" x2="625" y2="248" stroke="#15803d" stroke-width="1.2"/>
+
+  <!-- BINARY SEARCH vs LINEAR -->
+  <text x="30" y="308" font-size="10" font-weight="600" fill="#0284c7" letter-spacing="1.2">BINARY SEARCH vs LINEAR SEARCH  (n = 1,000,000)</text>
+
+  <rect x="30"  y="316" width="390" height="68" rx="8" fill="#fff" stroke="#dc2626" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="225" y="336" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">Linear Search  O(n)</text>
+  <text x="225" y="354" text-anchor="middle" font-size="10" fill="#7f1d1d">Check every element: up to 1,000,000 comparisons</text>
+  <text x="225" y="370" text-anchor="middle" font-size="9.5" fill="#b91c1c">Like reading a book page by page to find one word</text>
+  <text x="225" y="382" text-anchor="middle" font-size="9.5" font-weight="600" fill="#dc2626">Works on unsorted data</text>
+
+  <rect x="440" y="316" width="390" height="68" rx="8" fill="#fff" stroke="#16a34a" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="635" y="336" text-anchor="middle" font-size="11" font-weight="700" fill="#16a34a">Binary Search  O(log n)</text>
+  <text x="635" y="354" text-anchor="middle" font-size="10" fill="#14532d">Cut in half each step: only 20 comparisons!</text>
+  <text x="635" y="370" text-anchor="middle" font-size="9.5" fill="#166534">Like using a dictionary — open to middle, go left or right</text>
+  <text x="635" y="382" text-anchor="middle" font-size="9.5" font-weight="600" fill="#dc2626">Requires sorted data</text>
+
+  <!-- DYNAMIC PROGRAMMING -->
+  <text x="30" y="410" font-size="10" font-weight="600" fill="#b45309" letter-spacing="1.2">DYNAMIC PROGRAMMING  —  cache results, avoid recomputation</text>
+  <rect x="30"  y="418" width="390" height="74" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="225" y="437" text-anchor="middle" font-size="10.5" font-weight="600" fill="#b45309">Naive fib(5)  →  O(2ⁿ) = 32 calls</text>
+  <text x="225" y="453" text-anchor="middle" font-size="9.5" fill="#92400e">fib(5) calls fib(4)+fib(3)</text>
+  <text x="225" y="468" text-anchor="middle" font-size="9.5" fill="#92400e">fib(4) calls fib(3)+fib(2)  ← fib(3) computed TWICE</text>
+  <text x="225" y="482" text-anchor="middle" font-size="9.5" font-weight="600" fill="#dc2626">fib(50) = 1 trillion+ calls!</text>
+
+  <rect x="440" y="418" width="390" height="74" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="635" y="437" text-anchor="middle" font-size="10.5" font-weight="600" fill="#15803d">Memoized fib(5)  →  O(n) = 5 calls</text>
+  <text x="635" y="453" text-anchor="middle" font-size="9.5" fill="#166534">memo = {}  → store each result once</text>
+  <text x="635" y="468" text-anchor="middle" font-size="9.5" fill="#166534">fib(3) computed once, returned from cache next time</text>
+  <text x="635" y="482" text-anchor="middle" font-size="9.5" font-weight="600" fill="#15803d">fib(50) = 50 calls ✓</text>
+
+  <text x="430" y="512" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 4  ·  Algorithms</text>
+</svg>

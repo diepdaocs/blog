@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#faf5ff"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#00000012"/></filter>
+    <marker id="a" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#1d4ed8"/></marker>
+    <marker id="ag" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#15803d"/></marker>
+  </defs>
+
+  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Data Structures — The Right Container for the Right Job</text>
+  <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">Array · Linked List · Hash Table · Binary Search Tree · Heap · Graph</text>
+
+  <!-- ARRAY -->
+  <text x="30" y="78" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">ARRAY  — O(1) access by index, cache-friendly</text>
+  <rect x="30" y="85" width="393" height="64" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.5" filter="url(#sh)"/>
+  <!-- cells -->
+  <rect x="48" y="99" width="46" height="36" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="71" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">10</text>
+  <text x="71" y="131" text-anchor="middle" font-size="8" fill="#3b82f6">[0]</text>
+  <rect x="98"  y="99" width="46" height="36" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="121" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">20</text>
+  <text x="121" y="131" text-anchor="middle" font-size="8" fill="#3b82f6">[1]</text>
+  <rect x="148" y="99" width="46" height="36" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="171" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">30</text>
+  <text x="171" y="131" text-anchor="middle" font-size="8" fill="#3b82f6">[2]</text>
+  <rect x="198" y="99" width="46" height="36" rx="4" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="221" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">40</text>
+  <text x="221" y="131" text-anchor="middle" font-size="8" fill="#93c5fd">[3] ← O(1)</text>
+  <rect x="248" y="99" width="46" height="36" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="271" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">50</text>
+  <text x="271" y="131" text-anchor="middle" font-size="8" fill="#3b82f6">[4]</text>
+  <text x="340" y="112" font-size="10" fill="#1d4ed8">Access: O(1)</text>
+  <text x="340" y="128" font-size="10" fill="#64748b">Insert mid: O(n)</text>
+  <text x="340" y="142" font-size="9" fill="#94a3b8">Contiguous memory</text>
+
+  <!-- LINKED LIST -->
+  <text x="437" y="78" font-size="10" font-weight="600" fill="#0284c7" letter-spacing="1.2">LINKED LIST  — O(1) insert at pointer</text>
+  <rect x="437" y="85" width="393" height="64" rx="8" fill="#fff" stroke="#0284c7" stroke-width="1.5" filter="url(#sh)"/>
+  <!-- nodes with arrows -->
+  <rect x="453" y="99" width="52" height="34" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="479" y="119" text-anchor="middle" font-size="11" font-weight="700" fill="#0284c7">10</text>
+  <text x="479" y="129" text-anchor="middle" font-size="7.5" fill="#0ea5e9">→</text>
+  <line x1="505" y1="116" x2="520" y2="116" stroke="#0284c7" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="522" y="99" width="52" height="34" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="548" y="119" text-anchor="middle" font-size="11" font-weight="700" fill="#0284c7">20</text>
+  <line x1="574" y1="116" x2="589" y2="116" stroke="#0284c7" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="591" y="99" width="52" height="34" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="617" y="119" text-anchor="middle" font-size="11" font-weight="700" fill="#0284c7">30</text>
+  <line x1="643" y1="116" x2="658" y2="116" stroke="#0284c7" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="660" y="99" width="52" height="34" rx="4" fill="#0284c7" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="686" y="119" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">null</text>
+  <text x="756" y="112" font-size="10" fill="#0284c7">Access: O(n)</text>
+  <text x="756" y="128" font-size="10" fill="#64748b">Insert: O(1)*</text>
+  <text x="756" y="142" font-size="9" fill="#94a3b8">Scattered memory</text>
+
+  <!-- HASH TABLE -->
+  <text x="30" y="172" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">HASH TABLE  — O(1) average lookup, insert, delete</text>
+  <rect x="30" y="180" width="393" height="100" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+  <!-- keys -->
+  <rect x="48" y="195" width="80" height="22" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="88" y="210" text-anchor="middle" font-size="9.5" fill="#5b21b6">"Alice"</text>
+  <text x="148" y="210" text-anchor="middle" font-size="10" fill="#7c3aed">→</text>
+  <text x="190" y="210" font-size="9" fill="#94a3b8">hash()=42</text>
+  <text x="248" y="210" text-anchor="middle" font-size="9.5" fill="#7c3aed">→</text>
+  <rect x="268" y="195" width="80" height="22" rx="4" fill="#7c3aed"/>
+  <text x="308" y="210" text-anchor="middle" font-size="9.5" fill="#fff">555-1234</text>
+
+  <rect x="48" y="223" width="80" height="22" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="88" y="238" text-anchor="middle" font-size="9.5" fill="#5b21b6">"Bob"</text>
+  <text x="148" y="238" text-anchor="middle" font-size="10" fill="#7c3aed">→</text>
+  <text x="190" y="238" font-size="9" fill="#94a3b8">hash()=17</text>
+  <text x="248" y="238" text-anchor="middle" font-size="9.5" fill="#7c3aed">→</text>
+  <rect x="268" y="223" width="80" height="22" rx="4" fill="#7c3aed"/>
+  <text x="308" y="238" text-anchor="middle" font-size="9.5" fill="#fff">555-5678</text>
+
+  <text x="365" y="204" font-size="10" fill="#7c3aed">Access: O(1)*</text>
+  <text x="365" y="220" font-size="10" fill="#7c3aed">Insert: O(1)*</text>
+  <text x="365" y="236" font-size="10" fill="#64748b">Collision → chain</text>
+  <text x="365" y="268" font-size="9" fill="#94a3b8">*amortized average</text>
+  <text x="60" y="268" font-size="9.5" fill="#64748b">Python dict, JavaScript Map, Java HashMap</text>
+
+  <!-- BST -->
+  <text x="437" y="172" font-size="10" font-weight="600" fill="#15803d" letter-spacing="1.2">BINARY SEARCH TREE  — O(log n) if balanced</text>
+  <rect x="437" y="180" width="393" height="100" rx="8" fill="#fff" stroke="#15803d" stroke-width="1.5" filter="url(#sh)"/>
+  <!-- tree nodes -->
+  <circle cx="633" cy="208" r="18" fill="#dcfce7" stroke="#15803d" stroke-width="1.8"/>
+  <text x="633" y="213" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">8</text>
+  <line x1="620" y1="224" x2="580" y2="243" stroke="#15803d" stroke-width="1.3"/>
+  <line x1="646" y1="224" x2="680" y2="243" stroke="#15803d" stroke-width="1.3"/>
+  <circle cx="572" cy="252" r="16" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+  <text x="572" y="257" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">3</text>
+  <circle cx="694" cy="252" r="16" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+  <text x="694" y="257" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">12</text>
+  <line x1="560" y1="266" x2="545" y2="279" stroke="#15803d" stroke-width="1.2"/>
+  <line x1="584" y1="266" x2="599" y2="279" stroke="#15803d" stroke-width="1.2"/>
+  <circle cx="537" cy="285" r="13" fill="#bbf7d0" stroke="#15803d" stroke-width="1.2"/>
+  <text x="537" y="289" text-anchor="middle" font-size="10" fill="#166534">1</text>
+  <circle cx="607" cy="285" r="13" fill="#bbf7d0" stroke="#15803d" stroke-width="1.2"/>
+  <text x="607" y="289" text-anchor="middle" font-size="10" fill="#166534">6</text>
+  <text x="455" y="207" font-size="9.5" fill="#15803d">left &lt; node</text>
+  <text x="455" y="222" font-size="9.5" fill="#15803d">right &gt; node</text>
+  <text x="455" y="245" font-size="10" fill="#64748b">Search: O(log n)</text>
+  <text x="455" y="261" font-size="10" fill="#64748b">Insert: O(log n)</text>
+  <text x="455" y="277" font-size="9" fill="#94a3b8">Balanced tree only</text>
+
+  <!-- HEAP + GRAPH -->
+  <text x="30" y="302" font-size="10" font-weight="600" fill="#b45309" letter-spacing="1.2">HEAP  — O(1) peek min/max, O(log n) insert/extract</text>
+  <rect x="30" y="310" width="393" height="90" rx="8" fill="#fff" stroke="#b45309" stroke-width="1.5" filter="url(#sh)"/>
+  <!-- min-heap tree -->
+  <circle cx="130" cy="334" r="18" fill="#fef9c3" stroke="#b45309" stroke-width="1.8"/>
+  <text x="130" y="340" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">1</text>
+  <text x="130" y="354" text-anchor="middle" font-size="7.5" fill="#b45309">min</text>
+  <line x1="117" y1="350" x2="97" y2="367" stroke="#b45309" stroke-width="1.3"/>
+  <line x1="143" y1="350" x2="163" y2="367" stroke="#b45309" stroke-width="1.3"/>
+  <circle cx="89" cy="376" r="15" fill="#fef9c3" stroke="#b45309" stroke-width="1.5"/>
+  <text x="89" y="381" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">3</text>
+  <circle cx="171" cy="376" r="15" fill="#fef9c3" stroke="#b45309" stroke-width="1.5"/>
+  <text x="171" y="381" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">2</text>
+  <line x1="79"  y1="389" x2="67" y2="400" stroke="#b45309" stroke-width="1.2"/>
+  <line x1="99"  y1="389" x2="111" y2="400" stroke="#b45309" stroke-width="1.2"/>
+  <circle cx="60" cy="390" r="8" fill="#fde68a" stroke="#b45309"/>
+  <text x="60" y="394" text-anchor="middle" font-size="7" fill="#92400e">7</text>
+  <circle cx="119" cy="390" r="8" fill="#fde68a" stroke="#b45309"/>
+  <text x="119" y="394" text-anchor="middle" font-size="7" fill="#92400e">4</text>
+
+  <text x="215" y="334" font-size="10" fill="#b45309" font-weight="600">Min-Heap property:</text>
+  <text x="215" y="350" font-size="9.5" fill="#92400e">parent ≤ children (always)</text>
+  <text x="215" y="366" font-size="9.5" fill="#92400e">Root = smallest element</text>
+  <text x="215" y="382" font-size="10" fill="#64748b">find_min: O(1)</text>
+  <text x="215" y="396" font-size="9.5" fill="#64748b">Priority queues · Dijkstra's alg</text>
+
+  <!-- GRAPH -->
+  <text x="437" y="302" font-size="10" font-weight="600" fill="#0284c7" letter-spacing="1.2">GRAPH  — V vertices, E edges, O(V+E) traversal</text>
+  <rect x="437" y="310" width="393" height="90" rx="8" fill="#fff" stroke="#0284c7" stroke-width="1.5" filter="url(#sh)"/>
+  <!-- nodes -->
+  <circle cx="530" cy="345" r="20" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+  <text x="530" y="350" text-anchor="middle" font-size="12" font-weight="700" fill="#0284c7">A</text>
+  <circle cx="620" cy="330" r="20" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+  <text x="620" y="335" text-anchor="middle" font-size="12" font-weight="700" fill="#0284c7">B</text>
+  <circle cx="620" cy="380" r="20" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+  <text x="620" y="385" text-anchor="middle" font-size="12" font-weight="700" fill="#0284c7">C</text>
+  <circle cx="710" cy="355" r="20" fill="#0284c7" stroke="#0284c7" stroke-width="1.8"/>
+  <text x="710" y="360" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">D</text>
+  <!-- edges -->
+  <line x1="549" y1="335" x2="601" y2="325" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="549" y1="355" x2="601" y2="375" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="640" y1="330" x2="690" y2="345" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="640" y1="380" x2="690" y2="365" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="620" y1="350" x2="620" y2="360" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="740" y="335" font-size="9.5" fill="#0284c7">BFS: shortest path</text>
+  <text x="740" y="351" font-size="9.5" fill="#0284c7">DFS: explore all</text>
+  <text x="740" y="367" font-size="9.5" fill="#64748b">Social networks</text>
+  <text x="740" y="383" font-size="9.5" fill="#64748b">Maps · Routing</text>
+  <text x="740" y="395" font-size="9.5" fill="#94a3b8">Dependencies</text>
+
+  <!-- Trade-off summary -->
+  <rect x="30" y="412" width="800" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="430" y="432" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a5f">Choose the right structure for your problem</text>
+  <text x="90"  y="450" text-anchor="middle" font-size="9" fill="#1d4ed8">Fast index access</text>
+  <text x="90"  y="462" text-anchor="middle" font-size="9" font-weight="600" fill="#1d4ed8">→ Array</text>
+  <text x="240" y="450" text-anchor="middle" font-size="9" fill="#7c3aed">Fast key lookup</text>
+  <text x="240" y="462" text-anchor="middle" font-size="9" font-weight="600" fill="#7c3aed">→ Hash Table</text>
+  <text x="390" y="450" text-anchor="middle" font-size="9" fill="#15803d">Sorted + search</text>
+  <text x="390" y="462" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">→ BST</text>
+  <text x="540" y="450" text-anchor="middle" font-size="9" fill="#b45309">Always need min/max</text>
+  <text x="540" y="462" text-anchor="middle" font-size="9" font-weight="600" fill="#b45309">→ Heap</text>
+  <text x="710" y="450" text-anchor="middle" font-size="9" fill="#0284c7">Model relationships</text>
+  <text x="710" y="462" text-anchor="middle" font-size="9" font-weight="600" fill="#0284c7">→ Graph</text>
+
+  <text x="430" y="478" text-anchor="middle" font-size="9" fill="#94a3b8">Wrong structure → correct algorithm + 100× slowdown.  Right structure → fast AND simple.</text>
+
+  <text x="430" y="514" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 5  ·  Data Structures</text>
+</svg>

@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff7ed"/>
+      <stop offset="100%" style="stop-color:#f0fdf4"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/></filter>
+    <marker id="aO" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#d97706"/></marker>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d"/></marker>
+  </defs>
+  <rect width="860" height="520" rx="14" fill="url(#bg)"/>
+  <text x="430" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a5f">Application Development — Building Software That Lasts</text>
+  <text x="430" y="52" text-anchor="middle" font-size="10.5" fill="#64748b">API Design · Clean Code · Testing · CI/CD · Observability</text>
+
+  <!-- App Stack -->
+  <text x="30" y="78" font-size="10" font-weight="600" fill="#b45309" letter-spacing="1.2">TYPICAL WEB APPLICATION STACK</text>
+
+  <!-- Client -->
+  <rect x="30" y="86" width="380" height="50" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="100" y="112" font-size="12" font-weight="700" fill="#1d4ed8">Client</text>
+  <text x="220" y="105" text-anchor="middle" font-size="9.5" fill="#3b82f6">Browser  ·  Mobile App  ·  CLI tool</text>
+  <text x="220" y="121" text-anchor="middle" font-size="9" fill="#93c5fd">React · Vue · Swift · Kotlin · curl</text>
+
+  <line x1="220" y1="136" x2="220" y2="149" stroke="#d97706" stroke-width="1.8" marker-end="url(#aO)"/>
+  <text x="290" y="145" font-size="9" fill="#b45309">HTTP / HTTPS</text>
+  <text x="290" y="157" font-size="8.5" fill="#94a3b8">REST · GraphQL · gRPC</text>
+
+  <!-- API Layer -->
+  <rect x="30" y="152" width="380" height="50" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="100" y="178" font-size="12" font-weight="700" fill="#d97706">API Layer</text>
+  <text x="220" y="170" text-anchor="middle" font-size="9.5" fill="#92400e">Routes · Auth middleware · Input validation</text>
+  <text x="220" y="185" text-anchor="middle" font-size="9" fill="#b45309">Business logic · Rate limiting · Logging</text>
+
+  <line x1="220" y1="202" x2="220" y2="215" stroke="#15803d" stroke-width="1.8" marker-end="url(#aG)"/>
+
+  <!-- Data Layer -->
+  <rect x="30" y="218" width="380" height="50" rx="8" fill="#f0fdf4" stroke="#15803d" stroke-width="1.8" filter="url(#sh)"/>
+  <text x="100" y="244" font-size="12" font-weight="700" fill="#15803d">Data Layer</text>
+  <text x="220" y="237" text-anchor="middle" font-size="9.5" fill="#166534">Database (PostgreSQL) · Cache (Redis)</text>
+  <text x="220" y="252" text-anchor="middle" font-size="9" fill="#4ade80">File storage (S3) · Message queue (Kafka)</text>
+
+  <!-- REST API design -->
+  <text x="440" y="78" font-size="10" font-weight="600" fill="#1d4ed8" letter-spacing="1.2">REST API DESIGN  — resources + HTTP methods</text>
+  <rect x="440" y="86" width="390" height="130" rx="8" fill="#fff" stroke="#1d4ed8" stroke-width="1.5" filter="url(#sh)"/>
+  <!-- Method rows -->
+  <rect x="452" y="97" width="55" height="18" rx="3" fill="#dcfce7"/>
+  <text x="479" y="110" text-anchor="middle" font-size="9.5" fill="#166534" font-weight="600">GET</text>
+  <text x="625" y="110" font-size="9" fill="#1e3a5f">/users            list all users</text>
+
+  <rect x="452" y="118" width="55" height="18" rx="3" fill="#dcfce7"/>
+  <text x="479" y="131" text-anchor="middle" font-size="9.5" fill="#166534" font-weight="600">GET</text>
+  <text x="625" y="131" font-size="9" fill="#1e3a5f">/users/42         get user #42</text>
+
+  <rect x="452" y="139" width="55" height="18" rx="3" fill="#dbeafe"/>
+  <text x="479" y="152" text-anchor="middle" font-size="9.5" fill="#1d4ed8" font-weight="600">POST</text>
+  <text x="625" y="152" font-size="9" fill="#1e3a5f">/users            create new user</text>
+
+  <rect x="452" y="160" width="55" height="18" rx="3" fill="#fef9c3"/>
+  <text x="479" y="173" text-anchor="middle" font-size="9.5" fill="#854d0e" font-weight="600">PATCH</text>
+  <text x="625" y="173" font-size="9" fill="#1e3a5f">/users/42         update user #42</text>
+
+  <rect x="452" y="181" width="55" height="18" rx="3" fill="#fee2e2"/>
+  <text x="479" y="194" text-anchor="middle" font-size="9.5" fill="#b91c1c" font-weight="600">DELETE</text>
+  <text x="625" y="194" font-size="9" fill="#1e3a5f">/users/42         delete user #42</text>
+
+  <text x="452" y="210" font-size="9" fill="#64748b">Status codes: 200 OK · 201 Created · 400 Bad Request · 404 Not Found · 500 Server Error</text>
+
+  <!-- TESTING PYRAMID -->
+  <text x="30" y="295" font-size="10" font-weight="600" fill="#7c3aed" letter-spacing="1.2">TESTING PYRAMID</text>
+  <rect x="30" y="302" width="390" height="178" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- E2E -->
+  <polygon points="215,318 260,350 170,350" fill="#fecdd3" stroke="#b91c1c" stroke-width="1.2"/>
+  <text x="215" y="338" text-anchor="middle" font-size="8.5" fill="#881337" font-weight="600">E2E</text>
+  <text x="270" y="338" font-size="9" fill="#b91c1c">Few · slow · full browser</text>
+
+  <!-- Integration -->
+  <polygon points="215,352 290,396 140,396" fill="#fde68a" stroke="#d97706" stroke-width="1.2"/>
+  <text x="215" y="376" text-anchor="middle" font-size="9" fill="#78350f" font-weight="600">Integration</text>
+  <text x="300" y="378" font-size="9" fill="#d97706">Some · real DB/APIs</text>
+
+  <!-- Unit -->
+  <polygon points="215,398 340,453 90,453" fill="#bbf7d0" stroke="#15803d" stroke-width="1.2"/>
+  <text x="215" y="428" text-anchor="middle" font-size="10" fill="#14532d" font-weight="600">Unit Tests</text>
+  <text x="350" y="428" font-size="9" fill="#15803d">Many · fast · mocked</text>
+
+  <text x="215" y="468" text-anchor="middle" font-size="9" fill="#475569">Each layer catches different bugs.</text>
+  <text x="215" y="480" text-anchor="middle" font-size="9" fill="#475569">100% coverage is not the goal — meaningful coverage is.</text>
+
+  <!-- CI/CD Pipeline -->
+  <text x="440" y="238" font-size="10" font-weight="600" fill="#15803d" letter-spacing="1.2">CI/CD PIPELINE  — ship safely, automatically</text>
+  <rect x="440" y="246" width="390" height="234" rx="8" fill="#fff" stroke="#15803d" stroke-width="1.5" filter="url(#sh)"/>
+
+  <!-- Steps -->
+  <rect x="452" y="258" width="367" height="28" rx="5" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="635" y="277" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="600">① Push code to Git branch</text>
+
+  <line x1="635" y1="286" x2="635" y2="294" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aG)"/>
+
+  <rect x="452" y="296" width="367" height="28" rx="5" fill="#fef9c3" stroke="#d97706" stroke-width="1.2"/>
+  <text x="635" y="315" text-anchor="middle" font-size="10" fill="#78350f" font-weight="600">② CI: lint · unit tests · integration tests</text>
+
+  <line x1="635" y1="324" x2="635" y2="332" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aG)"/>
+
+  <rect x="452" y="334" width="367" height="28" rx="5" fill="#dcfce7" stroke="#15803d" stroke-width="1.2"/>
+  <text x="635" y="353" text-anchor="middle" font-size="10" fill="#14532d" font-weight="600">③ All pass → deploy to staging environment</text>
+
+  <line x1="635" y1="362" x2="635" y2="370" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aG)"/>
+
+  <rect x="452" y="372" width="367" height="28" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="635" y="391" text-anchor="middle" font-size="10" fill="#5b21b6" font-weight="600">④ Smoke test on staging</text>
+
+  <line x1="635" y1="400" x2="635" y2="408" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aG)"/>
+
+  <rect x="452" y="410" width="367" height="28" rx="5" fill="#16a34a" stroke="#15803d" stroke-width="1.5"/>
+  <text x="635" y="429" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">⑤ Deploy to production  🚀</text>
+
+  <text x="635" y="456" text-anchor="middle" font-size="9.5" fill="#166534">Tools: GitHub Actions · GitLab CI · CircleCI</text>
+  <text x="635" y="470" text-anchor="middle" font-size="9" fill="#64748b">Bugs caught in minutes not weeks.</text>
+  <text x="635" y="482" text-anchor="middle" font-size="9" fill="#64748b">Deploy multiple times per day safely.</text>
+
+  <text x="430" y="512" text-anchor="middle" font-size="8.5" fill="#94a3b8">diepdao.me  ·  CS Series Post 8  ·  Application Development</text>
+</svg>
