@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Deep Learning: Neural Networks and the Transformer Revolution"
-date: 2026-03-30 10:00:00 +0800
+date: 2026-01-13 10:00:00 +0800
+permalink: /computer-science/2026/03/30/deep-learning/
 categories:
   - computer-science
 tags:

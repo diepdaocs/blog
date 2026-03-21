@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Operating Systems: The Software That Runs Everything Else"
-date: 2026-03-22 10:00:00 +0800
+date: 2026-01-05 10:00:00 +0800
+permalink: /computer-science/2026/03/22/operating-systems/
 categories:
   - computer-science
 tags:

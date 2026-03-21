@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Algorithms: Thinking About Efficiency"
-date: 2026-03-23 10:00:00 +0800
+date: 2026-01-06 10:00:00 +0800
+permalink: /computer-science/2026/03/23/algorithms/
 categories:
   - computer-science
 tags:

@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Distributed Systems: When One Machine Is Not Enough"
-date: 2026-03-28 10:00:00 +0800
+date: 2026-01-11 10:00:00 +0800
+permalink: /computer-science/2026/03/28/distributed-systems/
 categories:
   - computer-science
 tags:

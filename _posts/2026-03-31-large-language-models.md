@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Large Language Models: How AI Understands and Generates Language"
-date: 2026-03-31 10:00:00 +0800
+date: 2026-01-14 10:00:00 +0800
+permalink: /computer-science/2026/03/31/large-language-models/
 categories:
   - computer-science
 tags:

@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Networks & Security: How the Internet Works and How to Protect It"
-date: 2026-03-25 10:00:00 +0800
+date: 2026-01-08 10:00:00 +0800
+permalink: /computer-science/2026/03/25/networks-and-security/
 categories:
   - computer-science
 tags:

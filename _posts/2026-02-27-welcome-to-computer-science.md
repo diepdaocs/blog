@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Welcome to the Computer Science Series"
-date: 2026-02-27 09:00:00 +0800
+date: 2026-01-01 09:00:00 +0800
+permalink: /computer-science/2026/02/27/welcome-to-computer-science/
 categories:
   - computer-science
 tags:

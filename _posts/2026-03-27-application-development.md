@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Application Development: Building Software That Lasts"
-date: 2026-03-27 10:00:00 +0800
+date: 2026-01-10 10:00:00 +0800
+permalink: /computer-science/2026/03/27/application-development/
 categories:
   - computer-science
 tags:

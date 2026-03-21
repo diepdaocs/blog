@@ -1,7 +1,8 @@
 ---
 layout: single
 title: "Introduction to Computer Science: From Bits to Generative AI"
-date: 2026-03-16 09:00:00 +0800
+date: 2026-01-03 09:00:00 +0800
+permalink: /computer-science/2026/03/16/introduction-to-computer-science/
 categories:
   - computer-science
 tags:
