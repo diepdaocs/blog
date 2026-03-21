@@ -30,9 +30,106 @@ This post traces the full journey. Starting from what a bit physically is, all t
 
 Before diving in, here's the complete picture. Every piece of data follows this path:
 
-<div class="post-diagram">
-  <img src="/assets/images/bits-bytes-end-to-end-flow.png" alt="Bits & Bytes End-to-End Data Flow">
-</div>
+```
+╔══════════════════════════════════════════════════════════════════════════════════════════╗
+║              Bits & Bytes: End-to-End Data Flow                                          ║
+║         Raw Data → Encoding → Packetization → Routing → Physical                         ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║  1. Foundation: The Bit                                                                  ║
+║  ┌──────────────────────────────────────────────────────────────────────────────────┐    ║
+║  │  0  1  1  0  1  0  0  1  0  1  1  0  1  1  0  1  0  1  0  0  1  0  1  1          │    ║
+║  │                                                                                  │    ║
+║  │  1 bit  = 0 or 1          1 KB = 1,024 B          1 GB = 1,073,741,824 B         │    ║
+║  │  1 byte = 8 bits          1 MB = 1,048,576 B       1 TB = 1,099,511,627,776 B    │    ║
+║  └──────────────────────────────────────────────────────────────────────────────────┘    ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║  2. Encoding Raw Data                                                                    ║
+║  ┌───────────────────┐ ┌───────────────────┐ ┌───────────────────┐ ┌─────────────────┐   ║
+║  │    Numbers        │ │      Text         │ │      Audio        │ │     Images      │   ║
+║  │                   │ │                   │ │                   │ │                 │   ║
+║  │ Integers          │ │ ASCII             │ │ Sampling          │ │ Pixels          │   ║
+║  │  int8 / int32     │ │  128 chars, 7-bit │ │  44.1 kHz / 16-bit│ │  RGB 24-bit     │   ║
+║  │  two's complement │ │                   │ │                   │ │                 │   ║
+║  │                   │ │ Unicode           │ │ MP3               │ │ PNG             │   ║
+║  │ Floats            │ │  150,000+ chars   │ │  MDCT + Huffman   │ │  lossless       │   ║
+║  │  IEEE 754         │ │                   │ │                   │ │  deflate        │   ║
+║  │  sign|exp|mantissa│ │ UTF-8             │ │ AAC               │ │                 │   ║
+║  │                   │ │  1–4 bytes/char   │ │  psychoacoustics  │ │ JPEG            │   ║
+║  │ Endianness        │ │  ASCII-compatible │ │                   │ │  lossy DCT      │   ║
+║  │  big / little     │ │                   │ │ Opus              │ │  chroma sub     │   ║
+║  │                   │ │                   │ │  low-latency      │ │                 │   ║
+║  │                   │ │                   │ │                   │ │ WebP / AVIF     │   ║
+║  └───────────────────┘ └───────────────────┘ └───────────────────┘ └─────────────────┘   ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║  3. Video                                                                                ║
+║  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐    ║
+║  │   Format     │ │    Codec     │ │    Stream    │ │     Rate     │ │  Frame Ref   │    ║
+║  │              │ │              │ │              │ │              │ │              │    ║
+║  │ .mp4         │ │ H.264        │ │ 30 fps raw   │ │ H.264 ~5Mbps │ │ I-frame      │    ║
+║  │ .mkv         │ │ H.265 -40%   │ │ = 180 MB/s   │ │ H.265 ~3Mbps │ │  full image  │    ║
+║  │ .webm        │ │ VP9  -30%    │ │              │ │ VP9  ~3.5Mbps│ │              │    ║
+║  │              │ │ AV1  -50%    │ │ After codec: │ │ AV1  ~2.5Mbps│ │ P-frame      │    ║
+║  │ Container    │ │              │ │ 4K H.265     │ │              │ │  diff from   │    ║
+║  │ wraps video  │ │ vs H.264     │ │ ≈ 15–20 Mbps │ │ 4K H.265     │ │  previous    │    ║
+║  │ + audio      │ │ baseline     │ │              │ │ ≈ 15–20 Mbps │ │              │    ║
+║  │ + subtitles  │ │              │ │              │ │              │ │ B-frame      │    ║
+║  │ + metadata   │ │              │ │              │ │              │ │  diff past   │    ║
+║  │              │ │              │ │              │ │              │ │  + future    │    ║
+║  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘    ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║  4. Packetization (Preparing for Transmission)                                           ║
+║  ┌─────────────────────────────────────┐   ┌─────────────────────────────────────────┐   ║
+║  │      Application Layer              │   │          Transport Layer                │   ║
+║  │                                     │   │                                         │   ║
+║  │  HTTP/2   multiplexed streams       │   │  TCP   reliable, ordered delivery       │   ║
+║  │           HPACK header compression  │   │        SYN → SYN-ACK → ACK              │   ║
+║  │                                     │   │        retransmit on loss               │   ║
+║  │  TLS/SSL  AES-256-GCM encryption    │   │                                         │   ║
+║  │           ECDH key exchange         │   │  UDP   fire-and-forget                  │   ║
+║  │                                     │   │        no handshake, low latency        │   ║
+║  │  DNS      domain → IP address       │   │                                         │   ║
+║  │           UDP port 53, cached       │   │  QUIC  UDP + reliability in userspace   │   ║
+║  │                                     │   │        HTTP/3, no head-of-line block    │   ║
+║  └─────────────────────────────────────┘   └─────────────────────────────────────────┘   ║
+║             [Ethernet | IP | TCP | TLS record | HTTP/2 frame | your data]                ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║  5. Network & Physical (Connectivity)                                                    ║
+║  ┌──────────────────────┐ ┌──────────────────────┐ ┌──────────────────────────────────┐  ║
+║  │   Network Layer      │ │   Data Link Layer    │ │       Physical Layer             │  ║
+║  │                      │ │                      │ │                                  │  ║
+║  │ IPv4 / IPv6          │ │ Ethernet             │ │ Copper wire                      │  ║
+║  │  source + dest IP    │ │  MAC address routing │ │  voltage pulses                  │  ║
+║  │  TTL, checksum       │ │                      │ │                                  │  ║
+║  │                      │ │ Wi-Fi (802.11)       │ │ Optical fibre                    │  ║
+║  │ BGP                  │ │  wireless frames     │ │  light pulses, 100+ Gbps         │  ║
+║  │  inter-AS routing    │ │                      │ │                                  │  ║
+║  │  15–20 hops globally │ │ ARP                  │ │ Radio (Wi-Fi / 4G / 5G)          │  ║
+║  │                      │ │  IP → MAC lookup     │ │  OFDM + QAM-256                  │  ║
+║  └──────────────────────┘ └──────────────────────┘ └──────────────────────────────────┘  ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║  6. Infrastructure                                                                       ║
+║  ┌───────────────────┐ ┌───────────────────┐ ┌───────────────────┐ ┌─────────────────┐   ║
+║  │    CDN / DNS      │ │  Server / Switch  │ │  Firewall / NAT   │ │  Load Balancer  │   ║
+║  │                   │ │                   │ │                   │ │                 │   ║
+║  │ GeoDNS            │ │ Origin servers    │ │ NAT               │ │ L4              │   ║
+║  │  resolve to       │ │  serve content    │ │  192.168.x.x →    │ │  route by IP    │   ║
+║  │  nearest edge     │ │                   │ │  public IP        │ │  + port (fast)  │   ║
+║  │                   │ │ Switch            │ │                   │ │                 │   ║
+║  │ Edge cache        │ │  L2 forwarding    │ │ Firewall          │ │ L7              │   ║
+║  │  serve locally    │ │  by MAC address   │ │  packet filtering │ │  route by URL   │   ║
+║  │  if cache hit     │ │                   │ │  stateful rules   │ │  host / cookie  │   ║
+║  └───────────────────┘ └───────────────────┘ └───────────────────┘ └─────────────────┘   ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║  7. Assembly, Decoding & Rendering                                                       ║
+║  ┌──────────┐    ┌──────────┐    ┌────────────┐    ┌──────────┐    ┌──────┐    ┌──────┐  ║
+║  │Reassemble│───▶│ Decrypt  │───▶│Decompress  │───▶│  Decode  │───▶│Parse │───▶│Render│  ║
+║  │          │    │          │    │            │    │          │    │      │    │      │  ║
+║  │TCP segs  │    │AES-256   │    │gzip/brotli │    │JPEG→RGB  │    │HTML  │    │DOM   │  ║
+║  │reordered │    │TLS sessio│    │~7x smaller │    │AV1→frames│    │JSON  │    │CSS   │  ║
+║  │by seq no.│    │key       │    │            │    │AAC→PCM   │    │proto │    │GPU   │  ║
+║  └──────────┘    └──────────┘    └────────────┘    └──────────┘    └──────┘    └──────┘  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════╝
+```
 
 Keep this diagram in mind as we walk through each layer.
 
