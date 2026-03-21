@@ -9,7 +9,10 @@
       "Bash(tasklist:*)",
       "Bash(netstat:*)",
       "Bash(taskkill:*)",
-      "Bash(py:*)"
+      "Bash(py:*)",
+      "Bash(tailscale ip:*)",
+      "Bash(ip addr:*)",
+      "Bash(python3:*)"
     ]
   }
 }
