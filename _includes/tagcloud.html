@@ -1,11 +1,23 @@
 <div class="tagcloud">
   <h3 class="tagcloud__title">Tags</h3>
   {% assign sorted_tags = site.tags | sort %}
+  {% assign max_tag_count = 0 %}
   {% for tag in sorted_tags %}
-    {% assign tag_name = tag[0] %}
     {% assign tag_count = tag[1] | size %}
-    <a href="{{ site.baseurl }}/tags/#{{ tag_name | slugify }}" class="tag-pill">
-      {{ tag_name }}<span class="tag-pill__count">{{ tag_count }}</span>
-    </a>
+    {% if tag_count > max_tag_count %}
+      {% assign max_tag_count = tag_count %}
+    {% endif %}
+  {% endfor %}
+
+  {% for current_count in (1..max_tag_count) reversed %}
+    {% for tag in sorted_tags %}
+      {% assign tag_name = tag[0] %}
+      {% assign tag_count = tag[1] | size %}
+      {% if tag_count == current_count %}
+        <a href="{{ site.baseurl }}/tags/#{{ tag_name | slugify }}" class="tag-pill">
+          {{ tag_name }}<span class="tag-pill__count">{{ tag_count }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>
