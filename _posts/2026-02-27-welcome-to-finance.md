@@ -11,23 +11,24 @@ tags:
   - trading
 ---
 
-Finance and technology have been intertwined throughout my career. Working on a financial market terminal at Standard Chartered Bank — computing PnL, Greeks, and real-time risk for trading desks — gave me a front-row seat to how technology powers modern financial markets.
+Finance and technology have been intertwined throughout my career. Working on financial market terminals, corporate banking workflows, and real-time risk dashboards taught me that context matters as much as code.
 
 ## What This Series Is About
 
-This series sits at the intersection of finance and engineering:
+This series is a software-engineering map of finance:
 
-- **Financial Market Concepts** — how markets work, what traders actually look at, and the mechanics behind instruments like options and futures
-- **Quantitative Finance** — pricing models, risk metrics (PnL, Greeks, VaR), and the mathematics underneath
-- **FinTech Engineering** — building low-latency, high-reliability systems for financial applications
-- **Personal Finance** — investing principles, mental models for thinking about money, and lessons learned
+- how markets function
+- how financial institutions operate
+- how loans and facilities work in corporate banking
+- how risk numbers are computed and trusted
+- how trader-facing systems are built for reliability and speed
 
-## Why Finance
+## Series Roadmap
 
-Most software engineers don't need to understand finance deeply. But if you're building systems where money moves — whether that's a trading platform, a payments app, or a DeFi protocol — understanding the financial context makes you a dramatically better engineer.
-
-That's the angle I'll be writing from: a software engineer who had to learn finance on the job, and found it far more interesting than expected.
-
-## Articles in This Series
-
-- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know]({{ site.baseurl }}/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
+- [Introduction to Financial Markets: A Software Engineer’s Map](/finance/2026/03/17/introduction-to-financial-markets/)
+- [Market Microstructure: How Trades Actually Happen](/finance/2026/03/18/market-microstructure/)
+- [Financial Engineering for Builders: Pricing, Curves, and Risk](/finance/2026/03/19/financial-engineering-for-builders/)
+- [Banking and Financial Institutions: Operating Model for Engineers](/finance/2026/03/20/banking-and-financial-institutions/)
+- [Corporate Banking Systems: Loans, Facilities, and Controls](/finance/2026/03/21/corporate-banking-systems/)
+- [Risk Management and Trader Dashboards: From Trades to Decisions](/finance/2026/03/22/risk-management-and-trader-dashboards/)
+- [Project: Financial Engineering & Risk Management System](/projects/financial-engineering/)
