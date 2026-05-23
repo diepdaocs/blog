@@ -12,7 +12,7 @@ tags:
   - agents
 ---
 
-This is Post 4 in the [AI Series](/ai/2026/02/27/welcome-to-ai.html). The [previous post](/ai/2026/04/04/mlops-and-evaluation.html) covered MLOps and evaluation.
+This is Post 3 in the [AI Series](/ai/2026/02/27/welcome-to-ai/). The [previous post](/ai/2026/04/04/mlops-and-evaluation/) covered MLOps and evaluation.
 
 ## Why RAG Became Default
 
