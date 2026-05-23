@@ -31,5 +31,8 @@ I'll be writing from that perspective: practical, grounded, and honest about the
 
 ## Articles in This Series
 
-- [How Andrew Ng's Courses Changed the Way I Think About AI]({{ site.baseurl }}/ai/2026/02/27/learning-ml-andrew-ng.html)
+- [1. How Andrew Ng's Courses Changed the Way I Think About AI]({{ site.baseurl }}/ai/2026/02/27/learning-ml-andrew-ng.html)
+- [2. MLOps and Evaluation: From Notebook Models to Reliable Production]({{ site.baseurl }}/ai/2026/04/04/mlops-and-evaluation.html)
+- [3. LLM Systems and RAG: Building Useful AI Beyond Prompt Demos]({{ site.baseurl }}/ai/2026/04/05/llm-systems-and-rag.html)
+- [4. AI Agents in Production: Planning, Tool Use, and Safety Boundaries]({{ site.baseurl }}/ai/2026/04/06/ai-agents-tool-use.html)
 - [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know]({{ site.baseurl }}/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
