@@ -11,7 +11,7 @@ tags:
   - data-availability
 ---
 
-This is Post 4 in the [Blockchain Series](/blockchain/2026/02/27/welcome-to-blockchain.html). The [previous post](/blockchain/2026/04/02/defi-protocol-design.html) covered DeFi protocol design.
+This is Post 4 in the [Blockchain Series](/blockchain/2026/02/27/welcome-to-blockchain/). The [previous post](/blockchain/2026/04/02/defi-protocol-design/) covered DeFi protocol design.
 
 ## Why Layer 2 Exists
 

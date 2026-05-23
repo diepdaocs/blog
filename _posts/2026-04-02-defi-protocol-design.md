@@ -12,7 +12,7 @@ tags:
   - tokenomics
 ---
 
-This is Post 3 in the [Blockchain Series](/blockchain/2026/02/27/welcome-to-blockchain.html). The [previous post](/blockchain/2026/04/01/smart-contracts-and-evm.html) covered smart contracts and the EVM.
+This is Post 3 in the [Blockchain Series](/blockchain/2026/02/27/welcome-to-blockchain/). The [previous post](/blockchain/2026/04/01/smart-contracts-and-evm/) covered smart contracts and the EVM.
 
 ## AMMs: Market Making in Code
 

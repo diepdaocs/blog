@@ -30,8 +30,8 @@ This series is for developers who want to understand what's actually happening u
 
 ## Articles in This Series
 
-- [1. Blockchain From First Principles: Cryptography, Consensus, and the Trustless Ledger]({{ site.baseurl }}/blockchain/2026/02/27/blockchain-introduction.html)
-- [2. Smart Contracts and the EVM: How Ethereum Actually Executes Code]({{ site.baseurl }}/blockchain/2026/04/01/smart-contracts-and-evm.html)
-- [3. DeFi Protocol Design: AMMs, Lending, and On-Chain Risk]({{ site.baseurl }}/blockchain/2026/04/02/defi-protocol-design.html)
-- [4. Blockchain Scalability: Layer 2 Rollups, Data Availability, and Trade-offs]({{ site.baseurl }}/blockchain/2026/04/03/blockchain-scalability-and-rollups.html)
-- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know]({{ site.baseurl }}/ai/blockchain/2026/02/27/ai-blockchain-promises.html)
+- [1. Blockchain From First Principles: Cryptography, Consensus, and the Trustless Ledger]({{ site.baseurl }}/blockchain/2026/02/27/blockchain-introduction/)
+- [2. Smart Contracts and the EVM: How Ethereum Actually Executes Code]({{ site.baseurl }}/blockchain/2026/04/01/smart-contracts-and-evm/)
+- [3. DeFi Protocol Design: AMMs, Lending, and On-Chain Risk]({{ site.baseurl }}/blockchain/2026/04/02/defi-protocol-design/)
+- [4. Blockchain Scalability: Layer 2 Rollups, Data Availability, and Trade-offs]({{ site.baseurl }}/blockchain/2026/04/03/blockchain-scalability-and-rollups/)
+- [AI and Blockchain — The Promises, The Fear, and What People Who Build Them Actually Know]({{ site.baseurl }}/ai/blockchain/2026/02/27/ai-blockchain-promises/)

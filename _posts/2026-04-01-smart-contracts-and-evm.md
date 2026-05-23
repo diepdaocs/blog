@@ -12,7 +12,7 @@ tags:
   - gas
 ---
 
-This is Post 2 in the [Blockchain Series](/blockchain/2026/02/27/welcome-to-blockchain.html). The [previous post](/blockchain/2026/02/27/blockchain-introduction.html) covered blockchain fundamentals.
+This is Post 2 in the [Blockchain Series](/blockchain/2026/02/27/welcome-to-blockchain/). The [previous post](/blockchain/2026/02/27/blockchain-introduction/) covered blockchain fundamentals.
 
 ## Why Smart Contracts Matter
 

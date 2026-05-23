@@ -11,7 +11,7 @@ tags:
   - safety
 ---
 
-This is Post 5 in the [AI Series](/ai/2026/02/27/welcome-to-ai.html). The [previous post](/ai/2026/04/05/llm-systems-and-rag.html) covered LLM system design and RAG.
+This is Post 4 in the [AI Series](/ai/2026/02/27/welcome-to-ai/). The [previous post](/ai/2026/04/05/llm-systems-and-rag/) covered LLM system design and RAG.
 
 ## What Makes an Agent Different
 
